@@ -9,7 +9,7 @@ The Research Technology team at Tufts University has created several bioinformat
 
 ## Advanced HPC Bioinformatics Workshops
 
-<img src="images/introNGS.png" alt="drawing" height="100"/>
+[<img src="images/introNGS.png" alt="drawing" height="100"/>](https://tuftsdatalab.github.io/intro-to-ngs-bioinformatics/)
 
 <img src="images/rnaseq.png" alt="drawing" height="100"/>
 
