@@ -9,11 +9,10 @@ The Research Technology team at Tufts University has created several bioinformat
 [<img src="images/introHPC.png" alt="drawing" height="100"/>](https://tufts.app.box.com/s/x9aflewr2qw59pcbgcghbo9muykbi4ju)  [<img src="images/introR.png" alt="drawing" height="100"/>](https://bionomad.github.io/omicsCore/IntroToR/IntroToR.html)
 
 
- 
-
 ## HPC Bioinformatics Workshops
 
 [<img src="images/introNGS.png" alt="drawing" height="100"/>](https://tuftsdatalab.github.io/intro-to-ngs-bioinformatics/)   [<img src="images/rnaseq.png" alt="drawing" height="100"/>](https://huoww07.github.io/Bioinformatics-for-RNA-Seq/)  [<img src="images/introAlphaFold2.png" alt="drawing" height="100"/>](https://tuftsdatalab.github.io/Intro_To_AlphaFold2/)  [<img src="images/microbiome.png" alt="drawing" height="100"/>](https://tuftsdatalab.github.io/Intro_To_AlphaFold2/)
+
 [<img src="images/singlecell.png" alt="drawing" height="100"/>]()
 
 
