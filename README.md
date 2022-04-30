@@ -5,8 +5,20 @@
 
 The Research Technology team at Tufts University has created several bioinformatics workshops that cover a variety of topics in the field. These trainings are designed to be asynchronous where the user can learn at their own pace. 
 
-## Basics
+## The Basics
 
-## Advanced Topics
+## Advanced HPC Bioinformatics Workshops
+
+![](images/introNGS.png)
+
+![](images/rnaseq.png)
+
+![](images/introAlphaFold2.png)
+
+## Advanced Galaxy Bioinformatics Workshops
+
+![](images/rnaseqGalaxy.png)
+
+
 
 
