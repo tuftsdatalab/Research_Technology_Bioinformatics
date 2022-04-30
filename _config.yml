@@ -1,0 +1,14 @@
+
+title: [Research Technology Bioinformatics]
+description: [A Series of Tufts University Research Technology Workshops]
+
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - README.md
+  - lessons/
+
+theme: jekyll-theme-cayman
