@@ -9,15 +9,15 @@ The Research Technology team at Tufts University has created several bioinformat
 
 ## Advanced HPC Bioinformatics Workshops
 
-![](images/introNGS.png)
+<img src="images/introNGS.png" alt="drawing" width="200"/>
 
-![](images/rnaseq.png)
+<img src="images/rnaseq.png" alt="drawing" width="200"/>
 
-![](images/introAlphaFold2.png)
+<img src="images/introAlphaFold2.png" alt="drawing" width="200"/>
 
 ## Advanced Galaxy Bioinformatics Workshops
 
-![](images/rnaseqGalaxy.png)
+<img src="images/rnaseqGalaxy.png" alt="drawing" width="200"/>
 
 
 
