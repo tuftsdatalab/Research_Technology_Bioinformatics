@@ -7,7 +7,7 @@
 
 ## Introduction
 
-This tutorial introduces the Tufts HPC cluster and its application to the life sciences. We will talk a bit about it's architechture 
+This tutorial introduces the Tufts HPC cluster and its application to the life sciences. We will talk a bit about it's architechture, how to leverage it to run pipelines and how to manage projects you create.
 
 ## Navigate to the Cluster
 
