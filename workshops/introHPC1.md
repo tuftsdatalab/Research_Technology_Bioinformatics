@@ -1,4 +1,4 @@
-# Intro To HPC for Life Sciences
+# Introduction to the Tufts HPC Cluster
 
 ## Goals 
 - #### [Navigate to the Cluster](#navigate-to-the-cluster-1)
