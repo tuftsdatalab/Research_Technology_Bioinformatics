@@ -8,13 +8,13 @@ Often times you'll need to run several files through some loop to do the same co
 ```
 ```
 #!/bin/bash
-#SBATCH --job-name=starLoop
-#SBATCH --time=03-00:00:00
-#SBATCH --partition=preempt
-#SBATCH --nodes=1
-#SBATCH --mem=32G
-#SBATCH --output=%j.out
-#SBATCH --error=%j.err
+#SBATCH --job-name=starLoop                   #
+#SBATCH --time=03-00:00:00                    #
+#SBATCH --partition=preempt                   #
+#SBATCH --nodes=1                             #
+#SBATCH --mem=32G                             #
+#SBATCH --output=%j.out                       #
+#SBATCH --error=%j.err                        
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=YourEmail@tufts.edu
  
@@ -28,10 +28,10 @@ mkdir /cluster/home/tutln01/introHPC/STAR/output
 ## Defing reference genome, gtf, raw data and output directories
 REF_DIR=/cluster/tufts/bio/data/genomes/Mus_musculus/UCSC/mm10/Sequence/STAR
 GTF_DIR=/cluster/tufts/bio/data/genomes/Mus_musculus/UCSC/mm10/Annotation/Genes/genes.gtf
-DATA_DIR=/cluster/home/tutln01/introHPC/
+DATA_DIR=/cluster/home/tutln01/introHPC/data
 OUT_DIR=/cluster/home/tutln01/introHPC/STAR/output
 
-for i in ${DATA_DIR}/*_pass.fastq.gz
+for i in ${DATA_DIR}/*fastq.gz
 do
     #create output file name
     f=$(basename -- "$i")
@@ -50,3 +50,4 @@ do
     --sjdbOverhang 99
 done
 ```
+
