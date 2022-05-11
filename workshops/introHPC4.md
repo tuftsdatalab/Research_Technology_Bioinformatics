@@ -2,7 +2,7 @@
 
 ## Variables 
 
-Now we are going to get to the fun part - scripting! Here we will download some NGS data using the SRA toolkit and then align these reads to a genome using STAR. So let's start by discussing what a variable is. A variable is a word that you assign value to:
+Now we are going to get to the fun part - scripting! Here we will download some NGS data using the SRA toolkit. So let's start by discussing what a variable is. A variable is a word that you assign value to:
 
 ```
 [tutln01@lc1cmp047 data]$ testVar='/cluster/home/tutln01/introHPC/data'
