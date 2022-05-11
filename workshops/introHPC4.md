@@ -64,7 +64,15 @@ Here you will notice a few things:
 - we assign the `$acc` variable to our accession list file with SRA accession numbers
 - we run the `fastq-dump` command (with the `--split-e` option in case to pull paired data if applicable) to grab our fastq files 
 
+We now submit our job using another SLURM command, `sbatch`:
 
+```
+[tutln01@lc1cmp047 data]$ sbatch download.sh
+[tutln01@lc1cmp047 data]$ squeue -u tutln01
+ JOBID        PARTITION     NAME     USER      ST      TIME      NODES NODELIST(REASON) 
+ 15329130     preepmt       sraPull  tutln01   R       0:05      1     c1cmp047 
+```
+You'll also note that after submitting with `sbatch` that we checked our job with `squeue -u` and then your username. Here we see the Job ID, the partition it is being run on, the name of the job, the username, the state (`PD` for pending and `R` for running), the time it has run, the number of nodes it is using, and the node it is being run on. If for some reason you'd like to cancel this job you can run `scancel JOBID`. 
 
 ## loops
 
