@@ -9,10 +9,11 @@ Now we are going to get to the fun part - scripting! Here we will download some 
 [tutln01@lc1cmp047 data]$ echo $testVar
 /cluster/home/tutln01/introHPC/data
 ```
+Here we create a variable `testVar` and assign it to the directory `/cluster/home/tutln01/introHPC/data` we can then call that variable with `echo` by adding a `$` to the front of the word!
 
 ## Modules
 
-Here we create a variable `testVar` and assign it to the directory `/cluster/home/tutln01/introHPC/data` we can then call that variable with `echo` by adding a `$` to the front of the word! Now to write a script often times you will need something called a **module**, basically a software package. For our NGS download script we will need to do load the sratoolkit module. We do that by:
+Now to write a script often times you will need something called a **module**, basically a software package. For our NGS download script we will need to do load the sratoolkit module. We do that by:
 
 ```
 [tutln01@lc1cmp047 data]$ module av sra
