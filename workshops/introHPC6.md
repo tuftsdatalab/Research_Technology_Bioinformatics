@@ -1,6 +1,6 @@
 # Project Organization and Data Lifecycle
 
-When setting up a project on the Tufts HPC it is worth considering what kind of resources you need and the data's lifecyle.:
+When setting up a project on the Tufts HPC it is worth considering what kind of resources you need and the data's lifecyle:
 
 <img src="../images/datalifecyle.png" />
 
