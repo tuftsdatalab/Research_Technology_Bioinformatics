@@ -6,6 +6,9 @@ Often times you'll need to run several files through some loop to do the same co
 [tutln01@c1cmp047 ~]$ cd introHPC
 [tutln01@c1cmp047 introHPC]$ nano starLoop.sh
 ```
+
+Please copy and paste this script into starLoop.sh and then hit to save and exit:
+
 ```
 #!/bin/bash
 #SBATCH --job-name=sraPull               # name your job
@@ -62,4 +65,5 @@ Quite the script! Let's break it down:
 - These files are stripped to get the "base name" (SRR accession without "fastq.gz")
 - Now the file is run through the STAR command which will align it to the reference genome in `$REF_DIR`, use the GTF file in `$GTF_DIR` for coordinates, and output a bam file in the `$OUT_DIR` folder. 
 
+We can now submit this script with sbatch li
 NOTE: For a more in-depth look at RNA-seq workflows, check out our [RNA-seq tutorial]()
