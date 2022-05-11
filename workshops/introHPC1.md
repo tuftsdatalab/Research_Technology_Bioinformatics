@@ -71,7 +71,7 @@ Now you'll notice that the node has changed:
 
 ## Orienting Yourself in Terminal
 
-Now that we have a compute node we can start entering commands, specifically linux commands. Linux is an operating system and Linux commands are widely used in life science pipelines. Let's start by figuring out where we are using `pwd`:
+Now that we have a compute node we can start entering commands, specifically linux commands. Linux is an operating system and Linux commands are widely used in life science pipelines. This interface where you enter commands is called the command line interface or just command line. Let's start by figuring out where we are using `pwd`:
 
 ```
 [tutln01@i2cmp008 ~]$ pwd
