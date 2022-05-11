@@ -6,7 +6,7 @@
 The Research Technology team at Tufts University has created several bioinformatics workshops that cover a variety of topics in the field. These trainings are designed to be asynchronous so that learners can move at their own pace.
 
 ## The Basics
-[<img src="images/introHPC.png" alt="drawing" height="100"/>](https://tufts.app.box.com/s/x9aflewr2qw59pcbgcghbo9muykbi4ju)  [<img src="images/introR.png" alt="drawing" height="100"/>](https://bionomad.github.io/omicsCore/IntroToR/IntroToR.html)
+[<img src="images/introHPC.png" alt="drawing" height="100"/>](./workshops/introHPC0.md)  [<img src="images/introR.png" alt="drawing" height="100"/>](https://bionomad.github.io/omicsCore/IntroToR/IntroToR.html)
 
 
 ## HPC Bioinformatics Workshops
