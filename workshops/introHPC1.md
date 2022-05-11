@@ -36,7 +36,9 @@ To get the Tufts HPC cluster you'll first need an account. If you haven't alread
 
 <img src="../images/ondemandLayout.png" height=250px/>
 
+Here you might notice some familiar terms and some not so familiar terms - so let's break them down:
 
+|||
 
 ## Open an Interactive Session
 
