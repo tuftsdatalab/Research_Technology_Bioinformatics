@@ -67,6 +67,7 @@ Here you will notice a few things:
 - `#SBATCH` headers: these headers are going to be used by SLURM to dictate how your job is scheduled.
 - `module load sra/2.10.8` This loads the sratoolkit module
 - `vdb-config --interactive` configures this sratoolkit
+- regular sentences included in the script! We can get away with this by adding `#` in front of our sentence
 - we assign the `$acc` variable to our accession list file with SRA accession numbers
 - we run the `fastq-dump` command (with the `--split-e` option in case to pull paired data if applicable) to grab our fastq files 
 - we use the `<` to pipe the SRA accession numbers back into the command
