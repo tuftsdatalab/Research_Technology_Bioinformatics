@@ -17,6 +17,7 @@ This tutorial introduces the Tufts HPC cluster and its application to the life s
 - [Working with Files and Shortcuts](./introHPC2.md)
 - [Searching and Redirection](./introHPC3.md)
 - [Shell Scripting and Variables](./introHPC4.md)
-- [Project Organization and Data Lifecycle](./introHPC5.md)
+- [Scripts That Involve Loops](./introHPC5.md)
+- [Project Organization and Data Lifecycle](./introHPC6.md)
 
 ## Acknowledgement
