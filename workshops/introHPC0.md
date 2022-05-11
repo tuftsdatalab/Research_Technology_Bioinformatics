@@ -21,3 +21,8 @@ This tutorial introduces the Tufts HPC cluster and its application to the life s
 - [Project Organization and Data Lifecycle](./introHPC6.md)
 
 ## Acknowledgement
+
+
+_______________________________________________________________________________________________________________________________________________________
+
+[Back To All Tutorials](https://tuftsdatalab.github.io/Research_Technology_Bioinformatics/)
