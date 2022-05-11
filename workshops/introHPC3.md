@@ -26,7 +26,7 @@ Here we pipe our files content into `grep` and ask grep to find all instances of
 |```[^agd]``` | the character is not one of those included within the square brackets.|
 |```[c-f]``` | the dash within the square brackets operates as a range. In this case it means either the letters c, d, e or f.|
 |```()``` | allows us to group several characters to behave as one.|
-|```|``` (pipe symbol) | the logical OR operation.|
+|```\|``` | (pipe symbol) the logical OR operation.|
 |```^``` | matches the beginning of the line.|
 |```$``` | matches the end of the line.|
 
