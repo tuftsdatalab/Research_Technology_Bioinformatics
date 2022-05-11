@@ -85,5 +85,9 @@ We now submit our job using another SLURM command, `sbatch`:
 ```
 You'll also note that after submitting with `sbatch` that we checked our job with `squeue -u` and then your username. Here we see the Job ID, the partition it is being run on, the name of the job, the username, the state (`PD` for pending and `R` for running), the time it has run, the number of nodes it is using, and the node it is being run on. If for some reason you'd like to cancel this job you can run `scancel JOBID`. 
 
+___________________________________________________________________________________________________________________________________________________
 
+[Next](./introHPC5.md)
+
+[Previous](./introHPC3.md)
 
