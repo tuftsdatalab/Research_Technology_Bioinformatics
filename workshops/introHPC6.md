@@ -7,6 +7,7 @@ When setting up a project on the Tufts HPC it is worth considering what kind of 
 ## Questions To Ask
 
 When considering compute resources make sure you have an idea of the following:
+
 |Question| Why it's Useful|
 |-|-|
 |What is the approximate start date and end date for usage of the data?|This can be helpful when it comes to how TTS plans future storage needs|
