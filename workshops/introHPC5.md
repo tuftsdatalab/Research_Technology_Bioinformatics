@@ -1,4 +1,4 @@
-# Scripts That Involve Loops
+# Optional: STAR Loop Script
 
 Often times you'll need to run several files through some loop to do the same command. A common NGS example is to loop through fastq files to align them to a genome. Let's create a script to align our fastq files in the `data` folder to the Mouse Genome! 
 
