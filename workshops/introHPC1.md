@@ -10,8 +10,8 @@ Before getting to the cluster it is worth discussing what a cluster is and some 
 ### GPU -- Graphics Processing Unit
   - GPUs were originally designed to create images for computer graphics and video game consoles
   - Performing a narrower range of more specialized tasks
-
-![](../images/cpuGpu.png)
+  - 
+<img src="../images/cpuGpu.png alt="drawing" style="height:200px;"/>
 
 You'll notice that in the picture above the CPU is composed of a smaller unit, a **core**. A core is the computing unit in a CPU. You'll also note that the whole system (including CPUs, GPUs and Storage) is a single computer in the system called a **node**.
 
