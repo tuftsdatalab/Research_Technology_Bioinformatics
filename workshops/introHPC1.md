@@ -41,7 +41,7 @@ To get the Tufts HPC cluster you'll first need an account. If you haven't alread
 
 Now that we are logged in let's use the cluster! To start click on `Clusters > Tufts HPC Shell Access`. You'll notice the following: 
 
-<img src="../images/cli.png" height=250px/>
+<img src="../images/cli.png"/>
 
 Where:
 - tutln01 is your username
