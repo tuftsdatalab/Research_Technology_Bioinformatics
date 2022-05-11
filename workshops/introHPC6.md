@@ -31,3 +31,11 @@ It might seem insignificant but consider creating an organized folder structure.
 [tutln01@c1cmp047 project1]$ ls
 input_data trimmed_data bam_files feature_counts DEG_results
 ```
+
+________________________________________________________________________________________________________________________________________________________
+
+[Previous](./introHPC5.md)
+
+[Main Page](./introHPC0.md)
+
+
