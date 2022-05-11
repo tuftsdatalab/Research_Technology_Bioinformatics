@@ -69,6 +69,7 @@ Here you will notice a few things:
 - `vdb-config --interactive` configures this sratoolkit
 - we assign the `$acc` variable to our accession list file with SRA accession numbers
 - we run the `fastq-dump` command (with the `--split-e` option in case to pull paired data if applicable) to grab our fastq files 
+- we use the `<` to pipe the SRA accession numbers back into the command
 
 ## Submitting and Checking our Job
 
