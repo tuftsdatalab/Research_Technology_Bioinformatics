@@ -87,7 +87,7 @@ If we want to add to this new file we need a text editor. We will use nano to ed
 ```
 Now write whatever you like! Here we write `Hello World`:
 
-<img src="../images/nano.png" height=250px/>
+<img src="../images/nano.png" />
 
 To exit and save just hit `Esc` + `Cntl` + `x` then then hit `y` and then `Enter`. You can learn more about editing with nano [here](https://www.nano-editor.org/dist/latest/cheatsheet.html). Now say you want to remove this file or directory. You can do so with the `rm` command:
 
