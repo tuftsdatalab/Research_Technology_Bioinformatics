@@ -8,28 +8,27 @@ Often times you'll need to run several files through some loop to do the same co
 ```
 ```
 #!/bin/bash
-#SBATCH --job-name=starLoop                   #
-#SBATCH --time=03-00:00:00                    #
-#SBATCH --partition=preempt                   #
-#SBATCH --nodes=1                             #
-#SBATCH --mem=32G                             #
-#SBATCH --output=%j.out                       #
-#SBATCH --error=%j.err                        
-#SBATCH --mail-type=ALL
-#SBATCH --mail-user=YourEmail@tufts.edu
+#SBATCH --job-name=sraPull               # name your job
+#SBATCH --time=03-00:00:00               # how long your job might take
+#SBATCH --partition=preempt              # which partition you want to run it on
+#SBATCH --nodes=1                        # how many nodes do you want
+#SBATCH --mem=5Gb                        # how much memory do you want
+#SBATCH --output=%j.out                  # name of output file
+#SBATCH --error=%j.err                   # name of error file
+#SBATCH --mail-type=ALL                  # request to be emailed when job begins and ends
+#SBATCH --mail-user=YourEmail@tufts.edu  # provide your email
  
 ## Load STAR aligner
 module load STAR/2.7.0a
 
 #make directories
 mkdir /cluster/home/tutln01/introHPC/STAR
-mkdir /cluster/home/tutln01/introHPC/STAR/output
 
 ## Defing reference genome, gtf, raw data and output directories
 REF_DIR=/cluster/tufts/bio/data/genomes/Mus_musculus/UCSC/mm10/Sequence/STAR
 GTF_DIR=/cluster/tufts/bio/data/genomes/Mus_musculus/UCSC/mm10/Annotation/Genes/genes.gtf
 DATA_DIR=/cluster/home/tutln01/introHPC/data
-OUT_DIR=/cluster/home/tutln01/introHPC/STAR/output
+OUT_DIR=/cluster/home/tutln01/introHPC/STAR
 
 for i in ${DATA_DIR}/*fastq.gz
 do
@@ -50,4 +49,17 @@ do
     --sjdbOverhang 99
 done
 ```
+Quite the script! Let's break it down:
+- First we have our `#SBATCH` headers which tell SLURM how to run our job
+- Next we load the STAR module with `module load STAR/2.7.0a`
+- Now we will make an output directory for our results with `mkdir /cluster/home/tutln01/introHPC/STAR`
+- Next we define variables that point to where:
+ - `$REF_DIR` our mouse reference data is 
+ - `$GTF_DIR` where the gtf file is
+ - `$DATA_DIR` where our input fastq files are
+ - `$OUT_DIR` where our output directory is
+- Then we loop through all files in `$DATA_DIR` that end in `fastq.gz`
+- These files are stripped to get the "base name" (SRR accession without "fastq.gz")
+- Now the file is run through the STAR command which will align it to the reference genome in `$REF_DIR`, use the GTF file in `$GTF_DIR` for coordinates, and output a bam file in the `$OUT_DIR` folder. 
 
+NOTE: For a more in-depth look at RNA-seq workflows, check out our [RNA-seq tutorial]()
