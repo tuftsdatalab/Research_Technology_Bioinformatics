@@ -1,8 +1,8 @@
 # Project Organization and Data Lifecycle
 
-## Project Organization
+When setting up a project on the Tufts HPC it is worth considering what kind of resources you need and the data's lifecyle.:
 
-When setting up a project on the Tufts HPC it is worth considering what kind of resources you need and the data's lifecyle. 
+<img src="../images/datalifecyle.png" />
 
 ## Questions To Ask
 
@@ -16,7 +16,7 @@ When considering compute resources make sure you have an idea of the following:
 |What software/tools will you use to process, analyze, or view the data?| The Tufts HPC clustser has an incredible array of tools to help you do research. However, it doesn't have all of them and it might help to check before you start your project.|
 
 
-## Folder Structure
+## Project Organization
 
 It might seem insignificant but consider creating an organized folder structure. As a project grows it can be difficult to find relavent data  even when the folder structure is neat. Consider the following two projects and how easy it might be to find the files you're looking for:
 
