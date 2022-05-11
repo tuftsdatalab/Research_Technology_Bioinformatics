@@ -70,4 +70,11 @@ We can now submit this script with sbatch like so:
 ```
 [tutln01@c1cmp047 introHPC]$ sbatch starLoop.sh
 ```
-NOTE: For a more in-depth look at RNA-seq workflows, check out our [RNA-seq tutorial]()
+
+Once the script has run you'll note that output bam files are located in the STAR directory that we created in the script:
+
+```
+[tutln01@c1cmp047 introHPC]$ cd STAR
+[tutln01@c1cmp047 introHPC]$ ls
+```
+NOTE: For a more in-depth look at RNA-seq workflows, check out our [RNA-seq tutorial](https://huoww07.github.io/Bioinformatics-for-RNA-Seq/)
