@@ -85,10 +85,60 @@ If we want to add to this new file we need a text editor. We will use nano to ed
 ```
 [tutln01@i2cmp008 data]$ nano testfile.txt
 ```
+Now write whatever you like! Here we write `Hello World`:
+
+<img src="../images/nano.png" height=250px/>
+
+To exit and save just hit `Esc` + `Cntl` + `x` then then hit `y` and then `Enter`. You can learn more about editing with nano [here](https://www.nano-editor.org/dist/latest/cheatsheet.html). Now say you want to remove this file or directory. You can do so with the `rm` command:
+
+```
+[tutln01@i2cmp008 data]$ rm testfile.txt
+[tutln01@i2cmp008 data]$ ls
+accession.txt  SRR1552453.fastq.gz  SRR1552454.fastq.gz  SRR1552455.fastq.gz
+```
+
+**Use this command carefully** as deleting is permanent. If you want to delete a directory you can do so with `rm -r directoryToDelete`
+
+## Permissions
+
+Oftentimes you will be working with others on a project and sometimes they will need access to your files/directories. Let's demonstrate this by creating your own file and checking it's permissions with `ll`:
 
 
-cp, rm, touch, 
+```
+[tutln01@i2cmp008 data]$ touch testfile.txt
+[tutln01@i2cmp008 data]$ ll testfile.txt
+-rw-rw---- 1 tutln01 tutln01 14 May 11 11:04 testfile.txt
+```
 
-## permission
+You will notice a few things:
+<img src="../images/permissions.png" height=250px/>
 
-chmod
+There are a few permissions status':
+
+- `-` no permission status
+- `r` read permission
+- `w` write permission
+- `x` execute permission
+
+We can change these with the `chmod` command:
+
+```
+[tutln01@i2cmp008 data]$ chmod ugo+rwx testfile.txt
+[tutln01@i2cmp008 data]$ ll testfile.txt
+-rwxrwxrwx 1 tutln01 tutln01 14 May 11 11:04 testfile.txt
+```
+
+Here we chaged permissions for everyone - yourself (`u`), your group (`g`), and all others (`o`). We can add permissions with `+` and take them away with `-`:
+```
+[tutln01@i2cmp008 data]$ chmod o-rw testfile.txt
+[tutln01@i2cmp008 data]$ ll testfile.txt
+-rwxrwxrw- 1 tutln01 tutln01 14 May 11 11:04 testfile.txt
+```
+
+Here we removed other user's ability to execute this file.
+
+_______________________________________________________________________________________________________________________________________________________
+
+[Next](./introHPC3.md)
+
+[Previous](./introHPC1.md)
