@@ -78,3 +78,9 @@ Once the script has run you'll note that output bam files are located in the STA
 [tutln01@c1cmp047 introHPC]$ ls
 ```
 NOTE: For a more in-depth look at RNA-seq workflows, check out our [RNA-seq tutorial](https://huoww07.github.io/Bioinformatics-for-RNA-Seq/)
+
+_____________________________________________________________________________________________________________________________________________________
+
+[Next](./introHPC6.md)
+
+[Previous](./introHPC4.md)
