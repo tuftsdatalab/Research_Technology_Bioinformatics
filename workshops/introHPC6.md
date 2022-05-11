@@ -2,7 +2,7 @@
 
 When setting up a project on the Tufts HPC it is worth considering what kind of resources you need and the data's lifecyle:
 
-<img src="../images/datalifecycle.png" />
+<img src="../images/datalifecycle.png" height=250px/>
 
 ## Questions To Ask
 
