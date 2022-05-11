@@ -1,6 +1,6 @@
 # Shell Scripting and Variables
 
-## Variables and Modules
+## Variables 
 
 Now we are going to get to the fun part - scripting! Here we will download some NGS data using the SRA toolkit and then align these reads to a genome using STAR. So let's start by discussing what a variable is. A variable is a word that you assign value to:
 
@@ -9,6 +9,9 @@ Now we are going to get to the fun part - scripting! Here we will download some 
 [tutln01@lc1cmp047 data]$ echo $testVar
 /cluster/home/tutln01/introHPC/data
 ```
+
+## Modules
+
 Here we create a variable `testVar` and assign it to the directory `/cluster/home/tutln01/introHPC/data` we can then call that variable with `echo` by adding a `$` to the front of the word! Now to write a script often times you will need something called a **module**, basically a software package. For our NGS download script we will need to do load the sratoolkit module. We do that by:
 
 ```
@@ -25,6 +28,8 @@ Here we did a few things:
 - we loaded the newest sra module with `module load sra/2.10.8`
 - we checked which modules were loaded with `module list`
 - we purged all loaded modules with `module purge`
+
+## NGS Data Pull Script
 
 Now that we understand variables/modules let's create a script to download NGS data:
 
@@ -64,6 +69,8 @@ Here you will notice a few things:
 - we assign the `$acc` variable to our accession list file with SRA accession numbers
 - we run the `fastq-dump` command (with the `--split-e` option in case to pull paired data if applicable) to grab our fastq files 
 
+## Submitting and Checking our Job
+
 We now submit our job using another SLURM command, `sbatch`:
 
 ```
@@ -74,13 +81,5 @@ We now submit our job using another SLURM command, `sbatch`:
 ```
 You'll also note that after submitting with `sbatch` that we checked our job with `squeue -u` and then your username. Here we see the Job ID, the partition it is being run on, the name of the job, the username, the state (`PD` for pending and `R` for running), the time it has run, the number of nodes it is using, and the node it is being run on. If for some reason you'd like to cancel this job you can run `scancel JOBID`. 
 
-## loops
 
-what is a bash loop
 
-## SLURM headers and how to submit batch jobs
-
-slurm/ slurm headers 
-sbatch
-check job
-cancel job
