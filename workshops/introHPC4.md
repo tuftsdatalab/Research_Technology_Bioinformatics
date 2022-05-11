@@ -71,6 +71,7 @@ Here you will notice a few things:
 - we run the `fastq-dump` command (with the `--split-e` option in case to pull paired data if applicable) to grab our fastq files 
 - we use the `<` to pipe the SRA accession numbers back into the command
 
+
 ## Submitting and Checking our Job
 
 We now submit our job using another SLURM command, `sbatch`:
