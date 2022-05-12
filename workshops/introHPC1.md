@@ -1,10 +1,3 @@
-<!-- The sidebar -->
-<div class="sidebar">
-  <a class="active" href="https://tuftsdatalab.github.io/intro-to-ngs-bioinformatics/">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-</div>
 
 ## What is the Cluster?
 
