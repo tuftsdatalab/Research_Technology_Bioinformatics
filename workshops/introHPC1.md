@@ -1,6 +1,6 @@
-<!-- Side navigation -->
-<div class="sidenav">
-  <a href="./introHPC6.md">About</a>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="https://tuftsdatalab.github.io/intro-to-ngs-bioinformatics/">About</a>
   <a href="#">Services</a>
   <a href="#">Clients</a>
   <a href="#">Contact</a>
