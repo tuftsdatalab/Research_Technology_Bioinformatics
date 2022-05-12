@@ -11,7 +11,7 @@
   padding: 0;
   width: 200px;
   background-color: #f1f1f1;
-  position: relative;
+  position: fixed;
   height: 100%;
   overflow: auto;
 }
@@ -42,4 +42,6 @@ div.content {
   padding: 1px 16px;
   height: 1000px;
 }
+.content { margin-left : 160px; }
+
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { margin-top: 2rem;margin-bottom: 1rem; font-weight: normal; color: #000000; }
