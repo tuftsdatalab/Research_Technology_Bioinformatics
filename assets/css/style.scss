@@ -37,7 +37,7 @@
 }
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6, .content { 
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6, .content, div.content{ 
   margin-top: 2rem;
   margin-bottom: 1rem;
   margin-left:13rem;
