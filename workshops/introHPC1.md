@@ -1,9 +1,9 @@
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="https://tuftsdatalab.github.io/intro-to-ngs-bioinformatics/">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+<!-- The sidebar -->
+<div class="sidebar">
+  <a class="active" href="https://tuftsdatalab.github.io/intro-to-ngs-bioinformatics/">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
 </div>
 
 ## What is the Cluster?
