@@ -1,7 +1,7 @@
 ---
 ---
 
-@import 'jekyll-theme-cayman';
+@import "{{ site.theme }}";
 
 .page-header { color: #fff; text-align: center; background-image: url("../../images/background1.png"); background-size:cover}
 
