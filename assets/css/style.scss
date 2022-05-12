@@ -5,6 +5,13 @@
 
 .page-header { color: #fff; text-align: center; background-image: url("../../images/background1.png"); background-size:cover}
 
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6{ 
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  margin-left:13rem;
+  font-weight: normal;
+  color: #000000;}
+
 /* The side navigation menu */
 .sidebar {
   margin: 0;
@@ -37,11 +44,8 @@
 }
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6, .content, div.content{ 
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  margin-left:13rem;
-  font-weight: normal;
-  color: #000000; 
+div.content {
+  margin-left: 200px;
   padding: 1px 16px;
-  height: 1000px;}
+  height: 1000px;
+}
