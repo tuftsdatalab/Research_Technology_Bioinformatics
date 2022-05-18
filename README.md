@@ -18,7 +18,7 @@ The Research Technology team at Tufts University has created several bioinformat
 
 ## Galaxy Bioinformatics Workshops
 
-[<img src="images/rnaseqGalaxy.png" alt="drawing" height="100"/>](https://tuftsdatalab.github.io/intro-to-rnaseq-with-galaxy/) 
+[<img src="images/rnaseqGalaxy.png" alt="drawing" height="100"/>](./workshops/IntroToRNAseqGalaxy/README.md) 
 
 
 
