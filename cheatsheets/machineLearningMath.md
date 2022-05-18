@@ -14,3 +14,6 @@
 | ![](images/hadamardProduct.png) | the hadamard product of matrix A and matrix B| 
 | ![](images/sumVector.png) | the sum of vector x from i to d | 
 | ![](images/sum2DVector.png) | the sum of two dimensional vector A with m rows and n columns | 
+| ![](images/dotProduct.png) | thesum over the products of the elements at the same position| 
+| ![](images/dotProduct2.png) | thesum over the products of the elements at the same position| 
+
