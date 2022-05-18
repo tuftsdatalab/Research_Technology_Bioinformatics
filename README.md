@@ -11,7 +11,7 @@ The Research Technology team at Tufts University has created several bioinformat
 
 ## HPC Bioinformatics Workshops
 
-[<img src="images/introNGS.png" alt="drawing" height="100"/>](./workshops/IntroToNGS/README.md)   [<img src="images/rnaseq.png" alt="drawing" height="100"/>](https://huoww07.github.io/Bioinformatics-for-RNA-Seq/)  [<img src="images/introAlphaFold2.png" alt="drawing" height="100"/>](https://tuftsdatalab.github.io/Intro_To_AlphaFold2/)  [<img src="images/microbiome.png" alt="drawing" height="100"/>]()
+[<img src="images/introNGS.png" alt="drawing" height="100"/>](./workshops/IntroToNGS/README.md)   [<img src="images/rnaseq.png" alt="drawing" height="100"/>](https://huoww07.github.io/Bioinformatics-for-RNA-Seq/)  [<img src="images/introAlphaFold2.png" alt="drawing" height="100"/>](./workshops/Intro_To_AlphaFold2/README.md)  [<img src="images/microbiome.png" alt="drawing" height="100"/>]()
 
 [<img src="images/singlecell.png" alt="drawing" height="100"/>]()
 
