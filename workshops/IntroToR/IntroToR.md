@@ -9,7 +9,7 @@ Now that you have a familiarity with Linx, let's get familiar with R. R is a pow
 - Account on [Tufts HPC](https://access.tufts.edu/research-cluster-account)
 - [VPN](https://access.tufts.edu/vpn) if accessing the HPC from off campus
 
-OR
+**OR**
 
 - [RStudio](https://www.rstudio.com/products/rstudio/download/)
 
