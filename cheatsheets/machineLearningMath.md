@@ -16,4 +16,5 @@
 | ![](images/sum2DVector.png) | the sum of two dimensional vector A with m rows and n columns | 
 | ![](images/dotProduct.png) | thesum over the products of the elements at the same position| 
 | ![](images/dotProduct2.png) | thesum over the products of the elements at the same position| 
+| ![](images/matrixVectorProduct.png) | a column vector of length m whose ith element is the dot product of ai T x|
 
