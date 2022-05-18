@@ -17,4 +17,4 @@
 | ![](images/dotProduct.png) | thesum over the products of the elements at the same position| 
 | ![](images/dotProduct2.png) | thesum over the products of the elements at the same position| 
 | ![](images/matrixVectorProduct.png) | a column vector of length m whose ith element is the dot product of ai T x|
-
+| ![](images/matrixMatrixMultiplication.png) | multiplying matrix A by matrix b. So for example you would get the dot product between the rows in matrix A and the columns in matrix B. (e.g. matrix A:5x4 and matrix:4x4 make a matrix:5x3)|
