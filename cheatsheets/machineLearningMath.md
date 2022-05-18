@@ -13,3 +13,4 @@
 | ![](images/matrixTranspose.png) | matrix A is transposed - rows become columns and columns become rows| 
 | ![](images/hadamardProduct.png) | the hadamard product of matrix A and matrix B| 
 | ![](images/sumVector.png) | the sum of vector x from i to d | 
+| ![](images/sum2DVector.png) | the sum of two dimensional vector A with m rows and n columns | 
