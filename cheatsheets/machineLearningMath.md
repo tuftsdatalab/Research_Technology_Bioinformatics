@@ -12,3 +12,4 @@
 | ![](images/matrixAt.png) | matrix A at element ij (so the value at row i and column j)| 
 | ![](images/matrixTranspose.png) | matrix A is transposed - rows become columns and columns become rows| 
 | ![](images/hadamardProduct.png) | the hadamard product of matrix A and matrix B| 
+| ![](images/sumVector.png) | the sum of vector x from i to d | 
