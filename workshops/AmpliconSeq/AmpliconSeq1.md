@@ -16,14 +16,14 @@ This tutorial introduces microbial amplicon sequence analysis. We will explore w
 
 ## Schedule
 
-- [Introduction to Amplicon Sequencing]
-- [Setup]
-- [Quality Control]
-- [Sequence Error Mdoel/Dereplication]
-- [Inferring ASVs/Merging Reads]
-- [Creating the Count Table/Chimera Removal]
-- [Assign Taxonomy]
-- [Data Analysis]
+- [Introduction to Amplicon Sequencing]()
+- [Setup]()
+- [Quality Control]()
+- [Sequence Error Mdoel/Dereplication]()
+- [Inferring ASVs/Merging Reads]()
+- [Creating the Count Table/Chimera Removal]()
+- [Assign Taxonomy]()
+- [Data Analysis]()
 
 ## Acknowledgement
 
