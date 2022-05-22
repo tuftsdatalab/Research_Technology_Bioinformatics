@@ -17,6 +17,7 @@
   padding: 10px;
   width: 200px;
   position: absolute;
+  background-color:;#f1f1f1
   height: 100%;
   overflow: auto;
 }
@@ -37,7 +38,8 @@
 
 /* Links on mouse-over */
 .sidebar a:hover:not(.active) {
-  color: #24274a;
+  color: white;
+  background-color:#24274a;
 }
 
 
