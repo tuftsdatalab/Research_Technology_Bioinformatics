@@ -4,7 +4,7 @@
 
 Often times it we will need to answer quick questions about our file like does it contain a certain pattern? We can leverage a powerful searching command called `grep`. Say for instance we want to know how many sequences are in our fastq file? Let's first review the anatomy of a fastq file:
 
-<img src="../images/fastqFile.jpeg" />
+<img src="../../images/fastqFile.jpeg" />
 
 So if we wanted to see how many sequences there were we need to count patterns that only occur when new sequence information is started. We will use the unique label for each sequence. In our data each sequence has a label that starts with `@SRRxxxxxxx.x`. So we will just see how many lines  start with `@SRR`:
 
