@@ -14,9 +14,8 @@
 /* The side navigation menu */
 .sidebar {
   margin: 0;
-  padding: 5px;
+  padding: 10px;
   width: 200px;
-  background-color: #f1f1f1;
   position: absolute;
   height: 100%;
   overflow: auto;
@@ -38,8 +37,7 @@
 
 /* Links on mouse-over */
 .sidebar a:hover:not(.active) {
-  background-color: #555;
-  color: white;
+  color: #24274a;
 }
 
 
