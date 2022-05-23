@@ -15,7 +15,7 @@ The Research Technology team at Tufts University has created several bioinformat
 
 ## Metagenomics Analysis
 
-[<img src="images/microbiome.png" alt="drawing" height="100"/>]()
+[<img src="images/ampliconSeq.png" alt="drawing" height="100"/>]()
 
 ## Protein Structure Analysis
 
