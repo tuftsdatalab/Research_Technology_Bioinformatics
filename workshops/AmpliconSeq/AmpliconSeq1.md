@@ -16,8 +16,8 @@ This tutorial introduces microbial amplicon sequence analysis. We will explore w
 
 ## Schedule
 
-- [Introduction to Amplicon Sequencing]()
-- [Setup]()
+- [Introduction to Amplicon Sequencing](./16STutorial.pdf)
+- [Setup](./AmpliconSeq2.md)
 - [Quality Control]()
 - [Sequence Error Mdoel/Dereplication]()
 - [Inferring ASVs/Merging Reads]()
