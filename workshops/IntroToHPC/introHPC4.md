@@ -87,7 +87,7 @@ You'll also note that after submitting with `sbatch` that we checked our job wit
 
 ___________________________________________________________________________________________________________________________________________________
 
-[Next](./introHPC5.md)
+[Next](./introHPC6.md)
 
 [Previous](./introHPC3.md)
 
