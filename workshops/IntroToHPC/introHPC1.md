@@ -6,6 +6,7 @@ Before getting to the cluster it is worth discussing what a cluster is and some 
 ### CPU -- Central Processing Unit
   - A CPU can never be fully replaced by a GPU
   - Can be thought of as the taskmaster of the entire system, coordinating a wide range of general-purpose computing tasks
+ 
 ### GPU -- Graphics Processing Unit
   - GPUs were originally designed to create images for computer graphics and video game consoles
   - Performing a narrower range of more specialized tasks
