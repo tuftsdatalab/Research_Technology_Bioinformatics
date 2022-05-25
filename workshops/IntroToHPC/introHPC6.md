@@ -35,7 +35,7 @@ input_data trimmed_data bam_files feature_counts DEG_results
 
 ________________________________________________________________________________________________________________________________________________________
 
-[Previous](./introHPC5.md)
+[Previous](./introHPC4.md)
 
 [Main Page](./introHPC0.md)
 
