@@ -98,7 +98,7 @@ Here we go through a few commonly used functions:
   * ```mutate()``` will create a new column
   * ```arrange()``` will arrange your rows by some variable - here we choose ```Petal.Width```
     
-    > NOTE:  with arrange we can also specify that things are ordered to be descending by saying ```arrange(desc(YourVariable))```
+    > NOTE:  For more dplyr data wrangling tips check out the [Data Wrangling with dplyr and tidyr Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
  
  
 ## References:
