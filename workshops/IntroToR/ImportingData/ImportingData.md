@@ -160,9 +160,8 @@ ________________________________________________________________________________
 
 Next Workshop: [Manipulating Data](../ManipulatingData/ManipulatingData.md)
 
-[Back To Introduction to R](../IntroToR.md)
+[Main Page](../IntroToR.md)
 
-[Back To The Main Page](../../index.md)
 
 
 
