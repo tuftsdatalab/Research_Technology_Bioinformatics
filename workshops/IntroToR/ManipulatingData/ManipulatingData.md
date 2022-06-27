@@ -109,6 +109,5 @@ Here we go through a few commonly used functions:
 _________________________________________________________________________________________________________________________________________________________________________________
 
 
-[Back To Introduction to R](../IntroToR.md)
+[Main Page](../IntroToR.md)
 
-[Back To The Main Page](../../index.md)
