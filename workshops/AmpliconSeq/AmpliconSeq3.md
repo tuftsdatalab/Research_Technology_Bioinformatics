@@ -6,8 +6,6 @@ Today we will be working with data from [Rosshart et al. 2017](https://www.scien
 
 ![](./images/design.PNG)
 
-![](./images/blink.mov)
-
 ___________________________________________________________________________________________________________________________________________________________
 
 [Next](./AmpliconSeq4.md)
