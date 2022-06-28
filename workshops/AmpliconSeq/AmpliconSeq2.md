@@ -16,9 +16,8 @@
 
 ## Storage Space
 
-- Check how much available storage you have in your home directory by typing `showquota`.
+- Check how much available storage you have in your home directory by typing `showquota`:
 
-Result:
 ```
 Home Directory Quota
 Disk quotas for user tutln01 (uid 31394):
@@ -30,18 +29,28 @@ hpcstore03:/hpc_home/home
 Listing quotas for all groups you are a member of
 Group: facstaff	Usage: 16819478240KB	Quota: 214748364800KB	Percent Used: 7.00%
 ```
+- **What does this mean?**
 
-Under `blocks` you will see the amount of storage you are using, and under quota you see your quota.
-Here, the user has used 1222M of the available 5120M and has enough space for our analysis.
+     - `blocks`: amount of storage you are using. Here it is 1222M
+     - `quota`: amout of available storage. Here it is 5120M
 
-- If you do not have 500M available, you may have space in a project directory for your lab.
-These are located in `/cluster/tufts` with names like `/cluster/tufts/labname/username/`.
-If you don't know whether you have project space, please email [tts-research@tufts.edu](mailto:tts-research@tufts.edu).
+
+> NOTE: If you do not have 500M available, you may have space in a project directory for your lab. These are located in `/cluster/tufts` with names like `/cluster/tufts/labname/username/`. If you don't know whether you have project space, please email [tts-research@tufts.edu](mailto:tts-research@tufts.edu).
 
 ## Download the data
-- Get an interaction session on a compute node (3 hours, 16 Gb memory, 4 cpu on 1 node) on the default partition (`batch`) by typing:
+
+- As of now we are on a login node. We **CANNOT** run our scripts on the login node. For that we need a compute node, and we can request one like so:
 
 `srun --pty -t 3:00:00  --mem 16G  -N 1 --cpus 4 bash`
+
+Where:
+
+ - `srun` requests the pseudo terminal
+ - `--pty bash` requests a bash terminal
+ - `-t 3:00:00` requests 3 hours on that compute node
+ - `--mem 16G` requests 16G of memory
+ - `-N 1` requests 1 compute node
+ - `--cpus 4` requests 4 cpus on that 1 compute node
 
  
 > NOTE: If wait times are very long, you can try a different partitions by adding, e.g. `-p preempt` or `-p interactive` before `bash`.
@@ -49,15 +58,30 @@ If you go through this workshop in multiple steps, you will have to rerun this s
 
 - Change to your home directory
 
-`cd `
+     `cd `
 
-Or, if you are using a project directory:
+     Or, if you are using a project directory:
 
-`cd /cluster/tufts/labname/username/`
+     `cd /cluster/tufts/labname/username/`
 
 - Copy the course directory and all files in the directory (-R is for recursive):   
 
-`cp -R /cluster/tufts/bio/tools/training/microbiome16S/ .`   
+     `cp -R /cluster/tufts/bio/tools/training/microbiome16S/ .`   
+
+## Working with an Interactive App
+
+Today we will be working with R. We can access R using the RStudio interactive app OnDemand. To do this we will:
+
+- Go to `Interactive Apps -> RStudio Pax`
+![](images/interactive.PNG)
+
+- Type in the number of hours you'll use the app for, how memory you'll need, what version of R you'll need, the reseveration, and any supporting modules. Here enter the following:
+     - `hours`: 4
+     - `memory`: 16G
+     - `R version`: 4.0.0
+     - `reservation`: Default
+     - `supporting modules`: *don't enter anything here*
+- Click `Launch`
 
 ## Data for the class
 
