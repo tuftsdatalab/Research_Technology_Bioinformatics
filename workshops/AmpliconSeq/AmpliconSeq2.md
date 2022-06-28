@@ -1,19 +1,18 @@
 # Setup
 
 ## Log into the HPC cluster's On Demand interface
+
 - Open a Chrome browser and navigate to the [OnDemand Interface](https://ondemand.pax.tufts.edu)
 - Log in with your Tufts Credentials
-- On the top menu bar choose `Clusters->Tufts HPC Shell Access`
+- On the top menu bar choose `Clusters -> Tufts HPC Shell Access`
+
 <img src="../IntroToNGS/img/od_terminal.png" width="500">
 
-- Type your password at the prompt (the password will be hidden for security purposes):
-`tutln01@login.cluster.tufts.edu's password:`
 - You'll see a welcome message and a bash prompt, for example for user `tutln01`:
 
 `[tutln01@login001 ~]$`
 
-This indicates you are logged in to the login node of the cluster.
-- Type `clear` to clear the screen
+- This indicates you are logged in to the login node of the cluster. Type `clear` to clear the screen
 
 ## Storage Space
 
