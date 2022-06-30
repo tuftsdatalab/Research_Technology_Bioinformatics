@@ -1,6 +1,6 @@
-<nav id="sidebar" class="hidden">
+<div id="sidebar" class="hidden">
     ...
-</nav>
+</dvi>
 
 Hello 
 
