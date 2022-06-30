@@ -1,3 +1,7 @@
+<nav id="sidebar" class="hidden">
+    ...
+</nav>
+
 Hello 
 
 Welcome to my new workshop 
