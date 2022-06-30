@@ -1,6 +1,5 @@
-<div id="sidebar" class="hidden">
-    ...
-</div>
+ <div class="sidebar">
+ </div>
 
 Hello 
 
