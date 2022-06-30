@@ -1,5 +1,3 @@
- <div class="sidebar">
- </div>
 
 Hello 
 
