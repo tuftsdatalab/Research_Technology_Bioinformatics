@@ -14,6 +14,6 @@ include:
 
 ---
 layout: test
-title: training
+title: training/index
 ---
 theme: jekyll-theme-cayman
