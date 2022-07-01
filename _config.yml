@@ -20,6 +20,6 @@ defaults:
     scope:
       path: "workshops"
     values:
-      layout: "test"
+      layout: "hpcForLifeSciences_July2022"
       
 theme: jekyll-theme-cayman
