@@ -11,5 +11,15 @@ include:
   - README.md
   - lessons/
   
-layout: default
+defaults:
+  -
+    scope:
+      path: "workshops"
+    values:
+      layout: "default"
+    scope:
+      path: "training"
+    values:
+      layout: "test"
+      
 theme: jekyll-theme-cayman
