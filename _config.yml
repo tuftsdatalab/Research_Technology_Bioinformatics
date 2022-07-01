@@ -14,11 +14,11 @@ include:
 defaults:
   -
     scope:
-      path: "workshops"
+      path: "tutorials"
     values:
       layout: "default"
     scope:
-      path: "training"
+      path: "workshops"
     values:
       layout: "test"
       
