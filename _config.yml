@@ -11,6 +11,9 @@ include:
   - README.md
   - lessons/
   
-layout: default
 
+---
+layout: test
+title: training
+---
 theme: jekyll-theme-cayman
