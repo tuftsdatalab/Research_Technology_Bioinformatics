@@ -10,6 +10,6 @@ Basic knowledge of Linux commands.
 
 
 ## Table of Contents
-- [Tufts HPC Cluster Access](slides/Tufts HPC Cluster Access.md)
-- [Tufts HPC Cluster Resource](slides/Tufts HPC Cluster Resource.md)
+- [Tufts HPC Cluster Access](slides/Tufts_HPC_Cluster_Access.md)
+- [Tufts HPC Cluster Resource](slides/Tufts_HPC_Cluster_Resource.md)
 - [SLURM](slides/SLURM.md)
