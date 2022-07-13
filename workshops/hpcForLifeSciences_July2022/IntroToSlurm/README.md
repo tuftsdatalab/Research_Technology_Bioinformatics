@@ -24,7 +24,7 @@ Basic knowledge of Linux commands.
   - Software
   
 - [SLURM](slides/SLURM.md)
-  - Interactive Session
+  - Interactive Session -- Intro to Linux
   - Batch Job
   - Job Status
   
