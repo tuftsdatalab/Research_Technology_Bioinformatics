@@ -20,8 +20,7 @@ Basic knowledge of Linux commands.
   
 - [Tufts HPC Cluster Resource](slides/Tufts_HPC_Cluster_Resource.md)
   - Cluster Storage
-  - Partitions
-  - CPUs and GPUs 
+  - Computational Resource 
   - Software
   
 - [SLURM](slides/SLURM.md)
