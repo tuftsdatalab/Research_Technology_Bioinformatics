@@ -2,6 +2,8 @@
 
 The [US National Center for Biotechnology Information](https://www.ncbi.nlm.nih.gov/) (NCBI) hosts repositories for many types of biomedical and genomics data. Today we'll retrieve reference data from the [Genomes Database FTP server](https://ftp.ncbi.nlm.nih.gov/genomes/) as well as the [Sequence Read Archive](https://www.ncbi.nlm.nih.gov/sra). 
 
+## SARS-Cov-2 Reference Data
+
 We will use the `wget` command to download our reference data from the NCBI repository:
 
 ```
@@ -32,3 +34,12 @@ Note that we must always be sure that our gene information and genome come from 
 <p align="center">
 <img src="../images/gff.PNG">
 </p>
+
+## SARS-Cov-2 NGS Sequencing Data
+
+We are interested in obtaining reads from the sample [Viral genomic RNA sequencing of a B.1.617.2/Delta isolate; Severe acute respiratory syndrome coronavirus 2; RNA-Seq](https://www.ncbi.nlm.nih.gov/sra/?term=SRR15607266)
+<p align="center">
+<img src="../images/srr.png" width="900">
+</p>
+
+### Download 
