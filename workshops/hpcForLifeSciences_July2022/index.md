@@ -9,7 +9,7 @@ This workshop is sponsered by DISC and Research Technology. The presenters are:
 - Rebecca Batorsky (DISC - Senior Data Scientist)
 - Adelaide Rhodes (TTS - Senior Bioinformatics Scientist)
 - Jason Laird (TTS - Bioinformatics Scientist)
-- Delilah Maloney (TTS - HPC Specialist)
+- Delilah Maloney (TTS - Senior HPC Specialist)
 
 ## Prerequisites
 
