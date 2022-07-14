@@ -1,4 +1,4 @@
-# Obtain Data
+# Logging In
 
 ## Navigate to the Cluster
 
