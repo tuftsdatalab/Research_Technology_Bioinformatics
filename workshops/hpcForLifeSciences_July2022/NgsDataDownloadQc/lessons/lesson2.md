@@ -78,3 +78,9 @@ A quality score is a prediction of the probability of an error in base calling:
 <img src="../images/base_qual_1.png" width="750">
 
 Going back to our read, we can see that for most of our read the quality score is "G" –> "Q" =  38 -> Probability < 1/1000 of an error.
+
+_________________________________________________________________________________________________________________________________________________________
+
+[Next](lesson1.md)
+
+[Previous](lesson3.md)
