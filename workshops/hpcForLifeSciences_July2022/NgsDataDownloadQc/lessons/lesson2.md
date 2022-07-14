@@ -62,7 +62,15 @@ Now that we have this module loaded we can use it to pull our SARS-Cov-2 NGS seq
 ```
 fastq-dump --outdir fastq --gzip --skip-technical  --readids --read-filter pass --dumpbase --split-files --clip SRR15607266
 ```
-
+- `fastq-dump` is the command to pull SRA data
+- `--outdir` specifies where you want your SRA data deposited
+- `--gzip` compress the ouptu using gzip
+- `--skip-technical` only download biological reads and skip technical reads
+- `--readids` add a read ID, `.1` and `.2`, after the file name for paired end data. This allows us to differentiate the both left and right 
+- `--read-filter pass` return reads that pass filtering, so reads without N's
+- `--dumpbase` formats sequences by base space
+- `--split-files` splits files
+- `--clip`
 
 ### Fastq format
 Fastq format is a way to store both sequence data and information about the quality of each sequenced position.
