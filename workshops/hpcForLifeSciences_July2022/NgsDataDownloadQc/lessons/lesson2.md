@@ -91,6 +91,6 @@ Going back to our read, we can see that for most of our read the quality score i
 
 _________________________________________________________________________________________________________________________________________________________
 
-[Next](lesson1.md)
+[Next](lesson3.md)
 
-[Previous](lesson3.md)
+[Previous](lesson1.md)
