@@ -58,9 +58,7 @@
 
 ***Only for transfering files size less than 976MB per file.***
 
-Go to
-
-**[OnDemand]( https://ondemand.pax.tufts.edu/)** 
+Go to **[OnDemand]( https://ondemand.pax.tufts.edu/)** 
 
 Under **`Files`**, using the **`Upload`** or **`Download`** buttons to transfer. 
 
