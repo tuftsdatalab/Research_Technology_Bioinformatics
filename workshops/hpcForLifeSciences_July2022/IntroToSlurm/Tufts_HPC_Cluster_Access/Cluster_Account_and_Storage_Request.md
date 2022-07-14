@@ -1,9 +1,9 @@
-### Account & Storage Requests
+### Account & Storage Request
 
 Go to **[Tufts HPC website](https://it.tufts.edu/high-performance-computing)**
 
 
-### Cluster Storage
+### Cluster Storage Request
 
 * __Home Directory__
 
