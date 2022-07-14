@@ -2,13 +2,6 @@
 
 Go to **[Tufts HPC website](https://it.tufts.edu/high-performance-computing)**
 
-### Tufts Cluster(s)
-
-- Tufts HPC Cluster -- TAB Data Center 
-
-<img src="https://raw.githubusercontent.com/DelilahYM/ImageHost/master/TuftsHPCCluster.png" alt="TAB" width=100%>
-
-
 
 ### Cluster Storage
 
