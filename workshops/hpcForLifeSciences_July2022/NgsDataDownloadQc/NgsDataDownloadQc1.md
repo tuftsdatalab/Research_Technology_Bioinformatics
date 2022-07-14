@@ -4,6 +4,10 @@
 
 This is the first part of Day 2 of the High Performance Computing For Life Sciences workshop. Here we examine how to download publically available NGS data and perform quality control on that data.
 
+### Goals
+
+![](./images/day2workflow.PNG)
+
 ### Materials Needed
 
 - Chrome web browserworkshop
