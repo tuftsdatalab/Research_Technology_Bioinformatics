@@ -1,6 +1,6 @@
-### Account & Storage Request
+### Cluster Account Request
 
-Go to **[Tufts HPC website](https://it.tufts.edu/high-performance-computing)**
+**[Cluster Account Request](https://it.tufts.edu/high-performance-computing)**
 
 
 ### Cluster Storage Request
@@ -11,7 +11,7 @@ Your Home Directory (10GB, fixed) should be `/cluster/home/your_utln`
 
 * __Reserach Project Storage__
 
-[Request research project storage](https://it.tufts.edu/research-technology/)
+**[Cluster Storage Request]**([https://it.tufts.edu/research-technology/](https://it.tufts.edu/high-performance-computing))
 
 Your research projet storage (from 50GB and up) path should be `/cluster/tufts/yourlabname/`, and each member of the lab group has a dedicated directory `/cluster/tufts/yourlabname/your_utln`
 
