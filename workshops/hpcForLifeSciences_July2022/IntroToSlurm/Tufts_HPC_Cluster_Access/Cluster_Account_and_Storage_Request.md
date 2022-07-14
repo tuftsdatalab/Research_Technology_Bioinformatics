@@ -1,1 +1,30 @@
+### Account & Storage Requests
+
+Go to **[Tufts HPC website](https://it.tufts.edu/high-performance-computing)**
+
+### Tufts Cluster(s)
+
+- Tufts HPC Cluster -- TAB Data Center 
+
+<img src="https://raw.githubusercontent.com/DelilahYM/ImageHost/master/TuftsHPCCluster.png" alt="TAB" width=100%>
+
+
+
+### Cluster Storage
+
+* __Home Directory__
+
+Your Home Directory (10GB, fixed) should be `/cluster/home/your_utln`
+
+* __Reserach Project Storage__
+
+[Request research project storage](https://it.tufts.edu/research-technology/)
+
+Your research projet storage (from 50GB and up) path should be `/cluster/tufts/yourlabname/`, and each member of the lab group has a dedicated directory `/cluster/tufts/yourlabname/your_utln`
+
+To see your **research project storage quota** by running the following command from **any node on the new cluster Pax**:
+
+`$ df -h /cluster/tufts/yourlabname ` 
+
+**NOTE:** Accessing your research project storage space for the __first time__, please make sure you type out the __FULL PATH__ to the directory.
 
