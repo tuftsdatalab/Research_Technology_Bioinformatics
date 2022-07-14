@@ -22,6 +22,6 @@ This is the first part of Day 2 of the High Performance Computing For Life Scien
 
 ## Table of Contents
 
-- [Obtain Data]()
-- [Quality Control]()
-- [Process Reads]()
+- [Obtain Data](lessons/lesson1.md)
+- [Quality Control](lesssons/lesson2.md)
+- [Process Reads](lessons/lesson3.md)
