@@ -1,7 +1,3 @@
-
-
-### Command Line
-
 > Hostname: `xfer.cluster.tufts.edu`
 >
 > Protocol: SCP or SFTP
@@ -16,6 +12,9 @@
     > * __Cluster_Path__ is the path to your files or directory on the cluster
     >   * Home Directory: */cluster/home/your_utln/your_folder*
     >   * Research Project Storage Space Directory: */cluster/tufts/yourlabname/your_utln/your_folder*
+
+---
+### Command Line
 
 ***Execute from your local machine terminal.***
 
@@ -64,6 +63,7 @@ Go to
 **[OnDemand]( https://ondemand.pax.tufts.edu/)** 
 
 Under **`Files`**, using the **`Upload`** or **`Download`** buttons to transfer. 
+
 ---
 ### File Transfer Client
 
