@@ -2,7 +2,10 @@
 
 The [US National Center for Biotechnology Information](https://www.ncbi.nlm.nih.gov/) (NCBI) hosts repositories for many types of biomedical and genomics data. Today we'll retrieve reference data from the [Genomes Database FTP server](https://ftp.ncbi.nlm.nih.gov/genomes/) as well as the [Sequence Read Archive](https://www.ncbi.nlm.nih.gov/sra). 
 
+
 ## SARS-Cov-2 Reference Data
+
+### Download Reference Data
 
 We will use the `wget` command to download our reference data from the NCBI repository:
 
@@ -42,4 +45,36 @@ We are interested in obtaining reads from the sample [Viral genomic RNA sequenci
 <img src="../images/srr.png" width="900">
 </p>
 
-### Download 
+### Download NGS Sequencing Data
+
+To download our NGS Data we can bldfjasldfj
+
+### Fastq format
+Fastq format is a way to store both sequence data and information about the quality of each sequenced position.
+
+Each block of 4 lines contains one sequencing reads, for example:
+```
+@SRR15607266.1 1 length=76
+NTTATCTACTTTTATTTCAGCAGCTCGGCAAGGGTTTGTTGATTCAGATGTAGAAACTAAAGATGTTGTTGAATGT
++SRR15607266.1 1 length=76
+#8ACCGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+```
+
+1. Sequence identifier
+2. Sequence
+3. \+ (optionally lists the sequence identifier again)
+4. Quality string
+
+Paired end sequencing data will typically be stored as two fastq files, one for the forward and one for the reverse.  Each file should contain the same number of reads, with the same labels, in the same order. If this convention is not followed, it could cause errors with downstream tools. Fortunately there are tools such as [BBTools Repair](https://jgi.doe.gov/data-and-tools/bbtools/bb-tools-user-guide/repair-guide/) that can help restore pairing information.
+
+### Base Quality Scores
+
+The symbols we see in the read quality string are an encoding of the quality score:
+
+<img src="../images/base_qual_0.png" width="500">
+
+A quality score is a prediction of the probability of an error in base calling: 
+
+<img src="../images/base_qual_1.png" width="750">
+
+Going back to our read, we can see that for most of our read the quality score is "G" –> "Q" =  38 -> Probability < 1/1000 of an error.
