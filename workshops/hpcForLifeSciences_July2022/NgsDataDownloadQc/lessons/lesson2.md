@@ -1,5 +1,11 @@
 # Obtain Public NGS Data
 
+## Learning Objectives
+
+- Retrieve reference data from [US National Center for Biotechnology Information](https://www.ncbi.nlm.nih.gov/)
+- Download SRA Next Generation Sequencing Data
+- Understand Fasta, GFF, and Fastq file formats
+
 The [US National Center for Biotechnology Information](https://www.ncbi.nlm.nih.gov/) (NCBI) hosts repositories for many types of biomedical and genomics data. Today we'll retrieve reference data from the [Genomes Database FTP server](https://ftp.ncbi.nlm.nih.gov/genomes/) as well as the [Sequence Read Archive](https://www.ncbi.nlm.nih.gov/sra). 
 
 
