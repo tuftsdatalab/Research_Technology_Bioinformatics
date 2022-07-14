@@ -23,7 +23,7 @@
 > - login.cluster.tufts.edu
 >
 ---
-- **Terminal**   <img src="https://agaric.coop/sites/default/files/2019-04/Terminalicon2.png" alt="Terminal" width=10%>   
+### **Terminal**   <img src="https://agaric.coop/sites/default/files/2019-04/Terminalicon2.png" alt="Terminal" width=10%>   
 
   
 
@@ -47,7 +47,7 @@
 
   * Setting up [SSH keyless access](_https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/_)
 
-  - [**OnDemand**](https://ondemand.pax.tufts.edu)
+###[**OnDemand**](https://ondemand.pax.tufts.edu)
 
 Use your **Tufts UTLN** and **password** to login. 
 
