@@ -6,12 +6,11 @@
 - Download SRA Next Generation Sequencing Data
 - Understand Fasta, GFF, and Fastq file formats
 
-The [US National Center for Biotechnology Information](https://www.ncbi.nlm.nih.gov/) (NCBI) hosts repositories for many types of biomedical and genomics data. Today we'll retrieve reference data from the [Genomes Database FTP server](https://ftp.ncbi.nlm.nih.gov/genomes/) as well as the [Sequence Read Archive](https://www.ncbi.nlm.nih.gov/sra). 
-
-
 ## SARS-Cov-2 Reference Data
 
-### Download Reference Data
+The [US National Center for Biotechnology Information](https://www.ncbi.nlm.nih.gov/) (NCBI) hosts repositories for many types of biomedical and genomics data. Today we'll retrieve reference data from the [Genomes Database FTP server](https://ftp.ncbi.nlm.nih.gov/genomes/) as well as the [Sequence Read Archive](https://www.ncbi.nlm.nih.gov/sra). 
+
+### Downloading Reference Data
 
 We will use the `wget` command to download our reference data from the NCBI repository:
 
