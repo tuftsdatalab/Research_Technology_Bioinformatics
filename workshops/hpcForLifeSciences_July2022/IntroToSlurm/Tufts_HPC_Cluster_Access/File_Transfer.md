@@ -7,14 +7,7 @@
 > Protocol: SCP or SFTP
 >
 > Use port 22 for SFTP
-
-- **[FileZilla](https://filezilla-project.org/)**  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/FileZilla_logo.svg/1200px-FileZilla_logo.svg.png" alt="FileZilla" width=10%>  
-
-- **[Cyberduck](https://cyberduck.io/)**<img src="https://cdn.cyberduck.io/img/cyberduck-icon-384.png" alt="CyberDuck" width=10%>
-
-- **Terminal**   <img src="https://agaric.coop/sites/default/files/2019-04/Terminalicon2.png" alt="Terminal" width=10%>
-
-  - **Hostname for file transfer: xfer.cluster.tufts.edu**
+**Hostname for file transfer: xfer.cluster.tufts.edu**
 
     > NOTE:
     >
