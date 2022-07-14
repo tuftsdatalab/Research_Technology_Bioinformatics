@@ -47,7 +47,17 @@ We are interested in obtaining reads from the sample [Viral genomic RNA sequenci
 
 ### Download NGS Sequencing Data
 
-To download our NGS Data we can bldfjasldfj
+To download our NGS Data we will need to load the sratoolkit module. We can access this module by running:
+
+```
+module load sra/2.10.8
+```
+Now that we have this module loaded we can use it to pull our SARS-Cov-2 NGS sequencing data from the [SRA database](https://www.ncbi.nlm.nih.gov/sra):
+
+```
+fastq-dump --outdir fastq --gzip --skip-technical  --readids --read-filter pass --dumpbase --split-files --clip SRR15607266
+```
+
 
 ### Fastq format
 Fastq format is a way to store both sequence data and information about the quality of each sequenced position.
