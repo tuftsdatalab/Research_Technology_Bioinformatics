@@ -38,3 +38,6 @@ Now you'll notice that the node has changed:
 ```
 [tutln01@i2cmp008 ~]$ 
 ```
+## Obtain Public NGS Data
+
+The [US National Center for Biotechnology Information](https://www.ncbi.nlm.nih.gov/) hosts repositories for many types of biomedical and genomics data. Today we'll retrieve reference data from the [Genomes Database FTP server](https://ftp.ncbi.nlm.nih.gov/genomes/) as well as the [Sequence Read Archive](https://www.ncbi.nlm.nih.gov/sra). 
