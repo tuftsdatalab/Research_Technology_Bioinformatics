@@ -19,7 +19,7 @@
 
 ***Execute from your local machine terminal.***
 
-    General Format:
+General Format:
 
     `$ scp From_Path To_Path`
 
@@ -29,27 +29,27 @@
 
 **File** Transfer with `scp`or `rsync`:
 
-    * Download from cluster
+- Download from cluster
 
     `$ scp your_utln@xfer.cluster.tufts.edu:Cluster_Path Local_Path  `
 
     `$ rsync your_utln@xfer.cluster.tufts.edu:Cluster_Path Local_Path`
 
-    * Upload to cluster
+- Upload to cluster
 
-    `$ scp Local_Path your_utln@xfer.cluster.tufts.edu:Cluster_Path`
+    `$ scp Local_Path your_utln@xfer.cluster.tufts.edu:Cluster_Path `
 
     `$ rsync Local_Path your_utln@xfer.cluster.tufts.edu:Cluster_Path`
 
 **Directory** Transfer with `scp` or `rsync`:
 
-    * Download from cluster
+- Download from cluster
 
     `$ scp -r your_utln@xfer.cluster.tufts.edu:Cluster_Path Local_Path  `
 
     `$ rsync -azP your_utln@xfer.cluster.tufts.edu:Cluster_Path Local_Path`
 
-    * Upload to cluster
+- Upload to cluster
 
     `$ scp -r Local_Path your_utln@xfer.cluster.tufts.edu:Cluster_Path`
 
