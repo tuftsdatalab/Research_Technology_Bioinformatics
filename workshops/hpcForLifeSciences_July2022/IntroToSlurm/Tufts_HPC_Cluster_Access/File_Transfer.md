@@ -19,7 +19,7 @@
 
 ***Execute from your local machine terminal.***
 
-General Format:
+- General Format:
 
     `$ scp From_Path To_Path`
 
@@ -54,7 +54,7 @@ General Format:
     `$ scp -r Local_Path your_utln@xfer.cluster.tufts.edu:Cluster_Path`
 
     `$ rsync -azP Local_Path your_utln@xfer.cluster.tufts.edu:Cluster_Path`
-    
+---    
 ### OnDemand
 
 ***Only for transfering files size less than 976MB per file.***
@@ -64,7 +64,7 @@ Go to
 **[OnDemand]( https://ondemand.pax.tufts.edu/)** 
 
 Under **`Files`**, using the **`Upload`** or **`Download`** buttons to transfer. 
-
+---
 ### File Transfer Client
 
 > Hostname: `xfer.cluster.tufts.edu`
