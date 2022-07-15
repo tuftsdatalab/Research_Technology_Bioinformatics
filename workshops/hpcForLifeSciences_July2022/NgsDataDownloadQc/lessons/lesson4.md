@@ -26,19 +26,18 @@ After running FastQC, you will notice several files in your directory:
 ```
 ls
 ```
-output:
-```
-SRR15607266_pass_1_fastqc.html  SRR15607266_pass_1.fastq.gz     SRR15607266_pass_2_fastqc.zip
-SRR15607266_pass_1_fastqc.zip   SRR15607266_pass_2_fastqc.html  SRR15607266_pass_2.fastq.gz
-```
+> ```
+> SRR15607266_pass_1_fastqc.html  SRR15607266_pass_1.fastq.gz     SRR15607266_pass_2_fastqc.zip
+> SRR15607266_pass_1_fastqc.zip   SRR15607266_pass_2_fastqc.html  SRR15607266_pass_2.fastq.gz
+> ```
 
 To investigate the quality of our sequence, we will need to view the `.html` file that was produced. Navigate to the OnDemand Tab and click on `Files > Home Directory`:
 
 ![](../images/files_home.png)
 
-Now navigate to this workshop's directory and click on the `.html` file and then click View at the top of the screen:
+Now navigate to this workshop's directory and right click on `SRR15607266_pass_1_fastqc.html` and select `Open Link in New Tab`:
 
-![]()
+![](../images/fastqc_html.png)
 
 ## FastQC Output
 
