@@ -1,9 +1,14 @@
 # Process Reads
 
 ## Learning Objectives
- - trim-galore
+
+ - Understand when to trim NGS data
+ - Trim NGS data with Trim-Galore
+ - Understand Trim-Galore Output
  
-## Trim-Galore
+## Trimming NGS Data
+
+NGS data can contain reads with poor base pair quality and adapters still present. These poor bases and adapters can interfere with the accuracy of downstream analyses. 
 
 _________________________________________________________________________________________________________________________________________________________
 
