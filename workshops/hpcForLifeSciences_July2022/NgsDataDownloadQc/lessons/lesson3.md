@@ -78,10 +78,10 @@ We can enter our `fastq` directory and see that we have two files for this sampl
 cd fastq
 ls
 ```
-output:
-```
-SRR15607266_pass_1.fastq.gz  SRR15607266_pass_2.fastq.gz
-```
+
+>```
+>SRR15607266_pass_1.fastq.gz  SRR15607266_pass_2.fastq.gz
+>```
 
 ### Fastq format
 Fastq format is a way to store both sequence data and information about the quality of each sequenced position.
