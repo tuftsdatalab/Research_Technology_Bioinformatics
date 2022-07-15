@@ -49,3 +49,8 @@ Here we notice several quality control plots, let's take a minute to discuss wha
 
 ### Adapters in Sequence
 
+_________________________________________________________________________________________________________________________________________________________
+
+[Next](lesson5.md)
+
+[Previous](../lesson3.md)
