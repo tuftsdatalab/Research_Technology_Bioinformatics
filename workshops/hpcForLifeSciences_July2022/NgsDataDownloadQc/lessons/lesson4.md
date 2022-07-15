@@ -21,6 +21,13 @@ Now that we have it loaded we can run FastQC on our sequencing data:
 fastqc SRR15607266.fastq.gz
 ```
 
+After running FastQC, you will notice several files in your directory:
+
+```
+SOdaskfsjdfdfasadsklfjdlsafj
+```
+
+To e
 ### Sequence Quality
 
 ### GC Content
