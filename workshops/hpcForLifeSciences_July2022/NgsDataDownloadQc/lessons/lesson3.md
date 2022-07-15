@@ -21,8 +21,8 @@ wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/858/895/GCF_009858895.2_AS
 You will notice that both these files end in `.gz` - this indicates they are compressed. Compressing files is useful when storing data but to use it you will often need to decompress it with `gunzip -d`:
 
 ```
-gunzip -d https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/858/895/GCF_009858895.2_ASM985889v3/GCF_009858895.2_ASM985889v3_genomic.fna.gz
-gunzip -d https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/858/895/GCF_009858895.2_ASM985889v3/GCF_009858895.2_ASM985889v3_genomic.gff.gz
+gunzip -d GCF_009858895.2_ASM985889v3_genomic.fna.gz
+gunzip -d GCF_009858895.2_ASM985889v3_genomic.gff.gz
 ```
 
 You will also notice that one file ends in `.fna` and the other ends in `.gff`. These are Fasta and GFF files, respectively.
