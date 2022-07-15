@@ -39,10 +39,11 @@ Now you'll notice that the node has changed:
 [tutln01@i2cmp008 ~]$ 
 ```
 
-Now let's `cd ` into the workshop directory you used in Day 1 of this workshop:
+Now let's create a directory for our workshop with `mkdir` and change into it with `cd `: 
 
 ```
-cd XXXX
+mkdir hpcDay2
+cd hpcDay2
 ```
 
 _________________________________________________________________________________________________________________________________________________________
