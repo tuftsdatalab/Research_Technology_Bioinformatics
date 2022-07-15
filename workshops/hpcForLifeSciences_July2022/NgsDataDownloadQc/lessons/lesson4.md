@@ -18,13 +18,18 @@ module load fastqc/0.11.9
 Now that we have it loaded we can run FastQC on our sequencing data:
 
 ```
-fastqc SRR15607266.fastq.gz
+fastqc *.fastq.gz
 ```
 
 After running FastQC, you will notice several files in your directory:
 
 ```
-SOdaskfsjdfdfasadsklfjdlsafj
+ls
+```
+output:
+```
+SRR15607266_pass_1_fastqc.html  SRR15607266_pass_1.fastq.gz     SRR15607266_pass_2_fastqc.zip
+SRR15607266_pass_1_fastqc.zip   SRR15607266_pass_2_fastqc.html  SRR15607266_pass_2.fastq.gz
 ```
 
 To investigate the quality of our sequence, we will need to view the `.html` file that was produced. Navigate to the OnDemand Tab and click on `Files > Home Directory`:
