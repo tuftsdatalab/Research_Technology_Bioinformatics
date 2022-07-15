@@ -26,6 +26,7 @@ Let's take a moment ot go through the Viral NGS Workflow. Total RNA is extracted
 
 ## Types of Read Data
 
+When we sequence our DNA fragments we will often generate two kinds of data - singe-end and paired end. In single-end sequencing we sequence each DNA fragement from one end only. In paired-end sequencing we sequence each DNA fragment from **both** sides. Sequencing from both sides is advantageous in that we can better sequence areas with highly repetitive sequences. Today we will be analyzing paired-end data.
 
 ![](../images/single_paired.png)
 
