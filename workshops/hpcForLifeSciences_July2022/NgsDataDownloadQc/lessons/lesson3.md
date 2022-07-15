@@ -69,8 +69,8 @@ fastq-dump --outdir fastq --gzip --skip-technical  --readids --read-filter pass
 - `--readids` add a read ID, `.1` and `.2`, after the file name for paired end data. This allows us to differentiate the both left and right 
 - `--read-filter pass` return reads that pass filtering, so reads without N's
 - `--dumpbase` formats sequences by base space
-- `--split-files` splits files
-- `--clip`
+- `--split-files` splits files into left and right ends, if these reads are not paired-end they are combined into a single file
+- `--clip` this option will remove reads that SRA tags to be removed
 
 ### Fastq format
 Fastq format is a way to store both sequence data and information about the quality of each sequenced position.
