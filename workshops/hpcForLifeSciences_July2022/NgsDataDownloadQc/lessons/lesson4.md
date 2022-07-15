@@ -27,8 +27,21 @@ After running FastQC, you will notice several files in your directory:
 SOdaskfsjdfdfasadsklfjdlsafj
 ```
 
-To e
+To investigate the quality of our sequence, we will need to view the `.html` file that was produced. Navigate to the OnDemand Tab and click on `Files > Home Directory`:
+
+![](../images/files_home.png)
+
+Now navigate to this workshop's directory and click on the `.html` file and then click View at the top of the screen:
+
+![]()
+
+## FastQC Output
+
+Here we notice several quality control plots, let's take a minute to discuss what some of these plots mean.
+
 ### Sequence Quality
+
+
 
 ### GC Content
 
