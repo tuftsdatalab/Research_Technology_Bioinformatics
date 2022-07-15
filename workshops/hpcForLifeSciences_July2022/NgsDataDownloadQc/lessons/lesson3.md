@@ -72,6 +72,17 @@ fastq-dump --outdir fastq --gzip --skip-technical --readids --read-filter pass -
 - `--split-files` splits files into left and right ends, if these reads are not paired-end they are combined into a single file
 - `--clip` this option will remove reads that SRA tags to be removed
 
+We can enter our `fastq` directory and see that we have two files for this sample, seeing as this is paired-end data:
+
+```
+cd fastq
+ls
+```
+output:
+```
+SRR15607266_pass_1.fastq.gz  SRR15607266_pass_2.fastq.gz
+```
+
 ### Fastq format
 Fastq format is a way to store both sequence data and information about the quality of each sequenced position.
 
