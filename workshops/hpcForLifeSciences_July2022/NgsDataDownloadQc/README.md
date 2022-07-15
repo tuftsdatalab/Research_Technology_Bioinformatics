@@ -25,7 +25,7 @@ This is the first part of Day 2 of the High Performance Computing For Life Scien
 - [Background (10 min)](lessons/lesson1.md)
 - [Logging In (5 min)](lessons/lesson2.md)
 - [Obtain Data (15 min)](lessons/lesson3.md)
-- [Quality Control (15 min)](lesssons/lesson4.md)
+- [Quality Control (15 min)](lessons/lesson4.md)
 - [Process Reads (15 min)](lessons/lesson5.md)
 
 _________________________________________________________________________________________________________________________________________________________
