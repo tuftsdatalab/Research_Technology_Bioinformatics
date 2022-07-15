@@ -41,7 +41,7 @@ Now navigate to this workshop's directory and right click on `SRR15607266_pass_1
 
 ## FastQC Output
 
-Here we notice several quality control plots, let's take a minute to discuss what some of these plots mean.
+Before we dive into these plots let's discuss what is a "good" quality control plot and what is not. 
 
 ### Sequence Quality
 
@@ -58,6 +58,10 @@ Here we notice several quality control plots, let's take a minute to discuss wha
 ### Adapters in Sequence
 
 ![](../images/adpaters_seq.png)
+
+### So How About Our Own Data?
+
+![](../images/sars_fastqc.png)
 
 _________________________________________________________________________________________________________________________________________________________
 
