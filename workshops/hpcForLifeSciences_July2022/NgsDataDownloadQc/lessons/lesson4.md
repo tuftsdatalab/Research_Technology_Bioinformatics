@@ -1,5 +1,11 @@
 # Quality Control
 
+## Learning Objectives
+
+- Perform quality control on NGS data using FastQC
+- Understand what are expected FastQC metrics
+- Interpret FastQC metrics from SARS-CoV-2 NGS data
+
 ## FastQC
 
 Next Generation Sequencing can produce a large number of reads in each experiment, giving low-cost and in-depth information about the underlying RNA or DNA sample. However, every platform will produce errors (incorrect nucleotides in the sequence). Hence, quality control is an important step in data analysis. FastQC provides several modules to asses the quality of sequencing data:
