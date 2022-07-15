@@ -36,8 +36,7 @@ The virus genome is in fasta format. Fasta format has two parts, a sequence iden
 
 
 ### GFF Format
-The gene annotation file is in Generic Feature Format (GFF). This formet tells us where genes are located in the reference genome.
-Note that we must always be sure that our gene information and genome come from the same source. 
+The gene annotation file is in Generic Feature Format (GFF). This formet tells us where genes are located in the reference genome. Note that we must always be sure that our gene information and genome come from the same source. 
 
 <p align="center">
 <img src="../images/gff.PNG">
@@ -84,9 +83,7 @@ ls
 >```
 
 ### Fastq format
-Fastq format is a way to store both sequence data and information about the quality of each sequenced position.
-
-Each block of 4 lines contains one sequencing reads, for example:
+Fastq format is a way to store both sequence data and information about the quality of each sequenced position.Each block of 4 lines contains one sequencing reads, for example:
 ```
 @SRR15607266.1 1 length=76
 NTTATCTACTTTTATTTCAGCAGCTCGGCAAGGGTTTGTTGATTCAGATGTAGAAACTAAAGATGTTGTTGAATGT
