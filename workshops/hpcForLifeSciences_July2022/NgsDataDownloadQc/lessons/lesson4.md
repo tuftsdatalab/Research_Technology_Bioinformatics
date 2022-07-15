@@ -49,9 +49,15 @@ Here we notice several quality control plots, let's take a minute to discuss wha
 
 ### GC Content
 
+![](../images/gc.png)
+
 ### Per base sequence content
 
+![](../images/seq_qual_hist.png)
+
 ### Adapters in Sequence
+
+![](../images/seq_qual_hist.png)
 
 _________________________________________________________________________________________________________________________________________________________
 
