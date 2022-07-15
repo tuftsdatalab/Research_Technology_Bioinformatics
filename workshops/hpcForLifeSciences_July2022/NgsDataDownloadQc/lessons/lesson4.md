@@ -53,11 +53,11 @@ Here we notice several quality control plots, let's take a minute to discuss wha
 
 ### Per base sequence content
 
-![](../images/seq_qual_hist.png)
+![](../images/per_base_seq.png)
 
 ### Adapters in Sequence
 
-![](../images/seq_qual_hist.png)
+![](../images/adapters.png)
 
 _________________________________________________________________________________________________________________________________________________________
 
