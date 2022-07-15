@@ -45,7 +45,7 @@ Here we notice several quality control plots, let's take a minute to discuss wha
 
 ### Sequence Quality
 
-![](../seq_qual_hist.png)
+![](../images/seq_qual_hist.png)
 
 ### GC Content
 
