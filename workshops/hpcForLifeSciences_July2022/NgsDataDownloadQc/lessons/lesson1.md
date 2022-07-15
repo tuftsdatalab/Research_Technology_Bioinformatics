@@ -2,8 +2,7 @@
 
 ## SARS-CoV-2 Spike Protein
 
-Severe acute respiratory syndrome-coronavirus (SARS-CoV) has an RNA genome, which encodes proteins necessary for it’s replication inside cells.  
-The genome is contained in an envelope, which is studded with envelope and Spike proteins. It enters host cells when the receptor binding domain of the Spike protein binds to the host cell receptor angiotensin-converting enzyme 2 (ACE2)129, and the ACE2–virus complex enters the cell where downstream steps in the virus lifecycle take place. Viruses have a high mutation rate, and not surprisingly the Spike protein is under selective pressure to change the receptor binding domain in order to more readily infect cells.
+Severe acute respiratory syndrome-coronavirus (SARS-CoV) has an RNA genome, which encodes proteins necessary for it’s replication inside cells. The genome is contained in an envelope, which is studded with envelope and Spike proteins. It enters host cells when the receptor binding domain of the Spike protein binds to the host cell receptor angiotensin-converting enzyme 2 (ACE2)129, and the ACE2–virus complex enters the cell where downstream steps in the virus lifecycle take place. Viruses have a high mutation rate, and not surprisingly the Spike protein is under selective pressure to change the receptor binding domain in order to more readily infect cells.
 
 ![](../images/spike.png)
 
