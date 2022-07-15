@@ -57,7 +57,7 @@ Here we notice several quality control plots, let's take a minute to discuss wha
 
 ### Adapters in Sequence
 
-![](../images/adapters.png)
+![](../images/adapters_seq.png)
 
 _________________________________________________________________________________________________________________________________________________________
 
