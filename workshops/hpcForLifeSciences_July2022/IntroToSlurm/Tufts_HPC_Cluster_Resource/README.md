@@ -1,0 +1,4 @@
+- [Tufts HPC Cluster Resource](https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/tree/main/workshops/hpcForLifeSciences_July2022/IntroToSlurm/Tufts_HPC_Cluster_Resource)
+  - Cluster Storage
+  - Computational Resource 
+  - Software
