@@ -1,4 +1,4 @@
-Approximate time: 20 minutes
+Approximate time: 30 minutes
 
 ## Goals
 - Align short reads to a references genome with BWA
@@ -44,8 +44,8 @@ In the following steps we'll create the BWA index.
 
 You'll see the first 10 lines of the file `chr10.fa`:
 ```buildoutcfg
->NC_045512.2 Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1…   <-- '>' charachter followed by sequence name
-ATTAAAGGTTTATACCTTCCCAGGTAACAAACCAACCAACTTTCGATCTCTTGTAGATCTGTTCTCTAAACGAACTTTAA   <-- sequence
+>NC_045512.2 Severe acute respiratory syndrome coronavirus...   <-- '>' charachter followed by sequence name
+ATTAAAGGTTTATACCTTCCCAGGTAACAAACCAACCAACTTTCGATCTCTTGTAGAT...   <-- sequence
 …
 ```
 
@@ -267,6 +267,8 @@ Alignment:
 SRR15607266.1 | 99 | NC_045512.2 |8152 |60 |76M | = | 8307 | 231 | NTTA… | #8ACC... |
 SRR15607266.1 | 147 | NC_045512.2 | 8307 | 60 | 76M | = | 81523  | -231 | AAAA…   |  GGGG... | 
 SRR15607266.2 | 83 | NC_045512.2 | 16369 | 60 | 74M | = | 16255 | -188 | GTTA…   |  GGFD... |
+
+
 The fields:
 1. Read ID
 2. Flag: indicates alignment information e.g. paired, aligned, etc.
@@ -319,8 +321,8 @@ Result:
 58229 + 0 secondary                                       <-- 58229 reads have >1 alignment position
 0 + 0 supplementary                                       <-- for reads that align to multiple chromosomes
 0 + 0 duplicates
-2029614 + 0 mapped (78.56% : N/A)                         <-- For RNAseq data, >75% is expected, in this case we have some human contamination
-2525152 + 0 paired in sequencing
+2029614 + 0 mapped (78.56% : N/A)                         <-- For RNAseq data, >75% is expected, 
+2525152 + 0 paired in sequencing                              in this case we have some human contamination
 1262576 + 0 read1
 1262576 + 0 read2
 1948534 + 0 properly paired (77.17% : N/A)
