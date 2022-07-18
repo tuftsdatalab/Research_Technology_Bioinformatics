@@ -472,6 +472,23 @@ As of July 2022, these are the modules you might see displayed.
 <img width="711" alt="Blast_modules" src="https://user-images.githubusercontent.com/8632603/179539551-1d0c8933-30f2-43d5-957c-f4216d849ca6.png">
 
 
+Choose the blast-plus version of the module and load it.
+
+```
+
+module load blast-plus/2.11.0
+
+```
+
+Confirm that the module is loaded.
+
+```
+module list
+
+```
+
+
+
 
 
 We need some data!  Let's grab the mouse and zebrafish RefSeq
