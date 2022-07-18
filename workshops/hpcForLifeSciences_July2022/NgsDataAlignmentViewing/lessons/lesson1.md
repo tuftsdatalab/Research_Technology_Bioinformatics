@@ -93,25 +93,15 @@ bwa index GCF_009858895.2_ASM985889v3_genomic.fna
 
 Result:
 ```markdown
-[bwa_index] Pack FASTA... 0.93 sec
+[bwa_index] Pack FASTA... 0.00 sec
 [bwa_index] Construct BWT for the packed sequence...
-[BWTIncCreate] textLength=267594844, availableWord=30828588
-	[BWTIncConstructFromPacked] 10 iterations done. 50853228 characters processed.
-[BWTIncConstructFromPacked] 20 iterations done. 93947292 characters processed.
-[BWTIncConstructFromPacked] 30 iterations done. 132245372 characters processed.
-[BWTIncConstructFromPacked] 40 iterations done. 166280796 characters processed.
-[BWTIncConstructFromPacked] 50 iterations done. 196527516 characters processed.
-[BWTIncConstructFromPacked] 60 iterations done. 223406844 characters processed.
-[BWTIncConstructFromPacked] 70 iterations done. 247293244 characters processed.
-[BWTIncConstructFromPacked] 80 iterations done. 267594844 characters processed.
-[bwt_gen] Finished constructing BWT in 80 iterations.
-[bwa_index] 59.13 seconds elapse.
-[bwa_index] Update BWT... 0.67 sec
-[bwa_index] Pack forward-only FASTA... 0.59 sec
-[bwa_index] Construct SA from BWT and Occ... 24.98 sec
-[main] Version: 0.7.17-r1198-dirty
-[main] CMD: bwa index chr10.fa
-[main] Real time: 87.087 sec; CPU: 86.306 sec
+[bwa_index] 0.00 seconds elapse.
+[bwa_index] Update BWT... 0.00 sec
+[bwa_index] Pack forward-only FASTA... 0.00 sec
+[bwa_index] Construct SA from BWT and Occ... 0.00 sec
+[main] Version: 0.7.9a-r786
+[main] CMD: bwa index GCF_009858895.2_ASM985889v3_genomic.fna
+[main] Real time: 0.130 sec; CPU: 0.010 sec
 ```
 
 When it's done, take a look at the files produced by typing `ls`.
@@ -151,14 +141,9 @@ Algorithm options:
 
 Since our alignment command will have multiple arguments, it will be convenient to write a script.
 
-Go up one level to our main `intro-to-ngs` directory:
+Change into our `scripts` directory:
 ```markdown
-cd ..
-```
-
-Make a new directory for our results
-```markdown
-mkdir results
+cd ../scripts
 ```
 
 Open a text editor with the program `nano` and create a new file called `bwa.sh`.
@@ -215,7 +200,7 @@ sbatch bwa.sh
 
 We can check to see if our job is running
 ```markdown
-$ squeue -u rbator01
+squeue -u rbator01
 JOBID       PARTITION  NAME   USER      ST   TIME  NODES  NODELIST(REASON) 
 23712177    batch      bwa    rbator01  R    0:03  1      c1cmp044 
 ```
@@ -225,18 +210,22 @@ I can see my job number is `23712177`. Find your job number.
 Take a look at the error and the output files:
 Result:
 ```markdown
-$ls
+ls
 ....23712177.err 23712177.out 
 ```
 
-List the files in the results directory by typing `ls results`.
+Change into our `scripts` directory:
+```markdown
+cd ../scripts
+```
+
+List the files in the results directory by typing `ls`.
 Result:
 ```markdown
-sarscov2.sam
+sarscov2.sam 23712177.err 23712177.out
 ```
+
 ---
-
-
 ## Sequence Alignment Map (SAM)
 
 We will now introduce the SAM format and a tool called `Samtools` which we will use to manipulate SAM files.
@@ -258,7 +247,7 @@ $samtools view -H results/sarscov2.sam
 
 We can preview the alignment with this command. Note the '|' pipe and 'head':
 ```
-samtools view results/sarscov2.sam | head
+samtools view sarscov2.sam | head
 ````
 Alignment:
 
@@ -293,13 +282,19 @@ samtools view -S -b sarscov2.sam > sarscov2.bam
 samtools view sarscov2.bam | head
 ```
 
-Sort the BAM for efficient processing 
-Look at the difference in order.
+
+## Sort SAM file
+
+Downstream applications require that reads in SAM files be sorted by reference genome coordinates (fields 3 and 4 in each line of our SAM file).
+This will assist in fast search, display and other functions.
 ```
 samtools sort sarscov2.bam  -o sarscov2.srt.bam
 samtools view sarscov2.srt.bam | head
 ````
 
+Look at the difference in order.
+
+TODO: ADD TABLE 
 Index it for fast searching.
 ```
 samtools index sarscov2.srt.bam
@@ -309,10 +304,9 @@ samtools index sarscov2.srt.bam
 ## Alignment Quality Control
 
 Next, we'd like to know how well our reads aligned to the reference genome.
-
-To run the `flagstat` program on our `SAM` file:
+To run the `flagstat` program on our sorted `BAM` file:
 ```
-samtools flagstat results/sarscov2.srt.bam
+samtools flagstat sarscov2.srt.bam
 ```
 
 Result:
