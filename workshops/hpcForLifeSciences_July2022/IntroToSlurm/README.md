@@ -10,19 +10,18 @@ Basic knowledge of Linux commands is desirable.
 
 ## Table of Contents
 
-- [Tufts HPC Cluster Access](slides/Tufts_HPC_Cluster_Access.md)
+- [Tufts HPC Cluster Access](slides/Tufts_HPC_Cluster_Access)
   - Cluster Account and Storage Request
   - Login
   - File Transfer
   - OnDemand Interface
   
-- [Tufts HPC Cluster Resource](slides/Tufts_HPC_Cluster_Resource.md)
+- [Tufts HPC Cluster Resource](slides/Tufts_HPC_Cluster_Resource)
   - Cluster Storage
   - Computational Resource 
   - Software
   
-- [SLURM](slides/SLURM.md)
+- [SLURM](slides/Tufts_HPC_Cluster_SLURM)
   - Interactive Session -- **[Intro to Linux](https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/tree/main/workshops/hpcForLifeSciences_July2022/IntroToLinux)**
   - Batch Job
   - Job Status
-  
