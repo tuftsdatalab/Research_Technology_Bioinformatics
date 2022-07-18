@@ -1,7 +1,7 @@
 ### Cluster Account Request
 
 **[Cluster Account Request](https://it.tufts.edu/high-performance-computing)**
-
+<img src="https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/blob/2dda985fb7f7ea41f5770ed2923aa238fa2842b9/workshops/hpcForLifeSciences_July2022/IntroToSlurm/images/rthpcpage.png" alt="Requests" width=30%>
 
 ### Cluster Storage Request
 
