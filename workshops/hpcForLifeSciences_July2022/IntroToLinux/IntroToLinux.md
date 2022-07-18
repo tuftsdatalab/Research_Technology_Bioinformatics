@@ -71,7 +71,8 @@ components of a shell command are doing.
 
 https://ondemand.pax.tufts.edu/pun/sys/dashboard
 
-put the image here
+
+<img width="692" alt="Ondemand_Shell" src="https://user-images.githubusercontent.com/8632603/179539946-5d4fa52d-95ae-4215-ab16-24c912879aeb.png">
 
 
 Mac
@@ -199,6 +200,10 @@ ls
 A directory is like a desk drawer. We create them to store files that relate to each other mostly.
 
 When creating directories and filenames it is helpful to put some information about the project and the date of activity.
+
+
+<img width="786" alt="File_Folder_Structure" src="https://user-images.githubusercontent.com/8632603/179539866-ecd6e880-f468-4151-bbaa-149f52c328b4.png">
+
 
 Let's go into our directory and look around.
 
@@ -411,6 +416,7 @@ drwxrwx--- 2 username05 username05     4096 Jul 18 09:57 JulyWorkshop
 The first 10 letters in this line indicates the permission settings.
 
 
+<img width="523" alt="File_Permissions" src="https://user-images.githubusercontent.com/8632603/179539739-75f4edf9-5f5d-4de9-b20c-97abc7869be6.png">
 
 
 
@@ -450,6 +456,24 @@ Later on in the workshop we will talk more about these advantages and have a mor
 
 ## Running BLAST
 
+Many common programs are pre-loaded into the Tufts HPC using a system called "modules".
+
+To see whether blast is available as a module, try running this command.
+
+```
+
+module av blast
+
+```
+
+
+As of July 2022, these are the modules you might see displayed.
+
+<img width="711" alt="Blast_modules" src="https://user-images.githubusercontent.com/8632603/179539551-1d0c8933-30f2-43d5-957c-f4216d849ca6.png">
+
+
+
+
 We need some data!  Let's grab the mouse and zebrafish RefSeq
 protein data sets from NCBI, and put them in our home directory.
 
@@ -473,9 +497,9 @@ You should now see these 3:
 
 ```
 total 29908
--rw-rw-r-- 1 titus titus 12553742 Jun 29 08:41 mouse.1.protein.faa.gz
--rw-rw-r-- 1 titus titus  4074490 Jun 29 08:41 mouse.2.protein.faa.gz
--rw-rw-r-- 1 titus titus 13963093 Jun 29 08:42 zebrafish.1.protein.faa.gz
+-rw-rw-r-- 1 username01 username01 12553742 Jun 29 08:41 mouse.1.protein.faa.gz
+-rw-rw-r-- 1 username01 username01  4074490 Jun 29 08:41 mouse.2.protein.faa.gz
+-rw-rw-r-- 1 username01 username01 13963093 Jun 29 08:42 zebrafish.1.protein.faa.gz
 ```
 
 The three files you just downloaded are the last three on the list - the
