@@ -1,9 +1,8 @@
-=========
-The Shell
+# The Shell
 =========
 
 
-Objectives
+## Objectives
 ----------
 
 - What is the shell?
@@ -11,17 +10,9 @@ Objectives
 - How do you use it and what is it good for?
 
   * Running commands
-  * Storing files in folders
+  * File Directory Structure
   * Manipulating files
-  * Automating actions
-
-- Where are resources where I can learn more?
-
-Notes
------
-
-This workshop operates under the Software Carpentry Code of conduct:
-http://software-carpentry.org/conduct/
+  * Simple Bash Scripts
 
 What is the shell?
 ------------------
@@ -44,7 +35,7 @@ There are many reasons to learn about the shell.  A few specific ones:
 
 
 Automation
-~~~~~~~~~~
+
 
 The most important reason to learn the shell is to learn about
 **automation**.  Any time you find yourself doing roughly the same
@@ -54,7 +45,7 @@ the shell is often the best way to automate anything to do with files.
 Today we're going to go through how to access Unix/Linux and some of the basic
 shell commands.
 
-Information on the shell
+### Information on the shell
 ------------------------
 
 The challenge with UNIX is that it's not particularly simple - it's a
@@ -103,11 +94,11 @@ Other options:
 * https://conemu.github.io/
 
 Linux
-~~~~~
+
 
 You probably already know how to find the shell prompt.
 
-Starting with the shell
+### Starting with the shell
 -----------------------
 
 We will spend most of our time learning about the basics of the shell
@@ -125,7 +116,7 @@ and then hit ENTER
 This is a good question for Mondays ....
 
 
-## Running Commands
+### Running Commands
 --------------------------
 
 Let's try another.
@@ -173,7 +164,7 @@ prompt that do stuff. pwd stands for 'print working directory', while
 ================
 
 
-## Navigating in the Shell
+### Navigating in the Shell
 --------------------------
 
 We are going to make a place to work for this workshop.
