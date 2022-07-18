@@ -1,5 +1,3 @@
-### A Tufts University Research Technology Workshop
-
 ## Description
 
 This is a part of the HPC for Life Sciences workshop.
@@ -8,7 +6,7 @@ This is a part of the HPC for Life Sciences workshop.
 
 All attendess should have Tufts HPC Cluster account and Bioinformatic workshop reservation access.
 
-Basic knowledge of Linux commands.
+Basic knowledge of Linux commands is desirable.
 
 ## Table of Contents
 
