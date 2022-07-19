@@ -63,7 +63,8 @@ OR
 
 Use the `>_Open in Terminal` button in `Files` to open a terminal in whichever directory you navigated to.
 
-If you need **X11** access through OnDemand to display any GUI applications, please temporarily use our Old OnDemand [https://ondemand.cluster.tufts.edu](https://ondemand.cluster.tufts.edu) **`Clusters`** for this option:
+If you need **X11** access through OnDemand to display any GUI applications, please temporarily use our **Old OnDemand
+** [https://ondemand.cluster.tufts.edu](https://ondemand.cluster.tufts.edu) **`Clusters`** for this option:
 
 **`Tufts HPC FastX11 Shell Access`** = `$ ssh -XC your_utln@login.cluster.tufts.edu` (with X11 for GUI applications)
 
