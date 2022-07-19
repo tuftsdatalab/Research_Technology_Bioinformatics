@@ -34,19 +34,18 @@ There are many reasons to learn about the shell.  A few specific ones:
 * To use remote computers or cloud computing, you need to use the shell.
 
 
-Automation
-
+### Knowing Shell Increases Speed and Efficiency Through Automation
 
 The most important reason to learn the shell is to learn about
 **automation**.  Any time you find yourself doing roughly the same
 computational task more than few times, it may be worth automating it;
 the shell is often the best way to automate anything to do with files.
 
-Today we're going to go through how to access Unix/Linux and some of the basic
-shell commands.
+In this lesson, we're going to go through how to access Unix/Linux and some of the basic
+shell commands. We will finish with a demonstration of how to run programs interactively as well by submitting a job to SLURM (https://it.tufts.edu/sites/default/files/uploaded-files/2020-03/QuickStart%20for%20Slurm.pdf). Slurm is a scalable cluster management and job scheduling system for Linux clusters. Other job scheduling systems you may be familiar with from other universities are "PBS" and "SGE_Batch".
 
-### Information on the shell
-------------------------
+### Finding nformation on shell commands
+-----------------------------------------
 
 The challenge with UNIX is that it's not particularly simple - it's a
 power tool, with its own deep internal logic with lots of details.
