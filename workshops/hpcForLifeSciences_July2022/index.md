@@ -1,5 +1,5 @@
 
-# High Performance Computing For Life Sciences
+#  HPC For Life Sciences
 
 ## Description
 This introductory 2-day hybrid workshop will cover the basics of using the Tufts High Performance Compute Cluster (HPC) to manipulate Next Generation Sequencing (NGS) data. The first day will introduce users to Linux commands and how to use Slurm job scheduler to run and monitor jobs on the HPC. The second day will cover downloading, performing quality control, aligning and viewing Next Generation Sequencing data. This workshop is for any student, staff or faculty that wants to learn about Bioinformatics. 
