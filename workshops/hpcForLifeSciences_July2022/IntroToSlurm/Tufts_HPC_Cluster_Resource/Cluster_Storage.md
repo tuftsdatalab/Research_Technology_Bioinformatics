@@ -5,7 +5,7 @@ Your Home Directory (10GB, fixed) should be `/cluster/home/your_utln`
 
 * __Reserach Project Storage__
 
-**[Cluster Storage Request]**([https://it.tufts.edu/research-technology/](https://it.tufts.edu/high-performance-computing))
+**Cluster Storage Request** [https://it.tufts.edu/research-technology/](https://it.tufts.edu/high-performance-computing)
 
 <img src="https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/blob/1ffc84f7b5187b4ff6b019c0349da2d6065acd54/workshops/hpcForLifeSciences_July2022/IntroToSlurm/images/rthpcpage.png" alt="RTHPC" width=60%>
 
