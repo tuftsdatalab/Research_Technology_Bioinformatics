@@ -204,223 +204,6 @@ prompt that do stuff.
 It is similar to the abbreviations used in texting, it takes less time to get the point across (lol, tbh, imho, afaik, ftw -- you're saying them outloud in your head, right now, correct?)
 
 
-## Navigating in the Shell
---------------------------
-
-We are going to make a place to work for this workshop.
-
-The following command makes a new directory.
-
-```
-mkdir JulyWorkshop
-
-```
-----------------------
-
-### Pro Tip:
-===================
-
-When nameing files and directories, avoid spaces and special characters except underscores ("_").
-
-**Spelling** and **Capitalization** are literal in unix, be careful when making and using files to be consistent in your process. This will make it easier to find files later.
-
----------------------
-
-You can check that the new directory was created by repeating the list command.
-
-```
-ls
-```
-
-A directory is like a desk drawer. We create them to store files that relate to each other mostly.
-
-When creating directories and filenames it is helpful to put some information about the project and the date of activity.
-
-
-<img width="786" alt="File_Folder_Structure" src="https://user-images.githubusercontent.com/8632603/179539866-ecd6e880-f468-4151-bbaa-149f52c328b4.png">
-
-
-Let's go into our directory and look around.
-
-Another command you'll find yourself using a lot is `cd`, which stands
-for 'change directory'.  Try typing::
-
-```
-cd JulyWorkshop
-
-```
-and then
-
-```
-pwd
-```
-
-You should now see something like this:
-
-```
-/cluster/home/username01/JulyWorkshop
-```
-
-This is an example of an **Absolute Path**.
-
-It gives an address for where you are located on the cluster, much like a postal address that defines where you are in several layers (e.g. /country/state/city/street/specific_house.
-
-<img width="821" alt="tufts_root_path" src="https://user-images.githubusercontent.com/8632603/179759502-549b38b0-4957-4105-aee3-8bca4271bf7b.png">
-
-
-Note: If you ever type `cd` without a word behind it, it will send you back to your home directory.
-
-Your home directory is not all the way back at the root, it is set within the cluster as `/cluster/home/username01/`.
-
-
-
-Let's make a file here using a common command "echo" to start creating our file structure.
-
-
-```
-
-echo "Hello World " > helloworld.txt
-
-
-```
-
-
-The ">" in this command tells the command to place the output into the place it is pointing.
-
-
-To open the file and check the contents, there are a few options. "cat" is a useful command for many reasons, let's see a demo here. Typing this command will print the contents of the file to the screen.
-
-```
-cat helloworld.txt
-```
-
-"cat" will open the entire file, so this is not the best command for long files.
-
-In that case "head" is a good option. Head pulls the top ten lines of the file and prints them to the screen.
-
-```
-head helloworld.txt"
-
-```
-
-It does not look any different from cat in this case because there is only one line in the file.
-
-A third way to check file contents is by using a program called "less" (or "more").
-
-"less" will open the file interactively, then you can scroll through it and when you are done, push "q" on your keyboard to close the file.
-
-```
-less helloworld.txt
-```
-
-Press "q" to close the file.
-
-There are many versions of these tools on command line, but "cat", "head" and "less" are very common.
-
-
-### Absolute and Relative Paths
-===============================
-
-
-
-If you want to go back to the directory that is in the level above our current file, another common shortcut used in bahs is `..`.
-
-
-```
-
-cd ..
-
-```
-
-`..` is a reference to a **RELATIVE PATH**
-
-
-```
-
-ls JulyWorkshop
-
-
-```
-
-
-You should just see the file name.
-
-
-
-```
-
-emptyfile.txt
-
-
-```
-
-A Relative Path means that the command only works from the relative location that you are in.
-
-This can get confusing if you are moving around a lot in your directories or sending commands to SLURM, so the alternative method to navigating around the cluster is using an *ABSOLUTE PATH*.
-
-
-Let's go back into the JulyWorkshop directory, but this time use your ABSOLUTE path by changing *username01* to your username. If you forget your username, try *whoami*
-
-
-```
-
-cd /cluster/home/username01/JulyWorkshop
-
-
-```
-
-
-Many commands in bash can be used with the ABSOLUTE PATH.
-
-```
-
-ls /cluster/home/username01/JulyWorkshop
-
-
-```
-
-
-This is helpful for checking for outputs from SLURM jobs when they are running.
-
-
-### Going Home
-
-
-Sometimes we get lost, so it is useful to know a few ways to get back to where you started.
-
-```
-
-cd
-
-
-```
-
-This command returns you to your home directory.
-
-```
-
-pwd
-
-```
-
-Other options for this command are
-
-```
-
-cd ~
-
-
-```
-
-
-```
-
-cd $HOME
-
-```
-
-
-
 ### Parameters for Bash commands
 
 Many bash commands have special **parameters**, sometimes referred to as **flags** that open up a lot more possibilities.
@@ -473,6 +256,284 @@ The first 10 letters in this line indicates the permission settings.
 
 <img width="523" alt="File_Permissions" src="https://user-images.githubusercontent.com/8632603/179539739-75f4edf9-5f5d-4de9-b20c-97abc7869be6.png">
 
+
+
+
+## Navigating in the Shell
+===============================
+
+We are going to make a place to work for this workshop.
+
+The following command makes a new directory.
+
+```
+mkdir JulyWorkshop
+
+```
+----------------------
+
+### Pro Tip:
+===================
+
+When nameing files and directories, avoid spaces and special characters except underscores ("_").
+
+**Spelling** and **Capitalization** are literal in unix, be careful when making and using files to be consistent in your process. This will make it easier to find files later.
+
+---------------------
+
+You can check that the new directory was created by repeating the list command.
+
+```
+ls
+```
+
+A directory is like a desk drawer. We create them to store files that relate to each other mostly.
+
+When creating directories and filenames it is helpful to put some information about the project and the date of activity.
+
+
+<img width="786" alt="File_Folder_Structure" src="https://user-images.githubusercontent.com/8632603/179539866-ecd6e880-f468-4151-bbaa-149f52c328b4.png">
+
+### Absolute and Relative Paths
+
+
+Let's go into our directory and look around.
+
+Another command you'll find yourself using a lot is `cd`, which stands
+for 'change directory'.  Try typing::
+
+```
+cd JulyWorkshop
+
+```
+and then
+
+```
+pwd
+```
+
+You should now see something like this:
+
+```
+/cluster/home/username01/JulyWorkshop
+```
+
+This is an example of an **Absolute Path**.
+
+It gives an address for where you are located on the cluster, much like a postal address that defines where you are in several layers (e.g. /country/state/city/street/specific_house.
+
+<img width="821" alt="tufts_root_path" src="https://user-images.githubusercontent.com/8632603/179759502-549b38b0-4957-4105-aee3-8bca4271bf7b.png">
+
+If you want to go back to the directory that is in the level above our current file, another common shortcut used in bahs is `..`.
+
+
+```
+cd ..
+
+```
+`..` is a reference to a **RELATIVE PATH**
+
+```
+pwd
+```
+
+You should be back in your home directory.
+
+```
+/cluster/home/username01/
+```
+
+If you want to go back to the directory that you just left, type this command.
+
+```
+cd -
+```
+Then find your location.
+
+```
+pwd
+```
+
+You should be back in the directory you came from.
+
+```
+/cluster/home/username01/JulyWorkshop
+```
+
+A **RELATIVE PATH* means that the command only works from the relative location that you are in.
+
+`cd ..` and `cd -` are examples of relative path commands.
+
+This can get confusing if you are moving around a lot in your directories or sending commands to SLURM, so the alternative method to navigating around the cluster is using an **ABSOLUTE PATH**.
+
+
+Note: If you ever type `cd` without a word behind it, it will send you back to your home directory.
+
+Your home directory is not all the way back at the root, it is set within the cluster as `/cluster/home/username01/`.
+
+You can make sure that you are in the right directory by using the command `cd` with the absolute path.
+
+```
+cd /cluster/home/username01/JulyWorkshop
+```
+
+## Creating and Manipulating Files
+==================================
+
+Let's make a file here using a common command "echo" to start creating our file structure.
+
+```
+echo "Hello World " > helloworld.txt
+
+```
+
+The `>` in this command tells the command to place the output into the place it is pointing. In this case, it creates the file `helloworld.txt` and puts the phrase `Hello World` into the file. 
+
+### Pro Tip:
+===================
+
+Be careful with redirect.
+
+When using `>` to redirect content into a file, if the filename already exists, it will **overwrite** the file. This means that the original file is gone, and there is no undo in shell.
+
+If you want to add to a file (for example if you are running the same command on several files and extracting a piece of information that you want to put together at the end) you can use another form of redirect `>>`. Using the double redirect will **add** to the file instead of overwriting it.
+
+Which one is used depends on your process. If you are only running a command once, or have an intermediate file in a process that does not need to be retained at the end, then `>` is okay to use.
+
+-------------------------
+
+#### Reading File Contents
+
+Let's look inside the file. We have several methods of viewing the content of files that we have created.
+
+A helpful command is `cat`.
+
+```
+cat helloworld.txt
+```
+
+"cat" will open the entire file, so this is not the best command for long files.
+
+In that case "head" is a good option. Head pulls the top ten lines of the file and prints them to the screen.
+
+```
+head helloworld.txt"
+
+```
+
+It does not look any different from cat in this case because there is only one line in the file.
+
+A third way to check file contents is by using a program called "less" (or "more").
+
+"less" will open the file interactively, then you can scroll through it and when you are done, push "q" on your keyboard to close the file.
+
+```
+less helloworld.txt
+```
+
+Press "q" to close the file.
+
+There are many versions of these tools on command line, but "cat", "head" and "less" are very common.
+
+
+
+Let's go back into the JulyWorkshop directory, but this time use your ABSOLUTE path by changing `username01` to your username. If you forget your username, try `whoami`.
+
+
+```
+cd /cluster/home/username01/JulyWorkshop
+
+```
+
+
+Many commands in bash can be used with the ABSOLUTE PATH.
+
+```
+ls /cluster/home/username01/JulyWorkshop
+
+```
+
+
+This is helpful for checking for outputs from SLURM jobs when they are running.
+
+
+### Going Home
+
+
+Sometimes we get lost, so it is useful to know a few ways to get back to where you started.
+
+```
+cd
+
+```
+
+This command returns you to your home directory. Check by typing this command.
+
+```
+pwd
+```
+
+Other options for going back to your home directory:
+
+```
+cd ~
+```
+
+```
+cd $HOME
+```
+
+When lost in the file structure, going home is a good place to start.
+
+### Find and Tree
+
+File structures can get complicated quickly.
+
+Two tools to understand where your files are that can help are `find` and `tree`.
+
+From your home directory, you can find your file named `helloworld.txt` by typing the following:
+
+```
+cd
+find . -name helloworld.txt
+```
+
+From the home directory, the answer should look like:
+
+```
+./JulyWorkshop/helloworld.txt
+```
+
+`.` in this case is another RELATIVE path direction that indicates "from this directoy that I am in currently". Note that the answer is given in the RELATIVE path format, starting with `.` = here.
+
+It is also possible to provide an ABSOLUTE path to this command.
+
+```
+find /cluster/home/username01 -name helloworld.txt
+```
+This command will work from anywhere in the cluster. Note that the answer is given in the ABSOLUTE path format.
+
+```
+/cluster/home/arhode05/JulyWorkshop/helloworld.txt
+```
+
+Another helpful bash command for finding files is `tree`.
+
+```
+tree
+
+```
+
+This outputs your directory structure with lines that indicate the tree-like branches of your file structure.
+
+This could be very messy if you already have a lot of files in a directory, so limit the level by adding a flag.
+
+```
+tree -L 2
+
+```
+
+This just shows the top two levels of the file structure.
 
 
 
