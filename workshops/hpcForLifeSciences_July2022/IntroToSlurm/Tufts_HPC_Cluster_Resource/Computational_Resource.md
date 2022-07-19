@@ -37,7 +37,7 @@ preempt         up 7-00:00:00     20   idle p1cmp[016-017,031-037,039-042,081-08
 
 ```
 
-*  [**OnDemand**](https://ondemand.pax.tufts.edu) `Misc`-->`Inventory ` shows more node details (core count & memory)
+[**OnDemand**](https://ondemand.pax.tufts.edu) `Misc`-->`Inventory ` shows more node details (core count & memory)
 
 <img src="https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/blob/3a85fd4bbc3b5b2ebe2f03321835aa5b834febef/workshops/hpcForLifeSciences_July2022/IntroToSlurm/images/Misc2.png" alt="Misc" width=60%>
 
