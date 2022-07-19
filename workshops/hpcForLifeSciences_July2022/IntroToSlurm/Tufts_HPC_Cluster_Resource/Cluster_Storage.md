@@ -1,9 +1,9 @@
 
-* __Home Directory__
+### Home Directory
 
 Your Home Directory (10GB, fixed) should be `/cluster/home/your_utln`
 
-* __Reserach Project Storage__
+### Reserach Project Storage
 
 **Cluster Storage Request** [https://it.tufts.edu/research-technology/](https://it.tufts.edu/high-performance-computing)
 
