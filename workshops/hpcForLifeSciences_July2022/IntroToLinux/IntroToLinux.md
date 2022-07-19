@@ -65,7 +65,7 @@ components of a shell command are doing.
 
 (We'll look at these at the bottom.)
 
-## How to access the shell
+## How to Access the Shell
 --------------------------
 
 https://ondemand.pax.tufts.edu/pun/sys/dashboard
@@ -122,7 +122,9 @@ and then hit ENTER
 
 When you are on the Tufts cluster, this will return your username according to the cluster. This username is attached to you wherever you are in the cluster and creates a home where your files can be kept, regardless of which machine you are on in the cluster. [If you are on your laptop or personal computer, the answer to this may be different before you log in.]
 
-### For Attendees Using Terminal Programs to Access the Cluster (instead of the Web Browser "OnDemand")
+---
+---
+#### For Attendees Using Terminal Programs to Access the Cluster (instead of the Web Browser "OnDemand")
 
 If you are using a terminal on your home machine to connect to the tufts cluster, you will first need to log in by sending a simple command. **Ignore this if you are using the web browser login tool.**
 
@@ -139,6 +141,10 @@ The login will ask you for your Tufts password.
 If you are not on the Tufts network, you will need to set up the Tufts VPN (Virtual Private Network) before logging in:
 
 https://it.tufts.edu/guides/vpn-virtual-private-network/anyconnect-desktop-application
+
+---
+---
+
 
 ### Running Commands
 --------------------
@@ -263,7 +269,7 @@ There are an overwhelming number of possibilities with some of these shell comma
 For example, `ls` has a lot of flags that can be used.
 
 ```
-ls -help
+ls --help
 ```
 
 This outputs a list of all the ways that `ls` can be altered to find information about your files.
@@ -273,6 +279,7 @@ Parameters can be added together in some cases.
 ```
 ls -ltr
 ```
+
 This command strings together three flags.
 
 `ls -l` is list with details
@@ -485,25 +492,32 @@ Press "q" to close the file.
 There are many versions of these tools on command line, but "cat", "head" and "less" are very common.
 
 
+### Copying Files
 
-Let's go back into the JulyWorkshop directory, but this time use your ABSOLUTE path by changing `username01` to your username. If you forget your username, try `whoami`.
+Sometimes we have a file that we want to reuse.
 
+When copying within the same directory, make sure to change the name of the file, or the original will be **overwritten**.
 
-```
-cd /cluster/home/username01/JulyWorkshop
+When copying to a new directory, the name can stay the same.
 
-```
-
-
-Many commands in bash can be used with the ABSOLUTE PATH.
+This command copies the file within the same directory with a new name.
 
 ```
-ls /cluster/home/username01/JulyWorkshop
+cp helloworld.txt helloworld1.txt
+```
+These commands make a new directory, and then copies the file into the new directory with the same name.
 
+```
+mkdir helloworld
+cp helloworld.txt helloworld
 ```
 
 
-This is helpful for checking for outputs from SLURM jobs when they are running.
+
+
+
+
+
 
 
 ### Going Home
@@ -584,15 +598,29 @@ tree -L 2
 
 This just shows the top two levels of the file structure.
 
+## Running Programs Interactively
+==================================
 
+Let's go back into the JulyWorkshop directory, but this time use your ABSOLUTE path by changing `username01` to your username. If you forget your username, try `whoami`.
 
+```
+cd /cluster/home/username01/JulyWorkshop
 
+```
 
+---
+### Pro Tip:
+=============
+Many commands in bash can be used with the ABSOLUTE PATH.
 
-Example for Class (Credit to https://angus.readthedocs.io/en/2019/)
+```
+ls /cluster/home/username01/JulyWorkshop
 
+```
 
+Using an absolute path to find files in a directory is helpful for checking for outputs from SLURM jobs when they are running.
 
+---
 
 ## What is BLAST?
 BLAST is the **B**asic **L**ocal **A**lignment **S**earch **T**ool.
@@ -619,31 +647,35 @@ However, running BLAST through the commmand line has many benefits:
   
 Later on in the workshop we will talk more about these advantages and have a more in-depth explanation of the shell.
 
-## Running BLAST
+----
+
+## Demo 1: Running BLAST on Tufts HPC
+
+
+### Loading Modules
 
 Many common programs are pre-loaded into the Tufts HPC using a system called "modules".
 
-To see whether blast is available as a module, try running this command.
+To see what versions of blast are available as a module, try running this command.
 
 ```
-
 module av blast
-
 ```
-
 
 As of July 2022, these are the modules you might see displayed.
 
 <img width="711" alt="Blast_modules" src="https://user-images.githubusercontent.com/8632603/179539551-1d0c8933-30f2-43d5-957c-f4216d849ca6.png">
 
 
-Choose the blast-plus version of the module and load it.
+Choose the latest blast-plus version of the module and load it. 
 
 ```
 
 module load blast-plus/2.11.0
 
 ```
+
+When there is only one version of a module, the full version does not need to be provided, but it is always best to inclue the version as we are loading and updating versions of programs all of the time.
 
 Confirm that the module is loaded.
 
@@ -652,9 +684,9 @@ module list
 
 ```
 
+### Bringing in Files from the Internet
 
-
-
+For genomics projects, the files are often stored in pubic repositories and we must go and get those files before proceeding.
 
 We need some data!  Let's grab the mouse and zebrafish RefSeq
 protein data sets from NCBI, and put them in our home directory.
@@ -663,11 +695,18 @@ Now, we'll use `curl` to download the files from a Web site onto our
 computer; note, these files originally came from the
 [NCBI FTP site](ftp://ftp.ncbi.nih.gov/refseq/M_musculus/mRNA_Prot)
 
+* `-o` indicates this is the name we are assigning to our files in our own directory
+* `-L` provides the full path for the download
+
+
 ```
 curl -o mouse.1.protein.faa.gz -L https://osf.io/v6j9x/download
 curl -o mouse.2.protein.faa.gz -L https://osf.io/j2qxk/download
 curl -o zebrafish.1.protein.faa.gz -L https://osf.io/68mgf/download
 ```
+
+Another method for pulling files from the internet is `wget`, which will be demoed tomorrow.
+
 
 If you look at the files in the current directory:
 
@@ -791,5 +830,11 @@ blastp -query mm-second.faa -db zebrafish.1.protein.faa -out mm-second.x.zebrafi
 You can open the file with `less mm-second.x.zebrafish.tsv` to see how the file looks like.
 
 See [this link](http://www.metagenomics.wiki/tools/blast/blastn-output-format-6) for a description of the possible BLAST output formats.
+
+
+## Writing a BASH Script and Running it as "Batch" 
+==================================================
+
+
 
 
