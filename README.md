@@ -7,7 +7,9 @@ The Research Technology team at Tufts University has created several bioinformat
 
 The menu on the left contains the self-guided tutorials that have been updated recently.
 
-To jump to our in-person workshop in July, 2022, please follow this link:
+To jump to our in-person workshop in July, 2022, please follow this link: 
+
+[July 20-21 Intro to HPC for the Life Sciences](https://tuftsdatalab.github.io/Research_Technology_Bioinformatics/workshops/hpcForLifeSciences_July2022/)
 
 
 
