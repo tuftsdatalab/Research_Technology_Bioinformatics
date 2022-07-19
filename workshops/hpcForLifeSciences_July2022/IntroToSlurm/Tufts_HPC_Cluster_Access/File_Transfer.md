@@ -3,15 +3,13 @@
 > Protocol: SCP or SFTP
 >
 > Use port 22 for SFTP
-> 
-**Hostname for file transfer: xfer.cluster.tufts.edu**
 
 > NOTE:
 > 
-> Local_Path is the path to your files or directory on your local computer
-> Cluster_Path is the path to your files or directory on the cluster
-> Home Directory: /cluster/home/your_utln/your_folder
-> Research Project Storage Space Directory: /cluster/tufts/yourlabname/your_utln/your_folder
+> **`Local_Path`** is the path to your files or directory on your local computer
+> **`Cluster_Path`** is the path to your files or directory on the cluster
+> Home Directory: **`/cluster/home/your_utln/your_folder`**
+> Research Project Storage Space Directory: **`/cluster/tufts/yourlabname/your_utln/your_folder`**
 
 ---
 ### OnDemand
