@@ -25,47 +25,40 @@
   For example, I would like to use `gcc` compiler, to check what versions of gcc compiler is available, load the version I would like to use, and use it:
 
   ```
-  [ymalon01@login-prod-01 ~]$ module av gcc
-  
-  ----------------------------------------------------------- /opt/shared/Modules/modulefiles-rhel6 ------------------------------------------------------------
-  gcc/4.7.0 gcc/4.9.2 gcc/5.3.0 gcc/7.3.0
-  
-  -------------------------------------------------------------- /cluster/tufts/hpc/tools/module ---------------------------------------------------------------
-  gcc/8.4.0 gcc/9.3.0
+  [ymalon01@login-prod-01 ~]$ module av blast
+
+---------------------- /opt/shared/Modules/modulefiles-rhel6 ----------------------
+blast/2.2.24 blast/2.2.31 blast/2.3.0  blast/2.8.1
+
+---------------------- /cluster/tufts/hpc/tools/module ----------------------------
+blast-plus/2.11.0
   ```
 
   ```
-  [ymalon01@login-prod-01 ~]$ module load gcc/7.3.0
+  [ymalon01@login-prod-01 ~]$ module load blast-plus/2.11.0
   [ymalon01@login-prod-01 ~]$ module list
   Currently Loaded Modulefiles:
-    1) use.own     2) gcc/7.3.0
+    1) use.own     2) blast-plus/2.11.0
   ```
 
   ```
-  [ymalon01@login-prod-01 ~]$ which gcc
-  /opt/shared/gcc/7.3.0/bin/gcc
+  [ymalon01@login-prod-01 ~]$ which blastp
+  /cluster/tufts/hpc/tools/spack/linux-rhel7-ivybridge/gcc-9.3.0/blast-plus-2.11.0-ip4jcqabi3a2jscgusnkipvib6goy5mv/bin/blastp
   [ymalon01@login-prod-01 ~]$ echo $PATH
-  /opt/shared/gcc/7.3.0/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/ymalon01/bin:/cluster/home/ymalon01/.local/bin
-  [ymalon01@login-prod-01 ~]$ gcc --version
-  gcc (GCC) 7.3.0
-  Copyright (C) 2017 Free Software Foundation, Inc.
-  This is free software; see the source for copying conditions.  There is NO
-  warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  /cluster/tufts/bio/tools/edirect:/cluster/tufts/hpc/tools/spack/linux-rhel7-ivybridge/gcc-9.3.0/blast-plus-2.11.0-ip4jcqabi3a2jscgusnkipvib6goy5mv/bin:/cluster/home/ymalon01/.iraf/bin:/cluster/home/ymalon01/.iraf/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/ymalon01/bin:/cluster/home/ymalon01/.local/bin
   ```
-
-  I can swap a module for another (doesn't have to be the same software):
-
+  
   ```
-  [ymalon01@login-prod-01 ~]$ module swap gcc/7.3.0 gcc/9.3.0 
-  [ymalon01@login-prod-01 ~]$ module list
-  Currently Loaded Modulefiles:
-    1) use.own     2) gcc/9.3.0
+  [ymalon01@login-prod-01 ~]$ blastp -version
+blastp: 2.11.0+
+ Package: blast 2.11.0, build Aug 17 2021 06:29:22
+  
   ```
 
   I can also unload loaded modules:
 
   ```
-  [ymalon01@login-prod-01 ~]$ module unload gcc
+  [ymalon01@login-prod-01 ~]$ module unload blast-plus/2.11.0
   [ymalon01@login-prod-01 ~]$ echo $PATH
   /usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/ymalon01/bin:/cluster/home/ymalon01/.local/bin
   ```
@@ -74,6 +67,8 @@
 
   ```
   [ymalon01@login-prod-01 ~]$ module purge
+  [ymalon01@login-prod-01 ~]$ module list
+No Modulefiles Currently Loaded.
   ```
 
   
