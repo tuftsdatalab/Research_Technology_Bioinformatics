@@ -44,7 +44,7 @@ the shell is often the best way to automate anything to do with files.
 In this lesson, we're going to go through how to access Unix/Linux and some of the basic
 shell commands. We will finish with a demonstration of how to run programs interactively as well by submitting a job to SLURM (https://it.tufts.edu/sites/default/files/uploaded-files/2020-03/QuickStart%20for%20Slurm.pdf). Slurm is a scalable cluster management and job scheduling system for Linux clusters. Other job scheduling systems you may be familiar with from other universities are "PBS" and "SGE_Batch".
 
-### Finding nformation on shell commands
+### Where to learn shell commands
 -----------------------------------------
 
 The challenge with UNIX is that it's not particularly simple - it's a
@@ -214,12 +214,10 @@ Let's start by going to your home directory (you choose the command)
 As you start using bash more and more, you will find a mix of files and directories/folders. If we want to know which is which, we can type::
 
 ```
-
     ls -F
-
 ```
 
-Anything with a "/" after it is a directory.  Things with a "*" after
+Anything with a "/" after it is a directory.  Things with a `*` after
 them are programs.  It there's nothing there it's an otherwise
 unremarkable file (e.g. a data file).
 
@@ -257,6 +255,57 @@ The first 10 letters in this line indicates the permission settings.
 <img width="523" alt="File_Permissions" src="https://user-images.githubusercontent.com/8632603/179539739-75f4edf9-5f5d-4de9-b20c-97abc7869be6.png">
 
 
+### Pro Tip:
+==============
+
+There are an overwhelming number of possibilities with some of these shell commands, so knowing how to find help on demand is important.
+
+For example, `ls` has a lot of flags that can be used.
+
+```
+ls -help
+```
+
+This outputs a list of all the ways that `ls` can be altered to find information about your files.
+
+Parameters can be added together in some cases.
+
+```
+ls -ltr
+```
+This command strings together three flags.
+
+`ls -l` is list with details
+`ls -t` is sort the list by creation time
+`ls -r` is sort the list in reverse
+
+For very full directories, this is helpful because it outputs the most recent set of files as the last in the list.
+
+
+Another way to get help is to use the `man` command. Not every unix installation has this installed, but the Tufts cluster does.
+
+```
+man ls
+```
+
+This opens up the manual on the `ls` command. It spells out the meaning of all the parameters in detail.
+
+Most common bash commands have a `man` page that explains it (I wish they had this for emojis....).
+
+Many programs have a help function built in, try adding `--help` or `-h` to see if some helpful information pops up. Sometimes just running the command without any arguments or parameters leads to some usage information or describes the correct command to get help.
+
+For example, if I want to understand the command `tr`
+
+```
+tr -h
+```
+
+shell outputs
+
+```
+tr: invalid option -- 'h'
+Try 'tr --help' for more information
+```
 
 
 ## Navigating in the Shell
