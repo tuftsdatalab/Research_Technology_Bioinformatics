@@ -15,38 +15,37 @@ jobs:
 
     # Checkout the `main` branch
     - uses: actions/checkout@v3
-    # Install Node.js
-    - uses: actions/setup-node@v2-beta
-      with:
-        node-version: '14'
+#    # Install Node.js
+#    - uses: actions/setup-node@v2-beta
+#      with:
+#        node-version: '14'
           
     # Install npm dependencies
     # (similar to npm install)
-    - run: npm ci
-    # Run code to build the site files inside the `` folder
-    - run: npm run build
+#    - run: npm ci
+    # Run code to build the site files inside the `Research_Technology_Bioinformatics` folder
+ #   - run: npm run build
     
     # Checkout the `testdeploy` branch
     - uses: actions/checkout@v3
       with:
         ref: testdeploy
-      # Put the checked out files inside the `testdeploy` folder
-        path: testdeploy
+      # Put the checked out files inside the `Research_Technology_Bioinformatics` folder
+        path: Research_Technology_Bioinformatics/testdeploy
         clean: false
       # Delete the .git folder from `testdeploy`
       # This turns the files into a plain folder instead of a git repository
-    - run: rm -rf testdeploy/.git
-      # Deploy the main folder to GitHub Pages
-    - uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: './big-island-buses'
-        user_name: 'github-actions[bot]'
-        user_email: 'github-actions[bot]@users.noreply.github.com'
+    - run: rm -rf Research_Technology_Bioinformatics/testdeploy/.git
+      # Deploy the `Research_Technology_Bioinformatics` folder to GitHub Pages
+#    - uses: peaceiris/actions-gh-pages@v3
+#      with:
+#        github_token: ${{ secrets.GITHUB_TOKEN }}
+#        publish_dir: './big-island-buses'
+#        user_name: 'github-actions[bot]'
+#        user_email: 'github-actions[bot]@users.noreply.github.com'
 
-
-#    - name: Build the site in the jekyll/builder container
-#      run: |
-#        docker run \
-#        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-#        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+    - name: Build the site in the jekyll/builder container
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+   
