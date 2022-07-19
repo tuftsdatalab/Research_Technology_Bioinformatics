@@ -82,4 +82,4 @@ You also have the option to use the `Xfce Terminal` under new  [OnDemand](https:
 - **[Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/about)**
 - **[PuTTY](https://www.putty.org/)**     
 - **[Cygwin](https://www.cygwin.com/)**  
-- **
+
