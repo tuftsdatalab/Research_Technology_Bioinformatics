@@ -76,16 +76,16 @@ https://ondemand.pax.tufts.edu/pun/sys/dashboard
 
 
 Mac
-~~~
+---
 
 On Mac the shell is available through Terminal  
 Applications -> Utilities -> Terminal  
 Go ahead and drag the Terminal application to your Dock for easy access.
 
 Windows
-~~~~~~~
+-------
 
-For Windows, we're going to be using gitbash.  
+For Windows, an easy one to install and use right away is  gitbash.  
 Download and install `gitbash <https://gitforwindows.org/>`__;
 Open up the program.
 
@@ -95,12 +95,13 @@ Other options:
 * https://conemu.github.io/
 
 Linux
+-----
 
 
 You probably already know how to find the shell prompt.
 
 ### Starting with the shell
------------------------
+---------------------------
 
 We will spend most of our time learning about the basics of the shell
 by manipulating some experimental data.
@@ -114,7 +115,7 @@ Open up the shell and type the command::
 
 and then hit ENTER 
 
-This is a good question for Mondays ....
+(This is a good question for Mondays ....)
 
 
 ### Running Commands
@@ -129,38 +130,30 @@ For example, the command *pwd* is short for "pass working directory."
 Now type the command
 
 ```
-
-   pwd
-
+pwd
 ```
 
 You should see something similar to this:
 
 ```
-
 /cluster/home/username01/
-
 ```
 
 Try this command
 
-
 ```
-
 ls
-
-
 ```
 
 It may be empty for the moment, let's circle back to the command shortly.
 
-===============
+
 Key Takeaway
 ===============
 
-'pwd' and 'ls' are examples of commands - programs you run at the shell
-prompt that do stuff. pwd stands for 'print working directory', while
-'ls' stands for 'list files'.
+`pwd` and `ls` are examples of commands - programs you run at the shell
+prompt that do stuff. `pwd` stands for 'print working directory', while
+`ls` stands for 'list files'. It is similar to the abbreviations used in texting, it takes less time to get the point across (lol, tbh, imho, afaik, ftw ....)
 
 ================
 
@@ -181,7 +174,7 @@ mkdir JulyWorkshop
 
 ===================
 
-Smart Tips:
+### Pro Tips:
 
 Avoid spaces and special characters in names.
 
@@ -236,36 +229,53 @@ You should now see something like this:
 ```
 
 
-Let's make an empty file here to start creating our file structure.
+Let's make a file here using a common command "echo" to start creating our file structure.
 
 
 ```
 
-touch emptyfile.txt
-
-
-```
-
-
-This is an empty file, to demonstrate file structure.
-
-
-```
-
-ls
+echo "Hello World " > helloworld.txt
 
 
 ```
 
 
-You should just see the file name.
+The ">" in this command tells the command to place the output into the place it is pointing.
+
+
+To open the file and check the contents, there are a few options. "cat" is a useful command for many reasons, let's see a demo here. Typing this command will print the contents of the file to the screen.
+
+```
+cat helloworld.txt
+```
+
+"cat" will open the entire file, so this is not the best command for long files.
+
+In that case "head" is a good option. Head pulls the top ten lines of the file and prints them to the screen.
+
+```
+head helloworld.txt"
 
 ```
 
-emptyfile.txt
+It does not look any different from cat in this case because there is only one line in the file.
 
+A third way to check file contents is by using a program called "less" (or "more").
+
+"less" will open the file interactively, then you can scroll through it and when you are done, push "q" on your keyboard to close the file.
 
 ```
+less helloworld.txt
+```
+
+Press "q" to close the file.
+
+There are many versions of these tools on command line, but "cat", "head" and "less" are very common.
+
+
+### Absolute and Relative Paths
+===============================
+
 
 
 If you want to go back to the directory that is in the level above our current file, another common shortcut used in bahs is `..`.
@@ -304,7 +314,7 @@ A Relative Path means that the command only works from the relative location tha
 This can get confusing if you are moving around a lot in your directories or sending commands to SLURM, so the alternative method to navigating around the cluster is using an *ABSOLUTE PATH*.
 
 
-Let's go back into the JulyWorkshop directory, but this time use your ABSOLUTE path by changing *username01** to your username. If you forget your username, try *whoami*
+Let's go back into the JulyWorkshop directory, but this time use your ABSOLUTE path by changing *username01* to your username. If you forget your username, try *whoami*
 
 
 ```
