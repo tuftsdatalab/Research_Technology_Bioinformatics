@@ -1,3 +1,12 @@
+
+* __Home Directory__
+
+Your Home Directory (10GB, fixed) should be `/cluster/home/your_utln`
+
+* __Reserach Project Storage__
+
+**[Cluster Storage Request]**([https://it.tufts.edu/research-technology/](https://it.tufts.edu/high-performance-computing))
+
 Your research projet storage (from 50GB and up) path should be `/cluster/tufts/yourlabname/`, and each member of the lab group has a dedicated directory `/cluster/tufts/yourlabname/your_utln`
 
 To see your **research project storage quota** by running the following command from **any node on the new cluster Pax**:
