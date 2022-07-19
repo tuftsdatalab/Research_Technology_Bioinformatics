@@ -86,7 +86,7 @@ Windows
 -------
 
 For Windows, an easy one to install and use right away is  gitbash.  
-Download and install `gitbash <https://gitforwindows.org/>`__;
+Download and install gitbash from https://gitforwindows.org/
 Open up the program.
 
 Other options: 
@@ -100,28 +100,46 @@ Linux
 
 You probably already know how to find the shell prompt.
 
-### Starting with the shell
+## Starting with the shell
 ---------------------------
 
 We will spend most of our time learning about the basics of the shell
 by manipulating some experimental data.
 
-Now we're going to download the data for the tutorial. For this you'll need
+Later on, we're going to download the data for the tutorial. For this you'll need
 internet access, because you're going to get it off the web.
 
 Open up the shell and type the command::
 
-   whoami
+```
+whoami
+```
 
 and then hit ENTER 
 
 (This is a good question for Mondays ....)
 
+When you are on the Tufts cluster, this will return your username according to the cluster. This username is attached to you wherever you are in the cluster and creates a home where your files can be kept, regardless of which machine you are on in the cluster. [If you are on your laptop or personal computer, the answer to this may be different before you log in.]
+
+
+### For Attendees Using Terminal Programs to Access the Cluster (instead of the Web Browser "OnDemand")
+
+If you are using a terminal on your home machine to connect to the tufts cluster, you will first need to log in by sending a simple command. **Ignore this if you are using the web browser login tool.**
+
+```
+ssh username01@login.pax.tufts.edu
+```
+
+Your username will have been created when your account was set up. If you do not have a cluster account, you can still follow this tutorial from your laptop or personal computer, except that the file structure will be different from what is described.
+
+If you are not on the Tufts network, you will need to set up the Tufts VPN (Virtual Private Network) before logging in:
+
+https://it.tufts.edu/guides/vpn-virtual-private-network/anyconnect-desktop-application
 
 ### Running Commands
---------------------------
+--------------------
 
-Let's try another.
+Let's try some simple commands.
 
 Much like text shortcuts, shell commands often use abbreviations to get their point across.
 
@@ -145,20 +163,22 @@ Try this command
 ls
 ```
 
-It may be empty for the moment, let's circle back to the command shortly.
+It may be empty for the moment, or it may not if this is not your first time using the shell.
 
 
-Key Takeaway
+### Key Takeaway
 ===============
 
 `pwd` and `ls` are examples of commands - programs you run at the shell
-prompt that do stuff. `pwd` stands for 'print working directory', while
-`ls` stands for 'list files'. It is similar to the abbreviations used in texting, it takes less time to get the point across (lol, tbh, imho, afaik, ftw ....)
+prompt that do stuff. 
 
-================
+* `pwd` stands for 'print working directory', while
+* `ls` stands for 'list files'. 
+
+It is similar to the abbreviations used in texting, it takes less time to get the point across (lol, tbh, imho, afaik, ftw -- you're saying them outloud in your head, right now, correct?)
 
 
-### Navigating in the Shell
+## Navigating in the Shell
 --------------------------
 
 We are going to make a place to work for this workshop.
@@ -166,28 +186,24 @@ We are going to make a place to work for this workshop.
 The following command makes a new directory.
 
 ```
-
 mkdir JulyWorkshop
-
 
 ```
 
-===================
+
 
 ### Pro Tips:
+===================
+Avoid spaces and special characters except underscores ("_").
 
-Avoid spaces and special characters in names.
-
-Spelling and Capitalization are literal in unix, be careful when making and using files to remember your convention.
+**Spelling** and **Capitalization** are literal in unix, be careful when making and using files to be consistent in your process. This will make it easier to find files later.
 
 ====================
 
 You can check that the new directory was created by repeating the list command.
 
 ```
-
 ls
-
 ```
 
 A directory is like a desk drawer. We create them to store files that relate to each other mostly.
@@ -200,33 +216,27 @@ When creating directories and filenames it is helpful to put some information ab
 
 Let's go into our directory and look around.
 
-Another command you'll find yourself using a lot is 'cd', which stands
+Another command you'll find yourself using a lot is `cd`, which stands
 for 'change directory'.  Try typing::
 
 ```
-
 cd JulyWorkshop
 
-
 ```
-
-
 and then
 
-
 ```
-
-   pwd
-
+pwd
 ```
 
 You should now see something like this:
 
 ```
-
 /cluster/home/username01/JulyWorkshop
-
 ```
+
+
+Note: If you ever type `cd` without a word behind it, it will send you back to your home directory.
 
 
 Let's make a file here using a common command "echo" to start creating our file structure.
