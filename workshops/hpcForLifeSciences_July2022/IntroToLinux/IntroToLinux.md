@@ -152,7 +152,15 @@ This is called the 'command line prompt.'
 [username01@login-prod-02 ~]$
 ```
 
-This information helps orient you to who you are and which computer you are currently on.
+This information helps orient you to who you are (`username01`) and which computer you are currently on(`login-prod-02`). In this case, it is a server that is intended only for "login", no big programs should be run from this computer, but it is fine for practicing a few bash commands.
+
+### Pro Tip:
+===================
+
+The name of the computer you are on is important informatiom when troubleshooting the cluster. `login` machines will reject large commands and output an error. Make sure to switch machines before running jobs. This is explained in the HPC portion of the lesson.
+
+----------------------
+
 
 The `$` at the end of the line is where you start typing your commands. The `$` (on the Mac it is a `%`) is not part of the command.
 
@@ -210,9 +218,10 @@ mkdir JulyWorkshop
 ```
 ----------------------
 
-### Pro Tips:
+### Pro Tip:
 ===================
-Avoid spaces and special characters except underscores ("_").
+
+When nameing files and directories, avoid spaces and special characters except underscores ("_").
 
 **Spelling** and **Capitalization** are literal in unix, be careful when making and using files to be consistent in your process. This will make it easier to find files later.
 
@@ -255,12 +264,15 @@ You should now see something like this:
 
 This is an example of an **Absolute Path**.
 
+It gives an address for where you are located on the cluster, much like a postal address that defines where you are in several layers (e.g. /country/state/city/street/specific_house.
 
-
-
+<img width="821" alt="tufts_root_path" src="https://user-images.githubusercontent.com/8632603/179759502-549b38b0-4957-4105-aee3-8bca4271bf7b.png">
 
 
 Note: If you ever type `cd` without a word behind it, it will send you back to your home directory.
+
+Your home directory is not all the way back at the root, it is set within the cluster as `/cluster/home/username01/`.
+
 
 
 Let's make a file here using a common command "echo" to start creating our file structure.
