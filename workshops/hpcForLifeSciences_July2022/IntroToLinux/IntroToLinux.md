@@ -1,9 +1,9 @@
 # The Shell
-=========
+============
 
 
-## Objectives
-----------
+## Learning Objectives
+-----------------------
 
 - What is the shell?
 - How do you access it?
@@ -17,7 +17,7 @@
 What is the shell?
 ------------------
 
-The *shell* is a program that presents a command line interface
+The **shell** is a program that presents a command line interface
 which allows you to control your computer using commands entered
 with a keyboard instead of controlling graphical user interfaces
 (GUIs) with a mouse/keyboard combination.
@@ -28,7 +28,7 @@ There are many reasons to learn about the shell.  A few specific ones:
   graphical interface. If you want to work in metagenomics or genomics you're
   going to need to use the shell.
 
-* The shell gives you *power*. The command line gives you the power to
+* The shell gives you **power**. The command line gives you the power to
   do your work more efficiently and more quickly. Shell allows users to automate repetitive tasks.
 
 * To use remote computers or cloud computing, you need to use the shell.
@@ -97,8 +97,10 @@ Other options:
 Linux
 -----
 
-
 You probably already know how to find the shell prompt.
+
+
+---------------------------
 
 ## Starting with the shell
 ---------------------------
@@ -121,10 +123,11 @@ and then hit ENTER
 
 When you are on the Tufts cluster, this will return your username according to the cluster. This username is attached to you wherever you are in the cluster and creates a home where your files can be kept, regardless of which machine you are on in the cluster. [If you are on your laptop or personal computer, the answer to this may be different before you log in.]
 
-
 ### For Attendees Using Terminal Programs to Access the Cluster (instead of the Web Browser "OnDemand")
 
 If you are using a terminal on your home machine to connect to the tufts cluster, you will first need to log in by sending a simple command. **Ignore this if you are using the web browser login tool.**
+
+Replace "username01" with your tufts username.
 
 ```
 ssh username01@login.pax.tufts.edu
@@ -132,12 +135,28 @@ ssh username01@login.pax.tufts.edu
 
 Your username will have been created when your account was set up. If you do not have a cluster account, you can still follow this tutorial from your laptop or personal computer, except that the file structure will be different from what is described.
 
+The login will ask you for your Tufts password.
+
 If you are not on the Tufts network, you will need to set up the Tufts VPN (Virtual Private Network) before logging in:
 
 https://it.tufts.edu/guides/vpn-virtual-private-network/anyconnect-desktop-application
 
 ### Running Commands
 --------------------
+
+When you login, you will see some letters and characters at the beginning of the line.
+
+This is called the 'command line prompt.'
+
+```
+[username01@login-prod-02 ~]$
+```
+
+This information helps orient you to who you are and which computer you are currently on.
+
+The `$` at the end of the line is where you start typing your commands. The `$` (on the Mac it is a `%`) is not part of the command.
+
+The outputs from commands will not have that piece of information or `$` at the beginning of the line.
 
 Let's try some simple commands.
 
@@ -167,7 +186,7 @@ It may be empty for the moment, or it may not if this is not your first time usi
 
 
 ### Key Takeaway
-===============
+=================
 
 `pwd` and `ls` are examples of commands - programs you run at the shell
 prompt that do stuff. 
@@ -189,8 +208,7 @@ The following command makes a new directory.
 mkdir JulyWorkshop
 
 ```
-
-
+----------------------
 
 ### Pro Tips:
 ===================
@@ -198,7 +216,7 @@ Avoid spaces and special characters except underscores ("_").
 
 **Spelling** and **Capitalization** are literal in unix, be careful when making and using files to be consistent in your process. This will make it easier to find files later.
 
-====================
+---------------------
 
 You can check that the new directory was created by repeating the list command.
 
@@ -234,6 +252,12 @@ You should now see something like this:
 ```
 /cluster/home/username01/JulyWorkshop
 ```
+
+This is an example of an **Absolute Path**.
+
+
+
+
 
 
 Note: If you ever type `cd` without a word behind it, it will send you back to your home directory.
