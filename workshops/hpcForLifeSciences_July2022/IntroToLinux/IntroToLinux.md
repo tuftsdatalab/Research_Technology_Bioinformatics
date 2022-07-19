@@ -782,9 +782,9 @@ computer; note, these files originally came from the
 
 
 ```
-curl -o mouse.1.protein.faa.gz -L https://osf.io/v6j9x/download
-curl -o mouse.2.protein.faa.gz -L https://osf.io/j2qxk/download
-curl -o zebrafish.1.protein.faa.gz -L https://osf.io/68mgf/download
+curl -o mouse.1.protein.faa.gz -L https://tuftsdatalab.github.io/Research_Technology_Bioinformatics/workshops/hpcForLifeSciences_July2022/IntroToLinux/mouse.1.protein.faa.gz
+https://tuftsdatalab.github.io/Research_Technology_Bioinformatics/workshops/hpcForLifeSciences_July2022/IntroToLinux/zebrafish.1.protein.faa.gz
+
 ```
 
 Another method for pulling files from the internet is `wget`, which will be demoed tomorrow.
@@ -796,12 +796,11 @@ If you look at the files in the current directory:
 ls -l
 ```
 
-You should now see these 3:
+You should now see these 3 files with details on who has permissions and when the files were created (notice that the dates are not today).
 
 ```
 total 29908
 -rw-rw-r-- 1 username01 username01 12553742 Jun 29 08:41 mouse.1.protein.faa.gz
--rw-rw-r-- 1 username01 username01  4074490 Jun 29 08:41 mouse.2.protein.faa.gz
 -rw-rw-r-- 1 username01 username01 13963093 Jun 29 08:42 zebrafish.1.protein.faa.gz
 ```
 
@@ -833,12 +832,34 @@ Let's take those first two sequences and save them to a file.  We'll
 do this using output redirection with '>', which says "take
 all the output and put it into this file here."
 
+`-n` flag for `head` specifies a number of lines to pull.
+
+The first 11 lines contain two protein sequences. Let's extract those for blasting to test that our process is working.
+
 ```
 head -n 11 mouse.1.protein.faa > mm-first.faa
 ```
 
-So now, for example, you can do `cat mm-first.faa` to see the contents of
-that file (or `less mm-first.faa`). TIP: if you try `less mm-first.faa` you will need to exit by pressing the `q` key in your keyboard.
+```
+cat mm-first.faa
+```
+
+Should produce:
+
+```
+>YP_220550.1 NADH dehydrogenase subunit 1 (mitochondrion) [Mus musculus domesticus]
+MFFINILTLLVPILIAMAFLTLVERKILGYMQLRKGPNIVGPYGILQPFADAMKLFMKEPMRPLTTSMSLFIIAPTLSLT
+LALSLWVPLPMPHPLINLNLGILFILATSSLSVYSILWSGWASNSKYSLFGALRAVAQTISYEVTMAIILLSVLLMNGSY
+SLQTLITTQEHMWLLLPAWPMAMMWFISTLAETNRAPFDLTEGESELVSGFNVEYAAGPFALFFMAEYTNIILMNALTTI
+IFLGPLYYINLPELYSTNFMMEALLLSSTFLWIRASYPRFRYDQLMHLLWKNFLPLTLALCMWHISLPIFTAGVPPYM
+>YP_220551.1 NADH dehydrogenase subunit 2 (mitochondrion) [Mus musculus domesticus]
+MNPITLAIIYFTIFLGPVITMSSTNLMLMWVGLEFSLLAIIPMLINKKNPRSTEAATKYFVTQATASMIILLAIVLNYKQ
+LGTWMFQQQTNGLILNMTLMALSMKLGLAPFHFWLPEVTQGIPLHMGLILLTWQKIAPLSILIQIYPLLNSTIILMLAIT
+SIFMGAWGGLNQTQMRKIMAYSSIAHMGWMLAILPYNPSLTLLNLMIYIILTAPMFMALMLNNSMTINSISLLWNKTPAM
+LTMISLMLLSLGGLPPLTGFLPKWIIITELMKNNCLIMATLMAMMALLNLFFYTRLIYSTSLTMFPTNNNSKMMTHQTKT
+KPNLMFSTLAIMSTMTLPLAPQLIT
+```
+
 
 Now let's BLAST these two sequences against the entire zebrafish
 protein data set. First, we need to tell BLAST that the zebrafish
@@ -902,20 +923,75 @@ Things to mention and discuss:
 
 ----
 
-Last, but not least, let's generate a more machine-readable version of that
-last file --
-
-```
-blastp -query mm-second.faa -db zebrafish.1.protein.faa -out mm-second.x.zebrafish.tsv -outfmt 6
-```
-
-You can open the file with `less mm-second.x.zebrafish.tsv` to see how the file looks like.
-
-See [this link](http://www.metagenomics.wiki/tools/blast/blastn-output-format-6) for a description of the possible BLAST output formats.
-
 
 ## Writing a BASH Script and Running it as "Batch" 
 ==================================================
+
+In this example, we'll repeat the blast command above but refine it by outputting a table which summarizes each blast hit on one line. 
+
+See [this link](http://www.metagenomics.wiki/tools/blast/blastn-output-format-6) for a description of the possible BLAST output formats.
+
+In order to do this, we need to open a text editor.
+
+### Opening a Text Editor
+
+The easiest text editor to use on command line is `nano`, but there are many other types of command line text editors (`vi`,`emacs`,`vim`, etc.)
+
+Nano is nice because it puts the instructions at the bottom of the editor in case you forget.
+
+Open nano
+
+```
+nano
+
+```
+
+Hit Control-X to exit, say no and no.
+
+Sometimes it is good to give a file name, so let's nano with a filename for our script.
+
+```
+nano sbatch.sh
+
+```
+
+Before closing, let's put some text into the file.
+
+```
+
+#!/bin/bash
+
+#SBATCH --job-name=job
+#SBATCH --nodes=1
+#SBATCH -n 2
+#SBATCH --partition=batch
+#SBATCH --reservation=bioworkshop
+#SBATCH --mem=32Gb
+#SBATCH --time=0-24:00:00
+#SBATCH --output=%j.out
+#SBATCH --error=%j.err
+
+blastp -query mm-second.faa -db zebrafish.1.protein.faa -out mm-second.x.zebrafish.tsv -outfmt 6
+
+
+```
+
+Control -X to close and save and use the same file name (sbatch.sh)
+
+Delilah will explain the contents of this file, but let's go ahead and run it from this directory.
+
+Because we did not add any ABSOLUTE paths, then the sbatch command will look for the files where the program is running.
+
+
+
+
+
+
+
+You can open the file with `less -S mm-second.x.zebrafish.tsv` to see how the file looks like. The command line may move stuff around slightly, but it is a tab delimited file that can be downloaded to your computer and loaded into your spreadsheet program of choice.
+
+
+
 
 
 
