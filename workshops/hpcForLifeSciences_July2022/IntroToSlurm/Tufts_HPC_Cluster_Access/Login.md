@@ -63,6 +63,8 @@ OR
 
 Use the `>_Open in Terminal` button in `Files` to open a terminal in whichever directory you navigated to.
 
+<img src="https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/blob/0d8f634f42148df2a1ce4cdf9009f68c9f5d36b8/workshops/hpcForLifeSciences_July2022/IntroToSlurm/images/Files.png" alt="Files" width=60%>
+
 <img src="https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/blob/80141a930eb34262425b799fa32d1bdac43e34d4/workshops/hpcForLifeSciences_July2022/IntroToSlurm/images/Home.png" alt="Home" width=60%>
 
 If you need **X11** access through OnDemand to display any GUI applications, please temporarily use our **Old OnDemand** [https://ondemand.cluster.tufts.edu](https://ondemand.cluster.tufts.edu) **`Clusters`** for this option:
