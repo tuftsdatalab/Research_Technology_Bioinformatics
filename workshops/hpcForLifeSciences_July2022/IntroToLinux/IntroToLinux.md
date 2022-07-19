@@ -500,11 +500,13 @@ When copying within the same directory, make sure to change the name of the file
 
 When copying to a new directory, the name can stay the same.
 
-This command copies the file within the same directory with a new name.
+This command copies the file within the same directory with a new name. Both files are kept.
 
 ```
 cp helloworld.txt helloworld1.txt
 ```
+Check this with `ls`
+
 These commands make a new directory, and then copies the file into the new directory with the same name.
 
 ```
@@ -512,12 +514,64 @@ mkdir helloworld
 cp helloworld.txt helloworld
 ```
 
+Check this with `ls helloworld` (lists the contents of the directory).
 
+### Moving Files
 
+`mv` is an option for renaming files, but also has the potential to **overwrite** existing files.
 
+For example, this command changes the name of the file and removes the original file. If `helloworld2.txt` already existed, it would be replaced.
 
+```
+mv helloworld1.txt helloworld2.txt
+```
 
+Check this with `ls`
 
+### Removing Files
+
+`rm` and `rmdir` are permanent in shell, so make sure you are ready to delete files.
+
+```
+rm helloworld/helloworld.txt
+```
+
+Once the directory is empty, we can remove the directory.
+
+```
+rmdir helloworld
+```
+
+It will throw an error if the directory is not empty.
+
+If you are positive that you want to remove a directory and all the files within it, then add two flags, `-r` for recursive and `-f` for force.
+
+Both commands above could have been replaced with one remove command: `rm -rf helloworld`
+
+Until you are confident with file structure and bash commands, it is a good idea to copy instead of move and to set the interactive flag `-i` on the commands `rm` and `mv` to set up a question that you answer `y` or `n` to before removing.
+
+```
+rm -i helloworld/helloworld.txt
+```
+
+Generates this question
+```
+rm: remove regular file ‘helloworld/helloworld.txt’?
+```
+
+`mv -i` only generates a question if you are in danger of overwriting an existing file.
+
+For example:
+
+```
+cp helloworld.txt helloworld1.txt
+mv -i helloworld.txt helloworld1.txt
+```
+Generates the question:
+
+```
+mv: overwrite ‘helloworld1.txt’?
+```
 
 
 ### Going Home
@@ -600,6 +654,34 @@ This just shows the top two levels of the file structure.
 
 ## Running Programs Interactively
 ==================================
+
+### HPC Etiquette
+
+Try not to use the login computers for programs or large file management jobs. Looking things up and small commands such as `cat` or `head` are fine, but running programs may block others from logging in to the cluster.
+
+### Switch to an Interactive Session
+
+Do this first before running programs or testing your code.
+
+```
+srun -p batch --reservation=bioworkshop -n 2 --mem=8g -t 1-0 --pty bash
+```
+
+This command only works during the workshop on July 20 and 21. To use this command after the workshop is over or if you are working on your own, just remove the reservation flag.
+
+* `-p` which partition to use, outside of class it is okay to use `interactive` or `batch`, your group may have it's own partition. You can read more about what is available by going to the OnDemand dropdown menu for "Misc" and look at "Scheduler Info" to find all the partition names.
+
+* `--reservation` only applies during a specific class or workshop
+* `-n` is the number of cpus to request, 2 or 4 is sufficient for most tests.
+* `--mem` specifies the memory requested, 8g is usually sufficient for small jobs, consult the documentation for a program to find out if a minimum memory requirement is needed.
+* `-t` indicates the time `1-0` means one day, so for tomorrow's session you will need to rerun this command.
+* `--pty bash` just indicates that the shell opens in `bash`, meaning that all the commands that we learned today will work.
+
+
+
+
+
+
 
 Let's go back into the JulyWorkshop directory, but this time use your ABSOLUTE path by changing `username01` to your username. If you forget your username, try `whoami`.
 
