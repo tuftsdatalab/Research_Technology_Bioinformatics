@@ -6,12 +6,12 @@
 > 
 **Hostname for file transfer: xfer.cluster.tufts.edu**
 
-    > NOTE:
-    >
-    > Local_Path is the path to your files or directory on your local computer
-    > Cluster_Path is the path to your files or directory on the cluster
-    > Home Directory: /cluster/home/your_utln/your_folder
-    > Research Project Storage Space Directory: /cluster/tufts/yourlabname/your_utln/your_folder
+> NOTE:
+> 
+> Local_Path is the path to your files or directory on your local computer
+> Cluster_Path is the path to your files or directory on the cluster
+> Home Directory: /cluster/home/your_utln/your_folder
+> Research Project Storage Space Directory: /cluster/tufts/yourlabname/your_utln/your_folder
 
 ---
 ### OnDemand
@@ -32,7 +32,9 @@ Using the **`Upload`** or **`Download`** buttons to transfer.
 ### File Transfer Client
 
 > Hostname: `xfer.cluster.tufts.edu`
+> 
 > Protocol: SCP or SFTP
+> 
 > Use port 22 for SFTP
 
 - **[WinSCP](https://winscp.net/eng/index.php)** <img src="https://miro.medium.com/max/500/1*Of7JOwV0wZgDIjgaS4qKlQ.png" alt="WinSCP" width=20%>
