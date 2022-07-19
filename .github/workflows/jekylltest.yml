@@ -26,10 +26,10 @@ jobs:
     # Run code to build the site files inside the `big-island-buses` folder
     - run: npm run build
     
-    # Checkout the `app-challenge` branch
-    - uses: actions/checkout@v2
+    # Checkout the `main` branch
+    - uses: actions/checkout@v3
       with:
-        ref: app-challenge
+        ref: main
       # Put the checked out files inside the `big-island-buses/heleon` folder
       path: main/testdeploy
           clean: false
