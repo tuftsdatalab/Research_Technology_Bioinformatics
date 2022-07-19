@@ -70,7 +70,7 @@ Using the **`Upload`** or **`Download`** buttons to transfer.
 
     `$ rsync Local_Path your_utln@xfer.cluster.tufts.edu:Cluster_Path`
 
-**Directory** Transfer with `scp` or `rsync`:
+**Directory** Transfer with `scp -r` or `rsync -azP`:
 
 - Download from cluster
 
