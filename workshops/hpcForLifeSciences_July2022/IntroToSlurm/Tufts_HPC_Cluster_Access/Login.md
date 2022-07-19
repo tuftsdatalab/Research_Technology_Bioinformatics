@@ -63,6 +63,8 @@ OR
 
 Use the `>_Open in Terminal` button in `Files` to open a terminal in whichever directory you navigated to.
 
+<img src="https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/blob/80141a930eb34262425b799fa32d1bdac43e34d4/workshops/hpcForLifeSciences_July2022/IntroToSlurm/images/Home.png" alt="Home" width=60%>
+
 If you need **X11** access through OnDemand to display any GUI applications, please temporarily use our **Old OnDemand** [https://ondemand.cluster.tufts.edu](https://ondemand.cluster.tufts.edu) **`Clusters`** for this option:
 
 **`Tufts HPC FastX11 Shell Access`** = `$ ssh -XC your_utln@login.cluster.tufts.edu` (with X11 for GUI applications)
