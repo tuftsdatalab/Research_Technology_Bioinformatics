@@ -23,26 +23,26 @@ jobs:
     # Install npm dependencies
     # (similar to npm install)
     - run: npm ci
-    # Run code to build the site files inside the `main` folder
+    # Run code to build the site files inside the `` folder
     - run: npm run build
     
     # Checkout the `testdeploy` branch
     - uses: actions/checkout@v3
       with:
         ref: testdeploy
-      # Put the checked out files inside the `main/testdeploy` folder
-      path: main/testdeploy
-      clean: false
-      # Delete the .git folder from `main/testdeploy`
+      # Put the checked out files inside the `testdeploy` folder
+        path: testdeploy
+        clean: false
+      # Delete the .git folder from `testdeploy`
       # This turns the files into a plain folder instead of a git repository
-      - run: rm -rf main/testdeploy/.git
+    - run: rm -rf testdeploy/.git
       # Deploy the main folder to GitHub Pages
-      - uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: './main'
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+    - uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: './big-island-buses'
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
 
 
 #    - name: Build the site in the jekyll/builder container
