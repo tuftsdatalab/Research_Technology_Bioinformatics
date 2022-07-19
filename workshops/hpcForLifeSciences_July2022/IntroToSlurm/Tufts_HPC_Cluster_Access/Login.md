@@ -77,3 +77,9 @@ You also have the option to use the `Xfce Terminal` under new  [OnDemand](https:
 
 <img src="https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/blob/22edb461e02368634befd5432c49111618a9bb07/workshops/hpcForLifeSciences_July2022/IntroToSlurm/images/InteractiveApps.png" alt="InteractiveApps" width=60%>
 
+### **Windows**
+- **[PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7.2)**
+- **[Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/about)**
+- **[PuTTY](https://www.putty.org/)**     
+- **[Cygwin](https://www.cygwin.com/)**  
+- **
