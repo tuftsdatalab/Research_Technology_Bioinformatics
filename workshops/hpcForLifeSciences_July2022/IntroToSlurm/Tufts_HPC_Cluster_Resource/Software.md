@@ -90,7 +90,8 @@ No Modulefiles Currently Loaded.
     - curl
   - [Python](https://tufts.box.com/v/CondaEnvonHPC) (Conda env recommanded)
     - anaconda/3 (older version, source activate)
-    - anaconda/2021.05 (newer version, source activate)
+    - anaconda/2021.11 or anaconda/2021.05 (newer version, source activate)
+    - Never run "conda activate" or "conda init"
     - Use the same version of conda on one conda env every time
   - Other software compiled from source
     - gcc
