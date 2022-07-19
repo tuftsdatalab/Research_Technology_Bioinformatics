@@ -1,8 +1,8 @@
 
 ### CPUs
-After logging in on the HPC cluster, you can use command `sinfo` to check:
-- The `partition` you have access to (all partitions listed in the `sinfo` output)
-- 
+Resources are orgnized into **partitions** on the cluster based on functionality and priority.
+After logging in on the HPC cluster, you can use command `sinfo` to check the `partition` you have access to (all partitions listed in the `sinfo` output).
+
 ```
 [ymalon01@login-prod-01 ~]$ sinfo
 PARTITION    AVAIL  TIMELIMIT  NODES  STATE NODELIST 
