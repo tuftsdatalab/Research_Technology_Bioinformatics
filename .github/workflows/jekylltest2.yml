@@ -22,9 +22,9 @@ jobs:
           
     # Install npm dependencies
     # (similar to npm install)
-#    - run: npm ci
+    - run: npm ci
     # Run code to build the site files inside the `Research_Technology_Bioinformatics` folder
- #   - run: npm run build
+    - run: npm run build
     
     # Checkout the `testdeploy` branch
     - uses: actions/checkout@v3
@@ -37,15 +37,14 @@ jobs:
       # This turns the files into a plain folder instead of a git repository
     - run: rm -rf Research_Technology_Bioinformatics/testdeploy/.git
       # Deploy the `Research_Technology_Bioinformatics` folder to GitHub Pages
-#    - uses: peaceiris/actions-gh-pages@v3
-#      with:
-#        github_token: ${{ secrets.GITHUB_TOKEN }}
-#        publish_dir: './big-island-buses'
-#        user_name: 'github-actions[bot]'
-#        user_email: 'github-actions[bot]@users.noreply.github.com'
+    - uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: './Research_Technology_Bioinformatics'
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
 
     - name: Build the site in the jekyll/builder container
       run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        docker run -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
    
