@@ -26,16 +26,16 @@ jobs:
     # Run code to build the site files inside the `main` folder
     - run: npm run build
     
-    # Checkout the `main` branch
+    # Checkout the `testdeploy` branch
     - uses: actions/checkout@v3
       with:
-        ref: main
+        ref: testdeploy
       # Put the checked out files inside the `main/testdeploy` folder
       path: main/testdeploy
       clean: false
-      # Delete the .git folder from `Research_Technology_Bioinformatics/testdeploy`
+      # Delete the .git folder from `main/testdeploy`
       # This turns the files into a plain folder instead of a git repository
-      - run: rm -rf Research_Technology_Bioinformatics/testdeploy/.git
+      - run: rm -rf main/testdeploy/.git
       # Deploy the main folder to GitHub Pages
       - uses: peaceiris/actions-gh-pages@v3
         with:
