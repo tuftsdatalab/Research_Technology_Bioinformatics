@@ -768,14 +768,14 @@ module list
 
 ### Bringing in Files from the Internet
 
-For genomics projects, the files are often stored in pubic repositories and we must go and get those files before proceeding.
+We need some data!  Let's grab the mouse and zebrafish RefSeq protein data sets from NCBI, and put them in our home directory. (this example is adapted from a lesson from Titus Brown's summer institute: https://angus.readthedocs.io/en/2019/running-command-line-blast.html)
 
-We need some data!  Let's grab the mouse and zebrafish RefSeq
-protein data sets from NCBI, and put them in our home directory.
+For genomics projects, the files are often stored in pubic repositories and we must go and get those files before proceeding. These files originally came from the
+[NCBI FTP site](ftp://ftp.ncbi.nih.gov/refseq/M_musculus/mRNA_Prot), a copy has been placed in our github directory for future reference.
+
 
 Now, we'll use `curl` to download the files from a Web site onto our
-computer; note, these files originally came from the
-[NCBI FTP site](ftp://ftp.ncbi.nih.gov/refseq/M_musculus/mRNA_Prot)
+computer; note, 
 
 * `-o` indicates this is the name we are assigning to our files in our own directory
 * `-L` provides the full path for the download
@@ -894,40 +894,23 @@ less mm-first.x.zebrafish.txt
 
 -----
 
-Let's do some more sequences (this one will take a little longer to run):
 
-```
-head -n 498 mouse.1.protein.faa > mm-second.faa
-blastp -query mm-second.faa -db zebrafish.1.protein.faa -out mm-second.x.zebrafish.txt
-```
 
-will compare the first 96 sequences.  You can look at the output file with:
 
-```
-less mm-second.x.zebrafish.txt
-```
-
-(and again, type 'q' to get out of paging mode.)
-
-Notes:
-
-* you can copy/paste multiple commands at a time, and they will execute in order;
-
-* why did it take longer to BLAST ``mm-second.faa`` than ``mm-first.faa``?
-
-Things to mention and discuss:
-
-* `blastp` options and -help.
-* command line options, more generally - why so many?
-* automation rocks!
-
-----
 
 
 ## Writing a BASH Script and Running it as "Batch" 
 ==================================================
 
 In this example, we'll repeat the blast command above but refine it by outputting a table which summarizes each blast hit on one line. 
+
+First, let's add more sequences to our query file. This will extract the first 186 sequences.  
+
+
+```
+head -n 999 mouse.1.protein.faa > mm-second.faa
+
+```
 
 See [this link](http://www.metagenomics.wiki/tools/blast/blastn-output-format-6) for a description of the possible BLAST output formats.
 
@@ -946,7 +929,9 @@ nano
 
 ```
 
-Hit Control-X to exit, say no and no.
+Hit Control-X to exit, say no and no. Nothing is saved, because we did not type into the file.
+
+Let's reopen and copy and paste our script into the file.
 
 Sometimes it is good to give a file name, so let's nano with a filename for our script.
 
@@ -966,29 +951,59 @@ Before closing, let's put some text into the file.
 #SBATCH -n 2
 #SBATCH --partition=batch
 #SBATCH --reservation=bioworkshop
-#SBATCH --mem=32Gb
+#SBATCH --mem=8Gb
 #SBATCH --time=0-24:00:00
 #SBATCH --output=%j.out
 #SBATCH --error=%j.err
 
+module load blast-plus/2.11.0
 blastp -query mm-second.faa -db zebrafish.1.protein.faa -out mm-second.x.zebrafish.tsv -outfmt 6
 
 
 ```
 
+Because it is going to one or several virtual locations in the cluster, we need to reload the module as part of the script before running the script. This will make the command recognizable to the machine where the job is running.
+
+
 Control -X to close and save and use the same file name (sbatch.sh)
 
-Delilah will explain the contents of this file, but let's go ahead and run it from this directory.
+```
+cat sbatch.sh
+```
+
+Does it have all the elements?
+
+If it does, a simple way to run it is by telling shell that it is a program.
+
+```
+sh sbatch.sh
+```
+
+
+
+Delilah will explain the contents of this file, but let's go ahead and run it from the workshop directory.
 
 Because we did not add any ABSOLUTE paths, then the sbatch command will look for the files where the program is running.
 
+The results will also show up in that directory.
+
+You can look at the output file with `less -S`, the flag allows scrolling from left to right instead of wrapping text or cutting it off:
+
+```
+less -S mm-second.x.zebrafish.tsv
+
+```
+
+(and again, type 'q' to get out of paging mode.)
 
 
+The command line may move stuff around slightly, but it is a tab delimited file that can be downloaded to your computer and loaded into your spreadsheet program of choice.
+
+`blastp` is a versatile tool for finding similar sequences, to see all the options, type `blastp -help`
+
+## This concludes our Intro to Unix Lesson and we now Return to our Regularly Scheduled Slurm
 
 
-
-
-You can open the file with `less -S mm-second.x.zebrafish.tsv` to see how the file looks like. The command line may move stuff around slightly, but it is a tab delimited file that can be downloaded to your computer and loaded into your spreadsheet program of choice.
 
 
 
