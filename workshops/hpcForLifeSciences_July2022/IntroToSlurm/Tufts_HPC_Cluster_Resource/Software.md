@@ -131,5 +131,5 @@ No Modulefiles Currently Loaded.
 
 ---
 
-NEXT - [Tufts HPC Cluster SLURM](./Tufts_HPC_Cluster_SLURM)
+NEXT - [Tufts HPC Cluster SLURM](../Tufts_HPC_Cluster_SLURM/README.md)
 
