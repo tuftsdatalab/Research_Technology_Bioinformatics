@@ -28,7 +28,7 @@ trim_galore --illumina --paired --fastqc -o trim_galore/ fastq/SRR15607266_pass_
 
 ## Trim Galore Output
 
-When you run the command above you will note several lines of output to the screen. We will focus on the
+When you run the command above you will note several lines of output to the screen. We will focus on the summary section.
 
 _________________________________________________________________________________________________________________________________________________________
 
