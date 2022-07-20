@@ -4,7 +4,7 @@
 ## Description
 This introductory 2-day hybrid workshop will cover the basics of using the Tufts High Performance Compute Cluster (HPC) to manipulate Next Generation Sequencing (NGS) data. The first day will introduce users to Linux commands and how to use Slurm job scheduler to run and monitor jobs on the HPC. The second day will cover downloading, performing quality control, aligning and viewing Next Generation Sequencing data. This workshop is for any student, staff or faculty that wants to learn about Bioinformatics. 
 
-This workshop is sponsered by DISC and Research Technology. The presenters, in order, are:
+This workshop is sponsered by the Data Intensive Studies Center ([DISC](https://disc.tufts.edu/)) and [Research Technology](https://it.tufts.edu/research-technology/). The presenters, in order, are:
 
 Day 1:
 - Delilah Maloney (TTS - Senior HPC Specialist)
@@ -12,7 +12,7 @@ Day 1:
 
 Day 2:
 - Jason Laird (TTS/RT - Bioinformatics Scientist)
-- Rebecca Batorsky (DISC - Senior Data Scientist)
+- [Rebecca Batorsky](https://disc.tufts.edu/people) (DISC - Senior Data Scientist)
 
 
 ## Prerequisites
