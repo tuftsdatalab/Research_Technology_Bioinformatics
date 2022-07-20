@@ -3,10 +3,11 @@
 - Checking your **active** jobs
 
 ```bash
-[ymalon01@cc1gpu001 ~]$ squeue -u $USER
+[ymalon01@login-prod-01 ~]$ squeue -u $USER
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON) 
             296794   preempt     bash ymalon01  R       5:12      1 cc1gpu001 
-[ymalon01@cc1gpu001 ~]$ squeue -u ymalon01
+            
+[ymalon01@login-prod-01 ~]$ squeue -u ymalon01
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON) 
             296794   preempt     bash ymalon01  R       5:21      1 cc1gpu001 
 ```
