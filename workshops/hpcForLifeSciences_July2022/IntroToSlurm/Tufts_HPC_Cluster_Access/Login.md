@@ -85,4 +85,4 @@ You also have the option to use the `Xfce Terminal` under new  [OnDemand](https:
 
 ---
 
-NEXT -- [File Transfer](File_Transfer.md)
+NEXT - [File Transfer](File_Transfer.md)
