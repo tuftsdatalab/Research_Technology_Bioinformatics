@@ -106,6 +106,7 @@ Display job detailed accounting data:
 NOTE: there are more format options, see [sacct](https://slurm.schedmd.com/sacct.html)
 
 ---
+If you have any HPC related questions, please feel free to contact us at **tts-research@tufts.edu**.
 
 *End of Day 1*
 
