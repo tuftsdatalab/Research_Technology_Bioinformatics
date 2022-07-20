@@ -1,4 +1,4 @@
 - SLURM
-  - [Interactive Session](Interactive_Session.md) -- **[Intro to Linux](../../IntroToLinux)**
+  - [Interactive Session](Interactive_Session.md) -- **[Intro to Linux](../../IntroToLinux/IntroToLinux.md)**
   - [Batch Job](Batch_Job.md)
   - [Job Status](Job_Status.md)
