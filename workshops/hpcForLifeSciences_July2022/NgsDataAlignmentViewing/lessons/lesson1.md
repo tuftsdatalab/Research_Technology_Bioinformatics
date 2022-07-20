@@ -2,7 +2,7 @@ Approximate time: 30 minutes
 
 ## Goals
 - Align short reads to a references genome with BWA
-- View alignment using Inegrated Genome Viewer
+- View alignment using [Integrative Genomics Viewer](https://software.broadinstitute.org/software/igv/)
 
 ## BWA Overview
 
@@ -159,11 +159,12 @@ This serves to make the script more readable.
 ```markdown
 #!/bin/bash
 #SBATCH --job-name=bwa
-#SBATCH -n 2 # tasks requested
-#SBATCH -N 1 # Nodes requested
+#SBATCH --nodes = 1                # Nodes requested
+#SBATCH -n 2                       # Tasks requested
+#SBATCH --partition=batch
 #SBATCH --reservation=bioworkshop
-#SBATCH --mem=1Gb
-#SBATCH --time=10:00
+#SBATCH --mem=1Gb                  # Memory requested
+#SBATCH --time=0-30:00             # Time requested
 #SBATCH --output=%j.out
 #SBATCH --error=%j.err
 
