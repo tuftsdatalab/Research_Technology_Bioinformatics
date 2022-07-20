@@ -8,7 +8,7 @@ This workshop is sponsered by the Data Intensive Studies Center ([DISC](https://
 
 Day 1:
 - Delilah Maloney (TTS - Senior HPC Specialist)
-- Adelaide Rhodes (TTS/RT - Senior Bioinformatics Scientist)
+- Adelaide Rhodes (TTS/RT - [Senior Bioinformatics Scientist]) [@RareSeas](https://mobile.twitter.com/RareSeas)
 
 Day 2:
 - Jason Laird (TTS/RT - Bioinformatics Scientist)
