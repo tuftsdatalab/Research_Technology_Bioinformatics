@@ -1,4 +1,4 @@
 - SLURM
-  - [Interactive Session](Interactive_Session.md) -- **[Intro to Linux](https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/tree/main/workshops/hpcForLifeSciences_July2022/IntroToLinux)**
+  - [Interactive Session](Interactive_Session.md) -- **[Intro to Linux](../../IntroToLinux)**
   - [Batch Job](Batch_Job.md)
   - [Job Status](Job_Status.md)
