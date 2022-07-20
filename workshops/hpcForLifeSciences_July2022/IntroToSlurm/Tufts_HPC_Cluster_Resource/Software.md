@@ -24,8 +24,10 @@
 
   For example, I would like to use `gcc` compiler, to check what versions of gcc compiler is available, load the version I would like to use, and use it:
 
-```
-  [ymalon01@login-prod-01 ~]$ module av blast
+
+  `[ymalon01@login-prod-01 ~]$ module av blast`
+  
+  ```
 
 ---------------------- /opt/shared/Modules/modulefiles-rhel6 ----------------------
 blast/2.2.24 blast/2.2.31 blast/2.3.0  blast/2.8.1
@@ -38,22 +40,31 @@ blast-plus/2.11.0
   [ymalon01@login-prod-01 ~]$ module load blast-plus/2.11.0
   
   [ymalon01@login-prod-01 ~]$ module list
+  
+```
+```
   Currently Loaded Modulefiles:
     1) use.own     2) blast-plus/2.11.0
     
 ```
 
+
+  `[ymalon01@login-prod-01 ~]$ which blastp`
 ```
-  [ymalon01@login-prod-01 ~]$ which blastp
-  /cluster/tufts/hpc/tools/spack/linux-rhel7-ivybridge/gcc-9.3.0/blast-plus-2.11.0-ip4jcqabi3a2jscgusnkipvib6goy5mv/bin/blastp
-  
-  [ymalon01@login-prod-01 ~]$ echo $PATH
-  /cluster/tufts/bio/tools/edirect:/cluster/tufts/hpc/tools/spack/linux-rhel7-ivybridge/gcc-9.3.0/blast-plus-2.11.0-ip4jcqabi3a2jscgusnkipvib6goy5mv/bin:/cluster/home/ymalon01/.iraf/bin:/cluster/home/ymalon01/.iraf/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/ymalon01/bin:/cluster/home/ymalon01/.local/bin
+/cluster/tufts/hpc/tools/spack/linux-rhel7-ivybridge/gcc-9.3.0/blast-plus-2.11.0-ip4jcqabi3a2jscgusnkipvib6goy5mv/bin/blastp
+
+```
+  `[ymalon01@login-prod-01 ~]$ echo $PATH`
+
+```
+/cluster/tufts/bio/tools/edirect:/cluster/tufts/hpc/tools/spack/linux-rhel7-ivybridge/gcc-9.3.0/blast-plus-2.11.0-ip4jcqabi3a2jscgusnkipvib6goy5mv/bin:/cluster/home/ymalon01/.iraf/bin:/cluster/home/ymalon01/.iraf/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/ymalon01/bin:/cluster/home/ymalon01/.local/bin
   
 ```
   
+
+  `[ymalon01@login-prod-01 ~]$ blastp -version`
+  
 ```
-  [ymalon01@login-prod-01 ~]$ blastp -version
 blastp: 2.11.0+
  Package: blast 2.11.0, build Aug 17 2021 06:29:22
   
@@ -65,6 +76,9 @@ blastp: 2.11.0+
   [ymalon01@login-prod-01 ~]$ module unload blast-plus/2.11.0
   
   [ymalon01@login-prod-01 ~]$ echo $PATH
+
+```
+```
   /usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/ymalon01/bin:/cluster/home/ymalon01/.local/bin
   
 ```
@@ -75,6 +89,8 @@ blastp: 2.11.0+
   [ymalon01@login-prod-01 ~]$ module purge
   
   [ymalon01@login-prod-01 ~]$ module list
+```
+```
 No Modulefiles Currently Loaded.
 
 ```
