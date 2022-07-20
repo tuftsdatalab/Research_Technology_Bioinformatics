@@ -8,7 +8,8 @@ Approximate time: 10 minutes
 1. With a Chrome web browser, visit [https://ondemand.pax.tufts.edu/](https://ondemand.pax.tufts.edu/)
 2. Login with your Tufts credentials
 3. On the top grey menu bar, choose `Interactive Apps->IGV`.
-<img src="../images/igv_dropdown.pdf" width="300">
+
+<img src="../images/igv_dropdown.png" width="300">
 
 4. Choose the following compute resource parameters: Number of house = 1, Number of cores = 1s, Amount of Memory = 8GB, Resevation = Bioinformatics Workshop, No Directory (leave blank)
 
@@ -54,8 +55,9 @@ You will see the name of the file and name of the sequence populate.
 4. It will take a minute or so to load all the reads. You can view progress in the lower right hand corner.
 
 
-5. When it's done, you will have the following view. Each row of data is called a track. There are four tracks visible: the top track shows the reference genome coordinates, followed by two tracks of our alignment (coverage and reads) followed by the GFF track showing the gene locations on our refererence genome.
-<img src="../images/igv_result.pdf" width="800">
+5. When it's done, you will have the following view. Each row of data is called a track. There are four tracks visible: the top track shows the reference genome coordinates, followed by two tracks of our alignment (coverage and reads) followed by the GFF track showing the gene locations on our reference genome.
+
+<img src="../images/igv_result.png" width="800">
 
 ### Examining a Gene
 
