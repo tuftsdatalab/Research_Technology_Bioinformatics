@@ -1,6 +1,12 @@
-# The Shell
-============
+* TOC
+{:toc}
 
+# Intro to Command Line
+========================
+
+This short workshop provides some basic training on bash and shell scripting on the command line on the Linux-based Tufts HPC cluster.
+
+This course is not meant to be comprehensive, but provides some insights into how the command line works as well as some strategic resources for studying and understanding command line on the HPC cluster.
 
 ## Learning Objectives
 -----------------------
@@ -220,7 +226,7 @@ Let's start by going to your home directory (you choose the command)
 As you start using bash more and more, you will find a mix of files and directories/folders. If we want to know which is which, we can type::
 
 ```
-    ls -F
+ls -F
 ```
 
 Anything with a "/" after it is a directory.  Things with a `*` after
@@ -385,8 +391,8 @@ If you want to go back to the directory that is in the level above our current f
 
 ```
 cd ..
-
 ```
+
 `..` is a reference to a **RELATIVE PATH**
 
 ```
@@ -473,8 +479,7 @@ cat helloworld.txt
 In that case "head" is a good option. Head pulls the top ten lines of the file and prints them to the screen.
 
 ```
-head helloworld.txt"
-
+head helloworld.txt
 ```
 
 It does not look any different from cat in this case because there is only one line in the file.
@@ -638,7 +643,6 @@ Another helpful bash command for finding files is `tree`.
 
 ```
 tree
-
 ```
 
 This outputs your directory structure with lines that indicate the tree-like branches of your file structure.
@@ -647,7 +651,6 @@ This could be very messy if you already have a lot of files in a directory, so l
 
 ```
 tree -L 2
-
 ```
 
 This just shows the top two levels of the file structure.
@@ -687,7 +690,6 @@ Let's go back into the JulyWorkshop directory, but this time use your ABSOLUTE p
 
 ```
 cd /cluster/home/username01/JulyWorkshop
-
 ```
 
 ---
@@ -697,7 +699,6 @@ Many commands in bash can be used with the ABSOLUTE PATH.
 
 ```
 ls /cluster/home/username01/JulyWorkshop
-
 ```
 
 Using an absolute path to find files in a directory is helpful for checking for outputs from SLURM jobs when they are running.
@@ -752,9 +753,7 @@ As of July 2022, these are the modules you might see displayed.
 Choose the latest blast-plus version of the module and load it. 
 
 ```
-
 module load blast-plus/2.11.0
-
 ```
 
 When there is only one version of a module, the full version does not need to be provided, but it is always best to inclue the version as we are loading and updating versions of programs all of the time.
@@ -763,7 +762,6 @@ Confirm that the module is loaded.
 
 ```
 module list
-
 ```
 
 ### Bringing in Files from the Internet
@@ -909,7 +907,6 @@ First, let's add more sequences to our query file. This will extract the first 1
 
 ```
 head -n 999 mouse.1.protein.faa > mm-second.faa
-
 ```
 
 See [this link](http://www.metagenomics.wiki/tools/blast/blastn-output-format-6) for a description of the possible BLAST output formats.
@@ -937,7 +934,6 @@ Sometimes it is good to give a file name, so let's nano with a filename for our 
 
 ```
 nano sbatch.sh
-
 ```
 
 Before closing, let's put some text into the file.
@@ -991,7 +987,6 @@ You can look at the output file with `less -S`, the flag allows scrolling from l
 
 ```
 less -S mm-second.x.zebrafish.tsv
-
 ```
 
 (and again, type 'q' to get out of paging mode.)
@@ -1002,6 +997,10 @@ The command line may move stuff around slightly, but it is a tab delimited file 
 `blastp` is a versatile tool for finding similar sequences, to see all the options, type `blastp -help`
 
 ## This concludes our Intro to Unix Lesson and we now Return to our Regularly Scheduled Slurm
+
+
+## Resources for Further Training in Command Line
+
 
 
 
