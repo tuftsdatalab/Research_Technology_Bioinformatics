@@ -21,7 +21,7 @@ Write a batch submission script e.g. **sbatch.sh**
 
 #[commands_you_would_like_to_exe_on_the_compute_nodes]
 # for example, running blast 
-# load the module so the correct version python is available to you
+# load the module so the correct version of blast is available to you
 
 module load blast-plus/2.11.0
 
