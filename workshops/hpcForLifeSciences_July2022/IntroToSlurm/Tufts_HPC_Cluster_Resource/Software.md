@@ -17,8 +17,10 @@
 
   Upon login, environment `PATH` is set for the system to search executables:
 
+
+  `[ymalon01@login-prod-01 ~]$ echo $PATH`
+  
   ```
-  [ymalon01@login-prod-01 ~]$ echo $PATH
   /usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/ymalon01/bin:/cluster/home/ymalon01/.local/bin
   ```
 
