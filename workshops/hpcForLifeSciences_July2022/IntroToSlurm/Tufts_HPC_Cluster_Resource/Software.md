@@ -9,10 +9,15 @@
 
   
 > List of Useful Commands:
+> 
 > module av
+> 
 > module load
+> 
 > module list
+> 
 > module unload
+> 
 > module purge
 
 
