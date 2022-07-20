@@ -83,5 +83,7 @@ Using the **`Upload`** or **`Download`** buttons to transfer.
     `$ scp -r Local_Path your_utln@xfer.cluster.tufts.edu:Cluster_Path`
 
     `$ rsync -azP Local_Path your_utln@xfer.cluster.tufts.edu:Cluster_Path`
+    
 ---    
 
+NEXT - [Tufts HPC Cluster Resource](../Tufts_HPC_Cluster_Resource/README.md)

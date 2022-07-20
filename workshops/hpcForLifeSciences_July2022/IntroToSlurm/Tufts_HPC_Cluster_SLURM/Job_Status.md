@@ -101,3 +101,8 @@ Display job detailed accounting data:
 
 NOTE: there are more format options, see [sacct](https://slurm.schedmd.com/sacct.html)
 
+---
+
+*End of Day 1*
+
+

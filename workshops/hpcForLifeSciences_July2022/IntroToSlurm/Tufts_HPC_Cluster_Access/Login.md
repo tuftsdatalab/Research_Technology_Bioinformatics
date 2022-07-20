@@ -83,3 +83,6 @@ You also have the option to use the `Xfce Terminal` under new  [OnDemand](https:
 - **[PuTTY](https://www.putty.org/)**     
 - **[Cygwin](https://www.cygwin.com/)**  
 
+---
+
+NEXT - [File Transfer](File_Transfer.md)

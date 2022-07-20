@@ -128,3 +128,8 @@ No Modulefiles Currently Loaded.
     - Follow instructions (read it through)
     - Use "--prefix=" to install in non-standard locations
     - Modify the environment variables !!! (such as PATH, LD_LIBRARY_PATH, CPATH, .etc)
+
+---
+
+NEXT - [Tufts HPC Cluster SLURM](../Tufts_HPC_Cluster_SLURM/README.md)
+
