@@ -434,6 +434,17 @@ You can make sure that you are in the right directory by using the command `cd` 
 cd /cluster/home/username01/JulyWorkshop
 ```
 
+#### Helpful Tip
+=================
+Many commands in bash can be used with the ABSOLUTE PATH.
+
+```
+ls /cluster/home/username01/JulyWorkshop
+```
+
+Using an absolute path to find files in a directory is helpful for checking for outputs from SLURM jobs when they are running.
+
+
 ## Creating and Manipulating Files
 ----------------------------------
 
@@ -690,15 +701,18 @@ cd /cluster/home/username01/JulyWorkshop
 ```
 
 ---
+
 #### Helpful Tip
-=================
-Many commands in bash can be used with the ABSOLUTE PATH.
+================
 
-```
-ls /cluster/home/username01/JulyWorkshop
-```
+There are some keyboard shortcuts that can help when writing complex commands and running programs interactively.
 
-Using an absolute path to find files in a directory is helpful for checking for outputs from SLURM jobs when they are running.
+* Control-C will terminate a running process
+* Control-A will put your cursor at the beginning of the line
+* Control-E will put your cursor at the end of the line
+* Up and down arrows will scroll through recent commands - If you make a mistake, just hit up to reveal the command and work on the part that was a mistake instead of retyping the whole thing.
+
+**Extra Tip**: When trouble shooting a command using tickets, screen shots of error messages are a good option. (On Macs, Command-Shift-4)
 
 ---
 
@@ -1012,9 +1026,9 @@ Other options are Subline and PyCharm, which have some features to help edit fil
 
 ## Resources for Further Training in Command Line
 
-Udemy
-Coursera
-LinkedIn Learning
+* Udemy
+* Coursera
+* LinkedIn Learning
 
 What are your favorites?
 
