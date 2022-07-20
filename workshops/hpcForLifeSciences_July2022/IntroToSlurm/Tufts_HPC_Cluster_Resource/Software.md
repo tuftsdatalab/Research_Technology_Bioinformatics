@@ -11,9 +11,9 @@
 
   To check available modules installed on the cluster:
 
-  ```
-  [ymalon01@login-prod-01 ~]$ module av
-  ```
+
+  `[ymalon01@login-prod-01 ~]$ module av`
+
 
   Upon login, environment `PATH` is set for the system to search executables:
 
@@ -29,8 +29,7 @@
 
   `[ymalon01@login-prod-01 ~]$ module av blast`
   
-  ```
-
+```
 ---------------------- /opt/shared/Modules/modulefiles-rhel6 ----------------------
 blast/2.2.24 blast/2.2.31 blast/2.3.0  blast/2.8.1
 
@@ -38,12 +37,11 @@ blast/2.2.24 blast/2.2.31 blast/2.3.0  blast/2.8.1
 blast-plus/2.11.0
 ```
 
-```
-  [ymalon01@login-prod-01 ~]$ module load blast-plus/2.11.0
+
+  `[ymalon01@login-prod-01 ~]$ module load blast-plus/2.11.0`
   
-  [ymalon01@login-prod-01 ~]$ module list
+  `[ymalon01@login-prod-01 ~]$ module list`
   
-```
 ```
   Currently Loaded Modulefiles:
     1) use.own     2) blast-plus/2.11.0
@@ -52,6 +50,7 @@ blast-plus/2.11.0
 
 
   `[ymalon01@login-prod-01 ~]$ which blastp`
+  
 ```
 /cluster/tufts/hpc/tools/spack/linux-rhel7-ivybridge/gcc-9.3.0/blast-plus-2.11.0-ip4jcqabi3a2jscgusnkipvib6goy5mv/bin/blastp
 
@@ -74,12 +73,11 @@ blastp: 2.11.0+
 
   I can also unload loaded modules:
 
-```
-  [ymalon01@login-prod-01 ~]$ module unload blast-plus/2.11.0
-  
-  [ymalon01@login-prod-01 ~]$ echo $PATH
 
-```
+  `[ymalon01@login-prod-01 ~]$ module unload blast-plus/2.11.0`
+  
+  `[ymalon01@login-prod-01 ~]$ echo $PATH`
+
 ```
   /usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/ymalon01/bin:/cluster/home/ymalon01/.local/bin
   
@@ -87,11 +85,11 @@ blastp: 2.11.0+
 
   I can unload ALL of the loaded modules:
 
-```
-  [ymalon01@login-prod-01 ~]$ module purge
+
+  `[ymalon01@login-prod-01 ~]$ module purge`
   
-  [ymalon01@login-prod-01 ~]$ module list
-```
+  `[ymalon01@login-prod-01 ~]$ module list`
+
 ```
 No Modulefiles Currently Loaded.
 
