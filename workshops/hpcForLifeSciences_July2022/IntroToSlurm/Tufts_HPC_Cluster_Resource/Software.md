@@ -1,6 +1,6 @@
 ### Modules
 
-- What are modules
+**What are modules**
 
   - A tool that **simplify** shell initialization and lets users easily modify their environment during the session with modulefiles
   - Each modulefile contains the **information** needed to configure the shell for an application. (PATH, LD_LIBRARY_PATH, CPATH, etc.)
@@ -9,25 +9,25 @@
 
   
 
-  To check available modules installed on the cluster:
+To check **ALL available modules** installed on the cluster:
 
 
-  `[ymalon01@login-prod-01 ~]$ module av`
+`[ymalon01@login-prod-01 ~]$ module av`
 
 
-  Upon login, environment `PATH` is set for the system to search executables:
+Upon login, environment `PATH` is set for the system to search executables:
 
 
-  `[ymalon01@login-prod-01 ~]$ echo $PATH`
+`[ymalon01@login-prod-01 ~]$ echo $PATH`
   
-  ```
-  /usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/ymalon01/bin:/cluster/home/ymalon01/.local/bin
-  ```
+```
+/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/ymalon01/bin:/cluster/home/ymalon01/.local/bin
+```
 
-  For example, I would like to use `gcc` compiler, to check what versions of gcc compiler is available, load the version I would like to use, and use it:
+For example, I would like to use `blast`, to **check** what versions of blast are available, **load** the version I would like to use, and use it:
 
 
-  `[ymalon01@login-prod-01 ~]$ module av blast`
+`[ymalon01@login-prod-01 ~]$ module av blast`
   
 ```
 ---------------------- /opt/shared/Modules/modulefiles-rhel6 ----------------------
@@ -38,24 +38,24 @@ blast-plus/2.11.0
 ```
 
 
-  `[ymalon01@login-prod-01 ~]$ module load blast-plus/2.11.0`
+`[ymalon01@login-prod-01 ~]$ module load blast-plus/2.11.0`
   
-  `[ymalon01@login-prod-01 ~]$ module list`
+`[ymalon01@login-prod-01 ~]$ module list`
   
 ```
-  Currently Loaded Modulefiles:
+Currently Loaded Modulefiles:
     1) use.own     2) blast-plus/2.11.0
     
 ```
 
 
-  `[ymalon01@login-prod-01 ~]$ which blastp`
+`[ymalon01@login-prod-01 ~]$ which blastp`
   
 ```
 /cluster/tufts/hpc/tools/spack/linux-rhel7-ivybridge/gcc-9.3.0/blast-plus-2.11.0-ip4jcqabi3a2jscgusnkipvib6goy5mv/bin/blastp
 
 ```
-  `[ymalon01@login-prod-01 ~]$ echo $PATH`
+`[ymalon01@login-prod-01 ~]$ echo $PATH`
 
 ```
 /cluster/tufts/bio/tools/edirect:/cluster/tufts/hpc/tools/spack/linux-rhel7-ivybridge/gcc-9.3.0/blast-plus-2.11.0-ip4jcqabi3a2jscgusnkipvib6goy5mv/bin:/cluster/home/ymalon01/.iraf/bin:/cluster/home/ymalon01/.iraf/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/ymalon01/bin:/cluster/home/ymalon01/.local/bin
@@ -63,7 +63,7 @@ blast-plus/2.11.0
 ```
   
 
-  `[ymalon01@login-prod-01 ~]$ blastp -version`
+`[ymalon01@login-prod-01 ~]$ blastp -version`
   
 ```
 blastp: 2.11.0+
@@ -71,24 +71,24 @@ blastp: 2.11.0+
   
 ```
 
-  I can also unload loaded modules:
+I can also **unload** a loaded modules:
 
 
-  `[ymalon01@login-prod-01 ~]$ module unload blast-plus/2.11.0`
+`[ymalon01@login-prod-01 ~]$ module unload blast-plus/2.11.0`
   
-  `[ymalon01@login-prod-01 ~]$ echo $PATH`
+`[ymalon01@login-prod-01 ~]$ echo $PATH`
 
 ```
-  /usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/ymalon01/bin:/cluster/home/ymalon01/.local/bin
+/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/ymalon01/bin:/cluster/home/ymalon01/.local/bin
   
 ```
 
-  I can unload ALL of the loaded modules:
+I can **unload ALL** of the loaded modules:
 
 
-  `[ymalon01@login-prod-01 ~]$ module purge`
+`[ymalon01@login-prod-01 ~]$ module purge`
   
-  `[ymalon01@login-prod-01 ~]$ module list`
+`[ymalon01@login-prod-01 ~]$ module list`
 
 ```
 No Modulefiles Currently Loaded.
@@ -97,7 +97,7 @@ No Modulefiles Currently Loaded.
 
   
 
-- Install Software/Packages
+**Install Software/Packages**
 
   - [R](https://tufts.box.com/s/qximkv5ke2y4k0vbg6m04m6fc6exh88h) (R command line recommanded)
     - R/4.0.0
@@ -116,7 +116,3 @@ No Modulefiles Currently Loaded.
     - Follow instructions (read it through)
     - Use "--prefix=" to install in non-standard locations
     - Modify the environment variables !!! (such as PATH, LD_LIBRARY_PATH, CPATH, .etc)
-
-
----
-
