@@ -10,18 +10,18 @@ Basic knowledge of Linux commands is desirable.
 
 ## Table of Contents
 
-- [Tufts HPC Cluster Access](https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/tree/main/workshops/hpcForLifeSciences_July2022/IntroToSlurm/Tufts_HPC_Cluster_Access)
+- [Tufts HPC Cluster Access](Tufts_HPC_Cluster_Access/README.md)
   - Cluster Account and Storage Request
   - Login
   - File Transfer
   - OnDemand Interface
   
-- [Tufts HPC Cluster Resource](https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/tree/main/workshops/hpcForLifeSciences_July2022/IntroToSlurm/Tufts_HPC_Cluster_Resource)
+- [Tufts HPC Cluster Resource](Tufts_HPC_Cluster_Resource/README.md)
   - Cluster Storage
   - Computational Resource 
   - Software
   
-- [SLURM](https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/tree/main/workshops/hpcForLifeSciences_July2022/IntroToSlurm/Tufts_HPC_Cluster_SLURM)
+- [SLURM](Tufts_HPC_Cluster_SLURM/README.md)
   - Interactive Session -- **[Intro to Linux](https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/tree/main/workshops/hpcForLifeSciences_July2022/IntroToLinux)**
   - Batch Job
   - Job Status
