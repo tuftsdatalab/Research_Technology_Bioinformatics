@@ -8,7 +8,25 @@
  
 ## Trimming NGS Data
 
-NGS data can contain reads with poor base pair quality and adapters still present. These poor bases and adapters can interfere with the accuracy of downstream analyses. 
+NGS data can contain reads with poor base pair quality and adapters still present. These poor bases and adapters can interfere with the accuracy of downstream analyses. To get rid of these poor quality bases and adapters we will need a tool that can perform both. Here we will use the tool Trim Galore to do just that. Please navigate back to the terminal tab and use the following command to load the Trim Galore module:
+
+```
+module load trim-galore/0.6.4_dev
+```
+
+To trim our data we will enter:
+
+```
+trim_galore --illumina --paired --fastqc -o trim_galore/ fastq/SRR15607266_pass_1.fastq.gz fastq/SRR15607266_pass_2.fastq.gz
+```
+
+- `--illumina` indicates we have illumina data
+- `--paired` the data is paired-end data
+- `-o` specifies that our output directory will be a folder called trim_galore
+
+## Trim Galore Output
+
+When you run the command above you will note several lines of output to the screen. 
 
 _________________________________________________________________________________________________________________________________________________________
 
