@@ -20,13 +20,15 @@ To trim our data we will enter:
 trim_galore --illumina --paired --fastqc -o trim_galore/ fastq/SRR15607266_pass_1.fastq.gz fastq/SRR15607266_pass_2.fastq.gz
 ```
 
-- `--illumina` indicates we have illumina data
-- `--paired` the data is paired-end data
+- `--illumina` Adapter sequence to be trimmed is the first 13bp of the Illumina universal adapter
+                        'AGATCGGAAGAGC' instead of the default auto-detection of adapter sequence.
+- `--paired` This option performs length trimming of quality/adapter/RRBS trimmed reads for
+                        paired-end files
 - `-o` specifies that our output directory will be a folder called trim_galore
 
 ## Trim Galore Output
 
-When you run the command above you will note several lines of output to the screen. 
+When you run the command above you will note several lines of output to the screen. We will focus on the
 
 _________________________________________________________________________________________________________________________________________________________
 
