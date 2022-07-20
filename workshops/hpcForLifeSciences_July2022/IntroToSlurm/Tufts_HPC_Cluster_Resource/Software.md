@@ -2,7 +2,7 @@
 
 **What are modules**
 
-  - A tool that **simplify** shell initialization and lets users easily modify their environment during the session with modulefiles
+  - A tool that **simplifies** shell initialization and lets users easily modify their environment during the session with modulefiles
   - Each modulefile contains the **information** needed to configure the shell for an application. (PATH, LD_LIBRARY_PATH, CPATH, etc.)
   - Modules are useful in managing **different versions** of applications. 
   - Modules can also be bundled into metamodules that will load an entire **set of different applications (dependencies)**. 
