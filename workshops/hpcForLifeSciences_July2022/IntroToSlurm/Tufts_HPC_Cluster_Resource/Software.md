@@ -8,6 +8,13 @@
   - Modules can also be bundled into metamodules that will load an entire **set of different applications (dependencies)**. 
 
   
+> List of Useful Commands:
+> module av
+> module load
+> module list
+> module unload
+> module purge
+
 
 To check **ALL available modules** installed on the cluster:
 
