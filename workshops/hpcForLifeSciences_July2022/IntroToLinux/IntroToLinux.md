@@ -20,7 +20,7 @@ This course is not meant to be comprehensive, but provides some insights into ho
   * Manipulating files
   * Simple Bash Scripts
 
-What is the shell?
+## What is the shell?
 ------------------
 
 The **shell** is a program that presents a command line interface
@@ -58,21 +58,15 @@ power tool, with its own deep internal logic with lots of details.
 The joke is that Unix is user-friendly - it's just very selective
 about who its friends are!
 
-shell cheat sheets:
+Practice is the best way to learn, but here are some helpful shell command resources:
 
-* https://files.fosswire.com/2007/08/fwunixref.pdf
-* https://github.com/swcarpentry/boot-camps/blob/master/shell/shell_cheatsheet.md
-
-Explain shell - a web site where you can see what the different
+* [Fun With Unix Cheat Sheet](https://files.fosswire.com/2007/08/fwunixref.pdf)
+* [Shell Cheatsheet - Software Carpentry](https://github.com/swcarpentry/boot-camps/blob/master/shell/shell_cheatsheet.md)
+* [Explain shell](http://explainshell.com) - a web site where you can see what the different
 components of a shell command are doing.
 
-* http://explainshell.com
-
-
-(We'll look at these at the bottom.)
-
-## How to Access the Shell
---------------------------
+### How to Access the Shell at Tufts
+------------------------------------
 
 https://ondemand.pax.tufts.edu/pun/sys/dashboard
 
@@ -91,13 +85,13 @@ Windows
 -------
 
 For Windows, an easy one to install and use right away is  gitbash.  
-Download and install gitbash from https://gitforwindows.org/
+Download and install [gitbash](https://gitforwindows.org/)
 Open up the program.
 
 Other options: 
 
-* https://docs.microsoft.com/en-us/windows/terminal/install
-* https://conemu.github.io/
+* [Microsoft Window Terminal](https://docs.microsoft.com/en-us/windows/terminal/install)
+* [Conemu](https://conemu.github.io/)
 
 Linux
 -----
@@ -107,7 +101,7 @@ You probably already know how to find the shell prompt.
 
 ---------------------------
 
-## Starting with the shell
+## Starting with the Shell
 ---------------------------
 
 We will spend most of our time learning about the basics of the shell
@@ -152,7 +146,7 @@ https://it.tufts.edu/guides/vpn-virtual-private-network/anyconnect-desktop-appli
 ---
 
 
-### Running Commands
+## Running Commands
 --------------------
 
 When you login, you will see some letters and characters at the beginning of the line.
@@ -165,7 +159,7 @@ This is called the 'command line prompt.'
 
 This information helps orient you to who you are (`username01`) and which computer you are currently on(`login-prod-02`). In this case, it is a server that is intended only for "login", no big programs should be run from this computer, but it is fine for practicing a few bash commands.
 
-### Pro Tip:
+#### Helpful Tip
 ===================
 
 The name of the computer you are on is important informatiom when troubleshooting the cluster. `login` machines will reject large commands and output an error. Make sure to switch machines before running jobs. This is explained in the HPC portion of the lesson.
@@ -204,7 +198,7 @@ ls
 It may be empty for the moment, or it may not if this is not your first time using the shell.
 
 
-### Key Takeaway
+### Takeaways
 =================
 
 `pwd` and `ls` are examples of commands - programs you run at the shell
@@ -216,7 +210,8 @@ prompt that do stuff.
 It is similar to the abbreviations used in texting, it takes less time to get the point across (lol, tbh, imho, afaik, ftw -- you're saying them outloud in your head, right now, correct?)
 
 
-### Parameters for Bash commands
+## Parameters for Bash Commands
+--------------------------------
 
 Many bash commands have special **parameters**, sometimes referred to as **flags** that open up a lot more possibilities.
 
@@ -267,8 +262,8 @@ The first 10 letters in this line indicates the permission settings.
 <img width="523" alt="File_Permissions" src="https://user-images.githubusercontent.com/8632603/179539739-75f4edf9-5f5d-4de9-b20c-97abc7869be6.png">
 
 
-### Pro Tip:
-==============
+#### Helpful Tip
+================
 
 There are an overwhelming number of possibilities with some of these shell commands, so knowing how to find help on demand is important.
 
@@ -334,7 +329,7 @@ mkdir JulyWorkshop
 ```
 ----------------------
 
-### Pro Tip:
+#### Helpful Tip
 ===================
 
 When nameing files and directories, avoid spaces and special characters except underscores ("_").
@@ -356,8 +351,8 @@ When creating directories and filenames it is helpful to put some information ab
 
 <img width="786" alt="File_Folder_Structure" src="https://user-images.githubusercontent.com/8632603/179539866-ecd6e880-f468-4151-bbaa-149f52c328b4.png">
 
-### Absolute and Relative Paths
-
+## Absolute and Relative Paths
+-------------------------------
 
 Let's go into our directory and look around.
 
@@ -440,7 +435,7 @@ cd /cluster/home/username01/JulyWorkshop
 ```
 
 ## Creating and Manipulating Files
-==================================
+----------------------------------
 
 Let's make a file here using a common command "echo" to start creating our file structure.
 
@@ -451,7 +446,7 @@ echo "Hello World " > helloworld.txt
 
 The `>` in this command tells the command to place the output into the place it is pointing. In this case, it creates the file `helloworld.txt` and puts the phrase `Hello World` into the file. 
 
-### Pro Tip:
+#### Helpful Tip
 ===================
 
 Be careful with redirect.
@@ -464,7 +459,8 @@ Which one is used depends on your process. If you are only running a command onc
 
 -------------------------
 
-#### Reading File Contents
+### Reading File Contents
+---------------------------
 
 Let's look inside the file. We have several methods of viewing the content of files that we have created.
 
@@ -498,6 +494,7 @@ There are many versions of these tools on command line, but "cat", "head" and "l
 
 
 ### Copying Files
+------------------
 
 Sometimes we have a file that we want to reuse.
 
@@ -522,6 +519,7 @@ cp helloworld.txt helloworld
 Check this with `ls helloworld` (lists the contents of the directory).
 
 ### Moving Files
+---------------------------
 
 `mv` is an option for renaming files, but also has the potential to **overwrite** existing files.
 
@@ -534,6 +532,7 @@ mv helloworld1.txt helloworld2.txt
 Check this with `ls`
 
 ### Removing Files
+---------------------------
 
 `rm` and `rmdir` are permanent in shell, so make sure you are ready to delete files.
 
@@ -579,7 +578,8 @@ mv: overwrite ‘helloworld1.txt’?
 ```
 
 
-### Going Home
+## Going Home
+---------------------------
 
 
 Sometimes we get lost, so it is useful to know a few ways to get back to where you started.
@@ -656,13 +656,15 @@ tree -L 2
 This just shows the top two levels of the file structure.
 
 ## Running Programs Interactively
-==================================
+----------------------------------
 
 ### HPC Etiquette
+------------------
 
 Try not to use the login computers for programs or large file management jobs. Looking things up and small commands such as `cat` or `head` are fine, but running programs may block others from logging in to the cluster.
 
 ### Switch to an Interactive Session
+-------------------------------------
 
 Do this first before running programs or testing your code.
 
@@ -681,11 +683,6 @@ This command only works during the workshop on July 20 and 21. To use this comma
 * `--pty bash` just indicates that the shell opens in `bash`, meaning that all the commands that we learned today will work.
 
 
-
-
-
-
-
 Let's go back into the JulyWorkshop directory, but this time use your ABSOLUTE path by changing `username01` to your username. If you forget your username, try `whoami`.
 
 ```
@@ -693,8 +690,8 @@ cd /cluster/home/username01/JulyWorkshop
 ```
 
 ---
-### Pro Tip:
-=============
+#### Helpful Tip
+=================
 Many commands in bash can be used with the ABSOLUTE PATH.
 
 ```
@@ -705,7 +702,8 @@ Using an absolute path to find files in a directory is helpful for checking for 
 
 ---
 
-## What is BLAST?
+### What is BLAST?
+
 BLAST is the **B**asic **L**ocal **A**lignment **S**earch **T**ool.
 It uses an index to rapdily search large sequence databases;
 it starts by finding small matches between the two sequences and extending those matches.
@@ -718,7 +716,7 @@ or finding a similar sequence in another organism.
 In this lesson, we will use BLAST to find zebrafish proteins that
 are similar to a small set of mouse proteins.
 
-## Why use the command line?
+### Why use the command line?
 BLAST has a very nice graphical interface for searching sequences in NCBI's database.
 However, running BLAST through the commmand line has many benefits:
   * It's much easier to run many BLAST queries using the command line than the GUI
@@ -731,8 +729,6 @@ However, running BLAST through the commmand line has many benefits:
 Later on in the workshop we will talk more about these advantages and have a more in-depth explanation of the shell.
 
 ----
-
-## Demo 1: Running BLAST on Tufts HPC
 
 
 ### Loading Modules
@@ -898,7 +894,7 @@ less mm-first.x.zebrafish.txt
 
 
 ## Writing a BASH Script and Running it as "Batch" 
-==================================================
+--------------------------------------------------
 
 In this example, we'll repeat the blast command above but refine it by outputting a table which summarizes each blast hit on one line. 
 
@@ -958,10 +954,9 @@ blastp -query mm-second.faa -db zebrafish.1.protein.faa -out mm-second.x.zebrafi
 
 ```
 
-Because it is going to one or several virtual locations in the cluster, we need to reload the module as part of the script before running the script. This will make the command recognizable to the machine where the job is running.
-
-
 Control -X to close and save and use the same file name (sbatch.sh)
+
+Because it is going to one or several virtual locations in the cluster, we need to reload the module as part of the script before running the script. This will make the command recognizable to the machine where the job is running.
 
 ```
 cat sbatch.sh
@@ -996,11 +991,32 @@ The command line may move stuff around slightly, but it is a tab delimited file 
 
 `blastp` is a versatile tool for finding similar sequences, to see all the options, type `blastp -help`
 
+#### Helpful Tip
+=================
+
+If writing the script on your laptop before copying and pasting, make sure to use a compatible text editor.
+
+Even though you can't see it, popular word processors will add hidden symbols and change punctuation to your code.
+
+There are several free tools available to avoid these errors.
+
+* [Notepad+](https://notepad-plus-plus.org/downloads/) is free to download and use.
+* [BBEdit](http://www.barebones.com/products/bbedit/) has a free version.
+
+Other options are Subline and PyCharm, which have some features to help edit files.
+
+------------------
+
 ## This concludes our Intro to Unix Lesson and we now Return to our Regularly Scheduled Slurm
 
 
 ## Resources for Further Training in Command Line
 
+Udemy
+Coursera
+LinkedIn Learning
+
+What are your favorites?
 
 
 
