@@ -48,12 +48,12 @@
 ### OnDemand Web Interface
 #### [**https://ondemand.pax.tufts.edu**](https://ondemand.pax.tufts.edu)
 
-<img src="../images/login.png" alt="OnDemandLogin" width=60%>
+<img src="../images/login.png" alt="OnDemandLogin" width="60%">
 
 Use your **Tufts UTLN** and **password** to login. 
 
 
-<img src="../images/Clusters.png" alt="Clusters" width=60%>
+<img src="../images/Clusters.png" alt="Clusters" width="60%">
 
 __`Clusters`__, you can start a shell access to the HPC cluster. 
 
@@ -63,9 +63,9 @@ OR
 
 Use the `>_Open in Terminal` button in `Files` to open a terminal in whichever directory you navigated to.
 
-<img src="../images/Files.png" alt="Files" width=60%>
+<img src="../images/Files.png" alt="Files" width="60%">
 
-<img src="../images/Home.png" alt="Home" width=60%>
+<img src="../images/Home.png" alt="Home" width="60%">
 
 If you need **X11** access through OnDemand to display any GUI applications, please temporarily use our **Old OnDemand** [https://ondemand.cluster.tufts.edu](https://ondemand.cluster.tufts.edu) **`Clusters`** for this option:
 
@@ -75,7 +75,7 @@ OR
 
 You also have the option to use the `Xfce Terminal` under new  [OnDemand](https://ondemand.pax.tufts.edu) `Interactive Apps`.
 
-<img src="../images/InteractiveApps.png" alt="InteractiveApps" width=60%>
+<img src="../images/InteractiveApps.png" alt="InteractiveApps" width="60%">
 
 ### **Windows**
 - **[PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7.2)**
