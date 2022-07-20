@@ -2,7 +2,7 @@
 
 **[https://it.tufts.edu/high-performance-computing](https://it.tufts.edu/high-performance-computing)**
 
-<img src="../images/rthpcpage.png" alt="Requests" width=60%>
+<img src="../images/rthpcpage.png" alt="Requests" width="60%">
 
 ### Cluster Storage Request
 
