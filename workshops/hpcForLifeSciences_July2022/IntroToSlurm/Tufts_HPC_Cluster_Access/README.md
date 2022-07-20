@@ -1,6 +1,5 @@
-- [Tufts HPC Cluster Access](https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/tree/main/workshops/hpcForLifeSciences_July2022/IntroToSlurm/Tufts_HPC_Cluster_Access)
-  - Cluster Account and Storage Request
-  - Login
-  - File Transfer
-  - OnDemand Interface
+- Tufts HPC Cluster Access
+  - [Cluster Account and Storage Request](Cluster_Account_and_Storage_Request.md)
+  - [Login](Login.md)
+  - [File Transfer](File_Transfer.md)
   

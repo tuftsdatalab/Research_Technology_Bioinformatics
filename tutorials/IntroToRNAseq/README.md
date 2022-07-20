@@ -1,4 +1,4 @@
-### A Tufts University Research Technology Workshop
+### Intro to RNA Seq
 
 ## Description:
 This tutorial will cover the basics of bioinformatics for RNA sequencing analysis using command line tools and R on the Tufts  High Performance Compute Cluster (HPC). The analysis pipeline includes quality control, read alignment, feature quantification, differential expression and pathway analysis. There was a [1-hour introductory session](slides/pipeline_walthrough.pdf), after which students will follow this self-guided online material. The material is designed to run on [Tufts High Performance Compute (HPC) Cluster](https://access.tufts.edu/research-cluster-account). If you don't have access to Tufts HPC, you will need to install [all required modules on your own computer](lessons/07_dependencies.md).

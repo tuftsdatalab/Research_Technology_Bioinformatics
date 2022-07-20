@@ -2,10 +2,9 @@
 [![View on Webpage](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white)](https://tuftsdatalab.github.io/intro-to-ngs-bioinformatics/)
 [![On Demand Tufts HPC](img/ondemandBadge.png)](https://ondemand.pax.tufts.edu)
 
-## Description
+## Intro to Variant Calling
 
-This course covers the basics of Next Generation Sequencing Bioinformatics, with the goal of 
-variant calling and interpretation.
+This course covers the basics of Variant Calling and interpretation for Next Gen sequencing data.
 
 The material is designed to be a 3 hour workshop and is run on [Tufts High Performance Compute (HPC) Cluster](https://access.tufts.edu/research-cluster-account).
 For support with this workshop or the HPC cluster, email TTS Research Technology [tts-research@tufts.edu](mailto:ltts-research@tufts.edu)

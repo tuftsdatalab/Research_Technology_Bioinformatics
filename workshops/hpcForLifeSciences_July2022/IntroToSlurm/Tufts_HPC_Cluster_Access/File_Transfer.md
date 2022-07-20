@@ -1,19 +1,49 @@
-> Hostname: `xfer.cluster.tufts.edu`
+> Hostname: **`xfer.cluster.tufts.edu`**
 >
-> Protocol: SCP or SFTP
+> Protocol: `SCP` or `SFTP`
 >
 > Use port 22 for SFTP
-> 
-**Hostname for file transfer: xfer.cluster.tufts.edu**
 
-    > NOTE:
-    >
-    > * __Local_Path__ is the path to your files or directory on your local computer
-    > * __Cluster_Path__ is the path to your files or directory on the cluster
-    >   * Home Directory: */cluster/home/your_utln/your_folder*
-    >   * Research Project Storage Space Directory: */cluster/tufts/yourlabname/your_utln/your_folder*
+> NOTE:
+> 
+> **`Local_Path`** is the path to your files or directory on your local computer
+> 
+> **`Cluster_Path`** is the path to your files or directory on the cluster
+> 
+> Home Directory: **`/cluster/home/your_utln/your_folder`**
+> 
+> Research Project Storage Space Directory: **`/cluster/tufts/yourlabname/your_utln/your_folder`**
 
 ---
+### OnDemand
+
+***Only for transfering files size up to 976MB per file.***
+
+Go to **[OnDemand]( https://ondemand.pax.tufts.edu/)** 
+
+Under **`Files`**
+
+<img src="https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/blob/fdeda080ce96097ea4929b7022f838673565866d/workshops/hpcForLifeSciences_July2022/IntroToSlurm/images/Home.png" alt="Files" width=60%>
+
+Using the **`Upload`** or **`Download`** buttons to transfer. 
+
+<img src="https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/blob/fdeda080ce96097ea4929b7022f838673565866d/workshops/hpcForLifeSciences_July2022/IntroToSlurm/images/Home.png" alt="Home" width=60%>
+
+---
+### File Transfer Client
+
+> Hostname: `xfer.cluster.tufts.edu`
+> 
+> Protocol: SCP or SFTP
+> 
+> Use port 22 for SFTP
+
+- **[WinSCP](https://winscp.net/eng/index.php)** <img src="https://miro.medium.com/max/500/1*Of7JOwV0wZgDIjgaS4qKlQ.png" alt="WinSCP" width=20%>
+
+- **[FileZilla](https://filezilla-project.org/)** <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/FileZilla_logo.svg/1200px-FileZilla_logo.svg.png" alt="FileZilla" width=10%>
+
+- **[Cyberduck](https://cyberduck.io/)** <img src="https://cdn.cyberduck.io/img/cyberduck-icon-384.png" alt="CyberDuck" width=10%>
+
 ### Command Line
 
 ***Execute from your local machine terminal.***
@@ -40,7 +70,7 @@
 
     `$ rsync Local_Path your_utln@xfer.cluster.tufts.edu:Cluster_Path`
 
-**Directory** Transfer with `scp` or `rsync`:
+**Directory** Transfer with `scp -r` or `rsync -azP`:
 
 - Download from cluster
 
@@ -54,30 +84,4 @@
 
     `$ rsync -azP Local_Path your_utln@xfer.cluster.tufts.edu:Cluster_Path`
 ---    
-### OnDemand
-
-***Only for transfering files size less than 976MB per file.***
-
-Go to **[OnDemand]( https://ondemand.pax.tufts.edu/)** 
-
-Under **`Files`**, using the **`Upload`** or **`Download`** buttons to transfer. 
-
-# Add Screenshots
-
----
-### File Transfer Client
-
-> Hostname: `xfer.cluster.tufts.edu`
->
-> Protocol: SCP or SFTP
->
-> Use port 22 for SFTP
-
-- **[WinSCP](https://winscp.net/eng/index.php)**<img src="https://miro.medium.com/max/500/1*Of7JOwV0wZgDIjgaS4qKlQ.png" alt="WinSCP" width=20%>
-
-- **[FileZilla](https://filezilla-project.org/)**  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/FileZilla_logo.svg/1200px-FileZilla_logo.svg.png" alt="FileZilla" width=10%>
-
-- **[Cyberduck<img src="https://cdn.cyberduck.io/img/cyberduck-icon-384.png" alt="CyberDuck" width=10%>](https://cyberduck.io/)**
-
-  ---
 

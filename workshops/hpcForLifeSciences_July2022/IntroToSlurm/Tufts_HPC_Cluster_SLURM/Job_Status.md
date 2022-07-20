@@ -3,10 +3,11 @@
 - Checking your **active** jobs
 
 ```bash
-[ymalon01@cc1gpu001 ~]$ squeue -u $USER
+[ymalon01@login-prod-01 ~]$ squeue -u $USER
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON) 
             296794   preempt     bash ymalon01  R       5:12      1 cc1gpu001 
-[ymalon01@cc1gpu001 ~]$ squeue -u ymalon01
+            
+[ymalon01@login-prod-01 ~]$ squeue -u ymalon01
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON) 
             296794   preempt     bash ymalon01  R       5:21      1 cc1gpu001 
 ```
@@ -23,7 +24,7 @@ To cancel all of your jobs:
 
 `$ scancel -u $USER` or `$ scancel -u your_utln`
 
-To check details of your active jobs (running or pending):
+To check details of your active jobs (running "R" or pending "PD"):
 
 `$ scontrol show jobid -dd JOBID`
 
@@ -63,7 +64,7 @@ JobId=296794 JobName=bash
 
 *You can no longer see these jobs in `squeue` command output.*
 
-Querying finished jobs helps users make better decisions on requesting resources for future jobs. 
+**Querying finished jobs helps users make better decisions on requesting resources for future jobs. **
 
 Display job CPU and memory usage:
 

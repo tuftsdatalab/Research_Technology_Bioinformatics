@@ -1,4 +1,4 @@
-# Introduction To The HPC For The Life Sciences
+# Introduction To HPC
 
 
 ## Description
@@ -11,7 +11,7 @@ This tutorial introduces the Tufts HPC cluster and its application to the life s
 - Account on [Tufts HPC](https://access.tufts.edu/research-cluster-account)
 - [VPN](https://access.tufts.edu/vpn) if accessing the HPC from off campus
 
-## Schedule
+## Lessons
 
 - [Introduction to Shell/HPC](./introHPC1.md)
 - [Working with Files and Shortcuts](./introHPC2.md)

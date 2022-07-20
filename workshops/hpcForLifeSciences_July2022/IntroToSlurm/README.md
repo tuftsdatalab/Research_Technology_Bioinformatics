@@ -1,4 +1,4 @@
-## Description
+## Intro to Slurm
 
 This is a part of the HPC for Life Sciences workshop.
 

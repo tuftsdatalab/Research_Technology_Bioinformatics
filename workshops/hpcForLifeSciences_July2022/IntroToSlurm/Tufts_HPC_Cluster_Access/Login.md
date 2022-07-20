@@ -48,7 +48,12 @@
 ### OnDemand Web Interface
 #### [**https://ondemand.pax.tufts.edu**](https://ondemand.pax.tufts.edu)
 
+<img src="https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/blob/22edb461e02368634befd5432c49111618a9bb07/workshops/hpcForLifeSciences_July2022/IntroToSlurm/images/login.png" alt="OnDemandLogin" width=60%>
+
 Use your **Tufts UTLN** and **password** to login. 
+
+
+<img src="https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/blob/22edb461e02368634befd5432c49111618a9bb07/workshops/hpcForLifeSciences_July2022/IntroToSlurm/images/Clusters.png" alt="Clusters" width=60%>
 
 __`Clusters`__, you can start a shell access to the HPC cluster. 
 
@@ -58,10 +63,23 @@ OR
 
 Use the `>_Open in Terminal` button in `Files` to open a terminal in whichever directory you navigated to.
 
-If you need X11 access through OnDemand to display any GUI applications, please temporarily use our [old OnDemand](https://ondemand.cluster.tufts.edu) **`Clusters`** for this option:
+<img src="https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/blob/0d8f634f42148df2a1ce4cdf9009f68c9f5d36b8/workshops/hpcForLifeSciences_July2022/IntroToSlurm/images/Files.png" alt="Files" width=60%>
+
+<img src="https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/blob/80141a930eb34262425b799fa32d1bdac43e34d4/workshops/hpcForLifeSciences_July2022/IntroToSlurm/images/Home.png" alt="Home" width=60%>
+
+If you need **X11** access through OnDemand to display any GUI applications, please temporarily use our **Old OnDemand** [https://ondemand.cluster.tufts.edu](https://ondemand.cluster.tufts.edu) **`Clusters`** for this option:
 
 **`Tufts HPC FastX11 Shell Access`** = `$ ssh -XC your_utln@login.cluster.tufts.edu` (with X11 for GUI applications)
 
 OR 
 
 You also have the option to use the `Xfce Terminal` under new  [OnDemand](https://ondemand.pax.tufts.edu) `Interactive Apps`.
+
+<img src="https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/blob/22edb461e02368634befd5432c49111618a9bb07/workshops/hpcForLifeSciences_July2022/IntroToSlurm/images/InteractiveApps.png" alt="InteractiveApps" width=60%>
+
+### **Windows**
+- **[PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7.2)**
+- **[Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/about)**
+- **[PuTTY](https://www.putty.org/)**     
+- **[Cygwin](https://www.cygwin.com/)**  
+
