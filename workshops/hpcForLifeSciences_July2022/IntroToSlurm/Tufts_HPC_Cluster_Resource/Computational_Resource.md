@@ -5,7 +5,7 @@ Resources are orgnized into **partitions** on the cluster based on functionality
 After logging in on the HPC cluster, you can use command `sinfo` to check the `partition` you have access to (all partitions listed in the `sinfo` output).
 
 ```
-[ymalon01@login-prod-01 ~]$ sinfo
+[your_utln@login-prod-01 ~]$ sinfo
 PARTITION    AVAIL  TIMELIMIT  NODES  STATE NODELIST 
 interactive     up    4:00:00      1    mix c1cmp064 
 interactive     up    4:00:00      1   idle c1cmp063 
