@@ -23,11 +23,11 @@ Go to **[OnDemand]( https://ondemand.pax.tufts.edu/)**
 
 Under **`Files`**
 
-<img src="https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/blob/fdeda080ce96097ea4929b7022f838673565866d/workshops/hpcForLifeSciences_July2022/IntroToSlurm/images/Home.png" alt="Files" width=60%>
+<img src="../images/Home.png" alt="Files" width="60%">
 
 Using the **`Upload`** or **`Download`** buttons to transfer. 
 
-<img src="https://github.com/tuftsdatalab/Research_Technology_Bioinformatics/blob/fdeda080ce96097ea4929b7022f838673565866d/workshops/hpcForLifeSciences_July2022/IntroToSlurm/images/Home.png" alt="Home" width=60%>
+<img src="../images/Home.png" alt="Home" width="60%">
 
 ---
 ### File Transfer Client
@@ -38,11 +38,11 @@ Using the **`Upload`** or **`Download`** buttons to transfer.
 > 
 > Use port 22 for SFTP
 
-- **[WinSCP](https://winscp.net/eng/index.php)** <img src="https://miro.medium.com/max/500/1*Of7JOwV0wZgDIjgaS4qKlQ.png" alt="WinSCP" width=20%>
+- **[WinSCP](https://winscp.net/eng/index.php)** <img src="https://miro.medium.com/max/500/1*Of7JOwV0wZgDIjgaS4qKlQ.png" alt="WinSCP" width="20%">
 
-- **[FileZilla](https://filezilla-project.org/)** <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/FileZilla_logo.svg/1200px-FileZilla_logo.svg.png" alt="FileZilla" width=10%>
+- **[FileZilla](https://filezilla-project.org/)** <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/FileZilla_logo.svg/1200px-FileZilla_logo.svg.png" alt="FileZilla" width="10%">
 
-- **[Cyberduck](https://cyberduck.io/)** <img src="https://cdn.cyberduck.io/img/cyberduck-icon-384.png" alt="CyberDuck" width=10%>
+- **[Cyberduck](https://cyberduck.io/)** <img src="https://cdn.cyberduck.io/img/cyberduck-icon-384.png" alt="CyberDuck" width="10%">
 
 ### Command Line
 
