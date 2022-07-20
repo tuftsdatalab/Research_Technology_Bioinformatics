@@ -24,7 +24,7 @@ To cancel all of your jobs:
 
 `$ scancel -u $USER` or `$ scancel -u your_utln`
 
-To check details of your active jobs (running or pending):
+To check details of your active jobs (running "R" or pending "PD"):
 
 `$ scontrol show jobid -dd JOBID`
 
