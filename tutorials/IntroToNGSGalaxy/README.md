@@ -1,4 +1,4 @@
-### A Tufts University Research Technology Workshop
+### Intro to the Tufts Galaxy Server for Bioinformatics
 
 ## Description
 This course is an introduction to NGS data using Galaxy on [Tufts University's Galaxy server](https://galaxy.cluster.tufts.edu). 
