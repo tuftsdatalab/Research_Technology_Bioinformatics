@@ -3,13 +3,13 @@
 - Checking your **active** jobs
 
 ```bash
-[ymalon01@c1cmp044 LS]$ squeue -u $USER
+[your_utln@c1cmp044 LS]$ squeue -u $USER
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON) 
-          24063163     batch      job ymalon01  R       0:17      1 c1cmp044 
+          24063163     batch      job your_utln  R       0:17      1 c1cmp044 
             
-[ymalon01@c1cmp044 LS]$ squeue -u ymalon01
+[your_utln@c1cmp044 LS]$ squeue -u your_utln
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON) 
-          24063163     batch      job ymalon01  R       0:54      1 c1cmp044 
+          24063163     batch      job your_utln  R       0:54      1 c1cmp044 
 ```
 
 To check your active jobs in the queue:
@@ -29,9 +29,9 @@ To check details of your active jobs (running "R" or pending "PD"):
 `$ scontrol show jobid -dd JOBID`
 
 ```bash
-[ymalon01@c1cmp044 LS]$ scontrol show jobid -dd 24063163
+[your_utln@c1cmp044 LS]$ scontrol show jobid -dd 24063163
 JobId=24063163 JobName=job
-   UserId=ymalon01(31003) GroupId=ymalon01(5343) MCS_label=N/A
+   UserId=your_utln(31003) GroupId=your_utln(5343) MCS_label=N/A
    Priority=12833 Nice=0 Account=normal QOS=normal
    JobState=RUNNING Reason=None Dependency=(null)
    Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
@@ -75,10 +75,10 @@ Display job CPU and memory usage:
 `$ seff JOBID`
 
 ```bash
-[ymalon01@c1cmp044 LS]$ seff 24063163
+[your_utln@c1cmp044 LS]$ seff 24063163
 Job ID: 24063163
 Cluster: pax
-User/Group: ymalon01/ymalon01
+User/Group: your_utln/your_utln
 State: COMPLETED (exit code 0)
 Nodes: 1
 Cores per node: 2
@@ -95,7 +95,7 @@ Display job detailed accounting data:
 `$ sacct --format=partition,state,time,start,end,elapsed,MaxRss,ReqMem,MaxVMSize,nnodes,ncpus,nodelist -j JOBID`
 
 ```bash
-[ymalon01@c1cmp044 LS]$ sacct --format=partition,state,time,start,end,elapsed,MaxRss,ReqMem,MaxVMSize,nnodes,ncpus,nodelist -j 24063163
+[your_utln@c1cmp044 LS]$ sacct --format=partition,state,time,start,end,elapsed,MaxRss,ReqMem,MaxVMSize,nnodes,ncpus,nodelist -j 24063163
  Partition      State  Timelimit               Start                 End    Elapsed     MaxRSS     ReqMem  MaxVMSize   NNodes      NCPUS        NodeList 
 ---------- ---------- ---------- ------------------- ------------------- ---------- ---------- ---------- ---------- -------- ---------- --------------- 
      batch  COMPLETED 1-00:00:00 2022-07-20T12:33:15 2022-07-20T12:36:15   00:03:00                   8Gn                   1          2        c1cmp044 
