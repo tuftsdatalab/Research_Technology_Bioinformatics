@@ -65,6 +65,7 @@ Use the `>_Open in Terminal` button in `Files` to open a terminal in whichever d
 
 <img src="../images/Files.png" alt="Files" width="60%">
 
+
 <img src="../images/Home.png" alt="Home" width="60%">
 
 If you need **X11** access through OnDemand to display any GUI applications, please temporarily use our **Old OnDemand** [https://ondemand.cluster.tufts.edu](https://ondemand.cluster.tufts.edu) **`Clusters`** for this option:
