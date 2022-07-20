@@ -3,7 +3,7 @@
 Write a batch submission script e.g. **sbatch.sh**
 
 ```bash
-#!/bin/sh
+#!/bin/bash
 #SBATCH --job-name=job            # job name is "job"
 #SBATCH --nodes=1                 # 1 nodes #for many shared-memory programs,please leave -N as 1.
 #SBATCH -n 2                      # 2 tasks total and 1 cpu per task, that gives you 2 cpu cores for this job
