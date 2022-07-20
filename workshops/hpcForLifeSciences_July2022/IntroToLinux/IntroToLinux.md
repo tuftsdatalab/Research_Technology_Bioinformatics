@@ -70,7 +70,7 @@ components of a shell command are doing.
 ### How to Access the Shell at Tufts
 ------------------------------------
 
-https://ondemand.pax.tufts.edu/pun/sys/dashboard
+[Log In through OnDemand](https://ondemand.pax.tufts.edu/pun/sys/dashboard){:target="_blank" rel="noopener"}
 
 
 <img width="692" alt="Ondemand_Shell" src="https://user-images.githubusercontent.com/8632603/179539946-5d4fa52d-95ae-4215-ab16-24c912879aeb.png">
@@ -319,6 +319,8 @@ tr: invalid option -- 'h'
 Try 'tr --help' for more information
 ```
 
+
+[Return to TOC](#intro-to-command-line)
 
 ## Navigating in the Shell
 ===============================
@@ -670,6 +672,8 @@ tree -L 2
 
 This just shows the top two levels of the file structure.
 
+[Return to TOC](#intro-to-command-line)
+
 ## Running Programs Interactively
 ----------------------------------
 
@@ -908,7 +912,7 @@ less mm-first.x.zebrafish.txt
 
 
 
-
+[Return to TOC](#intro-to-command-line)
 
 
 ## Writing a BASH Script and Running it as "Batch" 
@@ -1027,6 +1031,7 @@ Other options are Subline and PyCharm, which have some features to help edit fil
 
 ## This concludes our Intro to Unix Lesson and we now Return to our Regularly Scheduled Slurm
 
+[Return to TOC](#intro-to-command-line)
 
 ## Resources for Further Training in Command Line
 
