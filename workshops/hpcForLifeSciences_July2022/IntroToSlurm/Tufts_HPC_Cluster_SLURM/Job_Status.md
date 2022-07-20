@@ -103,5 +103,4 @@ NOTE: there are more format options, see [sacct](https://slurm.schedmd.com/sacct
 
 *End of Day 1*
 
-Please Join Us for 
 
