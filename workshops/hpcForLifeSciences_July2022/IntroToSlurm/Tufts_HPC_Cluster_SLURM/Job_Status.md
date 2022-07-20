@@ -64,7 +64,7 @@ JobId=296794 JobName=bash
 
 *You can no longer see these jobs in `squeue` command output.*
 
-Querying finished jobs helps users make better decisions on requesting resources for future jobs. 
+**Querying finished jobs helps users make better decisions on requesting resources for future jobs. **
 
 Display job CPU and memory usage:
 
