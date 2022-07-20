@@ -29,4 +29,4 @@ This workshop is open to the Tufts community and appropriate for anyone who woul
 ### Day 2: Intro to HPC Bioinformatics 
 
 - [Analyzing publicly available Next Generation Sequencing (NGS) Data (1 hour)](NgsDataDownloadQc/README.md)
-- Aligning and viewing NGS reads (1 hour)
+- [Aligning and viewing NGS reads (1 hour)](NgsDataAlignmentViewing/README.md)
