@@ -23,7 +23,7 @@ This workshop is open to the Tufts community and appropriate for anyone who woul
 
 ### Day 1: Intro to HPC computing 
 
-- [Intro to Slurm (1 hour)](IntroToSlurm/IntroToSlurm.md)
+- [Intro to Slurm (1 hour)](IntroToSlurm/README.md)
 - [Intro to Command Line (1 hour)](IntroToLinux/IntroToLinux.md)
 
 ### Day 2: Intro to HPC Bioinformatics 
