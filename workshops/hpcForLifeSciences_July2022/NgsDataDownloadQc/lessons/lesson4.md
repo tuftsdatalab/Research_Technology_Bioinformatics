@@ -70,6 +70,7 @@ Before we dive into these plots let's discuss what is a "good" quality control p
 ![](../images/sars_fastqc.png)
 
 Here we note that our quality scores are high and no adapters are present in our sample. However, the GC content and the Per base sequence content metrics have failed. This could be due to human contamination or overepresented sequences sequences like polyA tails.
+
 _________________________________________________________________________________________________________________________________________________________
 
 [Next](lesson5.md)

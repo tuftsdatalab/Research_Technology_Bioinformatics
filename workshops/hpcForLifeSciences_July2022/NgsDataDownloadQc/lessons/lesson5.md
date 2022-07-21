@@ -41,7 +41,7 @@ Total basepairs processed:    96,086,040 bp
 Quality-trimmed:                 257,279 bp (0.3%)
 Total written (filtered):     95,110,835 bp (99.0%)
 ```
-Here we note that only a small fraction of bases were removed, 0.3%, due to quality control issues. 
+Here we note that only a small fraction of bases were removed, 0.3%, due to quality control issues. You will also note that the adapter sequence was detected in 451,277 reads while FastQC did not detect any adapters. This is due to the fact that FastQC requires the entire adapter to be present while Trim Galore does not. You may also notice that Trim Galore did not remove any reads with adapters. Trim Galore will trim bases from the adapter sequence but will not remove the whole read if the read is still above a certain length.
 
 _________________________________________________________________________________________________________________________________________________________
 
