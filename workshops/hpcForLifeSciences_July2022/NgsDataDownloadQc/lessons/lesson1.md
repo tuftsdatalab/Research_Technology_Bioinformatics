@@ -48,7 +48,7 @@ The US National Center for Biotechnology Information hosts repositories for many
 - Transcribed into complementary DNA, and amplified
 - Adapters are added to attach to flowcell
 - Sequence of the fragments is determined using fluorescently tagged nucleotides 
-  - They emit a colored light signal when they attach to a base on the fragment being sequences
+  - They emit a colored light signal when they attach to a base on the fragment
 
 ![](../images/viral_ngs.png)
 
