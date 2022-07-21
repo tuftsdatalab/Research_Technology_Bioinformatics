@@ -183,8 +183,8 @@ bwa mem \
 -t 2 \
 -o ~/hpcDay2/results/sarscov2.sam \
 ~/hpcDay2/data/GCF_009858895.2_ASM985889v3_genomic.fna \
-~/hpcDay2/fastq/trim_galore/SRR15607266_pass_1_val_1.fq.gz \
-~/hpcDay2/fastq/trim_galore/SRR15607266_pass_2_val_2.fq.gz
+~/hpcDay2/data/fastq/trim_galore/SRR15607266_pass_1_val_1.fq.gz \
+~/hpcDay2/data/fastq/trim_galore/SRR15607266_pass_2_val_2.fq.gz
 ```
 
 Let's look line by line at the options we've given to BWA:
@@ -213,12 +213,13 @@ We can check to see if our job is running
 squeue -u tutln01
 ```
 
-```
-JOBID       PARTITION  NAME   USER      ST   TIME  NODES  NODELIST(REASON) 
-23712177    batch      bwa    tutln01  R    0:03  1      c1cmp044 
-```
+JOBID | PARTITON | NAME | USER | ST | TIME | NODES | NODELIST(REASON) |
+------|------|-----|----|------|------|-----|----|------|-----|---- 
+24130535 | batch | bwa | tutln01 | R | 0.06 | 1 | c1cmp044 |
+24129538 | batch | bash | tutln01 | R | 23:14 | 1 | c1cmp044 |
 
-I can see my job number is `23712177`. Find your job number.
+
+I can see my job number is `24130535`. Find your job number.
 
 Take a look at the error and the output files:
 
@@ -227,54 +228,27 @@ ls
 ```
 
 ```
-bwa.sh 23712177.err 23712177.out 
-```
-
-
-Change into our `results` directory:
-```markdown
-cd ../results
-```
-
-List the files in the results directory by typing `ls`.
-Result:
-```markdown
-sarscov2.sam
+bwa.sh 24130535.err 24130535.out 
 ```
 
 
 ## Sequence Alignment Map (SAM)
 ------------------
 
-We will now introduce the SAM format and a tool called `Samtools` which we will use to manipulate SAM files.
-Let's load the tool.
-
-To load the module:
-```markdown
-module load samtools/1.9
-```
-
+While our job runs for 3 minutes, we will introduce the SAM format.
 SAM files have two sections, Header and Alignment.
 
-We can view the alignment header with this command:
-```markdown
-samtools view -H sarscov2.sam
-```
-
+Header:
 ```
 @SQ	SN:NC_045512.2	LN:29903                                  <-- Reference sequence name (SN) and length (LN)
 @PG	ID:bwa	PN:bwa	VN:0.7.17-r1198-dirty	CL:bwa mem -t 2 ... <-- Programs and arguments used in processing
 ```
 
-We can preview the alignment with this command. We use the bash '|' symbol, called a "pip", which takes the input of one process and passes it as input to another process:
-```
-samtools view sarscov2.sam | head
-````
 Alignment:
 
 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 
 ------|------|-----|----|------|------|-----|----|------|-----|---- 
-SRR15607266.1 | 99 | NC_045512.2 |8152 |60 |76M | = | 8307 | 231 | NTTA… | #8ACC... |
+SRR15607266.1 | 99 | NC_045512.2 | 8152 |60 |76M | = | 8307 | 231 | NTTA… | #8ACC... |
 SRR15607266.1 | 147 | NC_045512.2 | 8307 | 60 | 76M | = | 81523  | -231 | AAAA…   |  GGGG... | 
 SRR15607266.2 | 83 | NC_045512.2 | 16369 | 60 | 74M | = | 16255 | -188 | GTTA…   |  GGFD... |
 
@@ -294,6 +268,48 @@ Here is a useful site to [decode flags](https://broadinstitute.github.io/picard/
 11. Read Quality
 
 More information on [SAM format](https://samtools.github.io/hts-specs/SAMv1.pdf).
+
+Your job should be done, and do do this, check to make sure your `bwa` job is no longer listed in your `squeue -u tutln01` output.
+
+Change into our `results` directory:
+```markdown
+cd ../results
+```
+
+List the files in the results directory by typing `ls`.
+Result:
+```markdown
+sarscov2.sam
+```
+
+Let's load the tool `Samtools` which we'll use to manipulate SAM files.
+
+To load the module:
+```markdown
+module load samtools/1.9
+```
+
+We can view the alignment header with this command:
+```markdown
+samtools view -H sarscov2.sam
+```
+
+```
+@SQ	SN:NC_045512.2	LN:29903                                  <-- Reference sequence name (SN) and length (LN)
+@PG	ID:bwa	PN:bwa	VN:0.7.17-r1198-dirty	CL:bwa mem -t 2 ... <-- Programs and arguments used in processing
+```
+
+We can preview the alignment with this command. We use the bash '|' symbol, called a `pipe`, which takes the input of one process and passes it as input to another process:
+```
+samtools view sarscov2.sam | head
+````
+Alignment:
+
+1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 
+------|------|-----|----|------|------|-----|----|------|-----|---- 
+SRR15607266.1 | 145 | NC_045512.2 | 2 | 60 | 30S42M4S | = | 8365 | 8323 | CGTA… | GGGG... |
+SRR15607266.1 | 97 | NC_045512.2 | 3 | 60 | 32S43M | = | 28292  | 8365 | CCAA…   |  CCCC... | 
+SRR15607266.2 | 161 | NC_045512.2 | 3 | 60 | 32S43M | = | 28255 | 28365 | CCAA…   |  CCCC... |
 
 
 Next, we'll convert the SAM into a compressed, binary format called BAM in order to process it further.
@@ -362,7 +378,7 @@ Result:
 0 + 0 with mate mapped to a different chr (mapQ>=5)
 ```
 
-Samtools flagstat is a great way to check to make sure that the alignment meets the quality expected.
+Samtools `flagstat` is a great way to check to make sure that the alignment meets the quality expected.
 In this case, >75% properly paired and mapped indicates a high quality alignment.
 
 ## Summary
