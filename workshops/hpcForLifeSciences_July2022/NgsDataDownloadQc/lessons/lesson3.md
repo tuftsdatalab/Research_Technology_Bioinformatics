@@ -12,9 +12,10 @@ The [US National Center for Biotechnology Information](https://www.ncbi.nlm.nih.
 
 ### Downloading Reference Data
 
-We will use the `wget` command to download our reference data from the NCBI repository:
+We will enter our `data` directory and use the `wget` command to download our reference data from the NCBI repository:
 
 ```
+cd data
 wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/858/895/GCF_009858895.2_ASM985889v3/GCF_009858895.2_ASM985889v3_genomic.fna.gz
 wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/858/895/GCF_009858895.2_ASM985889v3/GCF_009858895.2_ASM985889v3_genomic.gff.gz
 ```
