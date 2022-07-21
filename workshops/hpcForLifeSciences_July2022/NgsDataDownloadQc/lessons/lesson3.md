@@ -64,7 +64,7 @@ fastq-dump --outdir fastq --gzip --skip-technical --read-filter pass --dumpbase 
 ```
 - `fastq-dump` is the command to pull SRA data
 - `--outdir` specifies where you want your SRA data deposited
-- `--gzip` compress the ouptu using gzip
+- `--gzip` compress the output using gzip
 - `--skip-technical` only download biological reads and skip technical reads
 - `--read-filter pass` return reads that pass filtering, so reads without N's
 - `--dumpbase` formats sequences by base space
