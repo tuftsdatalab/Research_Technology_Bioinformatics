@@ -49,13 +49,13 @@ You will see the name of the file and name of the sequence populate.
 
 <img src="../images/igv_from_file.png" width="300">
 
-- As before, navigate to `hpcDay2/data/` and select the GFF file `GCF_009858895.2_ASM985889v3_genomic.gff` and click `Open`
+- As before, navigate to `tutln01/hpcDay2/data/` and select the GFF file `GCF_009858895.2_ASM985889v3_genomic.gff` and click `Open`
 
 ### Load the BAM file
 
 - Choose the BAM file by clicking on `File` menu and selecting `Load from File...`
 
-- Navigate to `hpcDay2/results/` and select the sorted BAM file `sarscov2.srt.bam`
+- Navigate to `tutln01/hpcDay2/results/` and select the sorted BAM file `sarscov2.srt.bam`
 
 - Click `Open`
 

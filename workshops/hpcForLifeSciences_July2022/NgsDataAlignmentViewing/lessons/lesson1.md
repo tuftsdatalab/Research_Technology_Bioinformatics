@@ -22,7 +22,7 @@ This speeds up the search by reducing the number of positions to check for a goo
 
 BWA has three algorithms:
 
-- BWA-backtrack: designed for Illumina sequence reads up to 100bp (3-step)
+- BWA-backtrack: designed for Illumina sequence reads up to 100bp
 - BWA-SW:  designed for longer sequences ranging from 70bp to 1Mbp, long-read support and split alignment
 - BWA-MEM: optimized for 70-100bp Illumina reads
 
