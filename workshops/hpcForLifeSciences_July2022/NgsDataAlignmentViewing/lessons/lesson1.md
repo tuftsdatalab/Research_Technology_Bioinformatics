@@ -1,7 +1,7 @@
 Approximate time: 30 minutes
 
 ## Goals
-- Align short reads to a references genome with BWA
+- Align short reads to a references genome
 
 ## Burrows-Wheeler Aligner (BWA) Overview
 ------------------
@@ -34,10 +34,10 @@ Underlying the BWA index is the Burrows-Wheeler Transform [Video](https://www.yo
 ------------------
 In the following steps we'll create the BWA index for the reference genome. 
 
-Change to our data directory
+Change to our `data` directory:
 
 ```
-cd data
+cd ~/hpcDay2/data/
 ```
 
 Preview our genome using the command `head` by typing:
@@ -46,7 +46,7 @@ Preview our genome using the command `head` by typing:
 head GCF_009858895.2_ASM985889v3_genomic.fna
 ``` 
 
-You'll see the first 10 lines of the file `chr10.fa` which, as discussed, is an example of FASTA format:
+You'll see the first 10 lines of the file which, as discussed, is an example of FASTA format:
 
 ```
 >NC_045512.2 Severe acute respiratory syndrome coronavirus...   <-- '>' charachter followed by sequence name
@@ -54,7 +54,7 @@ ATTAAAGGTTTATACCTTCCCAGGTAACAAACCAACCAACTTTCGATCTCTTGTAGAT...   <-- sequence
 …
 ```
 
-- Load the BWA module, which will give us access to the `bwa` program:
+Load the BWA module, which will give us access to the `bwa` program:
 
 ```
 module load bwa/0.7.17
@@ -84,7 +84,7 @@ Use the `bwa index` command to see usage instructions for genome indexing
 bwa index
 ```
 
-Result
+Result:
 ```markdown
 Usage:   bwa index [options] <in.fasta>
 Options: -a STR    BWT construction algorithm …
@@ -164,7 +164,7 @@ This serves to make the script more readable.
 ```markdown
 #!/bin/bash
 #SBATCH --job-name=bwa             # Job name
-#SBATCH --nodes = 1                # Nodes requested
+#SBATCH --nodes=1                # Nodes requested
 #SBATCH -n 2                       # Tasks requested
 #SBATCH --partition=batch          # Parition
 #SBATCH --reservation=bioworkshop  # Omit this line if not part of workshop
@@ -174,18 +174,17 @@ This serves to make the script more readable.
 #SBATCH --error=%j.err             # Output error file labeled by job name
 
 # Load the module
+
 module load bwa/0.7.17
 
-# Make our output directory, but don't throw an error if it's already there
-mkdir -p results
-
 # Write the BWA command
+
 bwa mem \
 -t 2 \
--o results/sarscov2.sam \
-data/GCF_009858895.2_ASM985889v3_genomic.fna \
-fastq/trim_galore/SRR15607266_pass_1_val_1.fq.gz \
-fastq/trim_galore/SRR15607266_pass_2_val_2.fq.gz
+-o ~/hpcDay2/results/sarscov2.sam \
+~/hpcDay2/data/GCF_009858895.2_ASM985889v3_genomic.fna \
+~/hpcDay2/fastq/trim_galore/SRR15607266_pass_1_val_1.fq.gz \
+~/hpcDay2/fastq/trim_galore/SRR15607266_pass_2_val_2.fq.gz
 ```
 
 Let's look line by line at the options we've given to BWA:
@@ -259,7 +258,10 @@ SAM files have two sections, Header and Alignment.
 
 We can view the alignment header with this command:
 ```markdown
-samtools view -H results/sarscov2.sam
+samtools view -H sarscov2.sam
+```
+
+```
 @SQ	SN:NC_045512.2	LN:29903                                  <-- Reference sequence name (SN) and length (LN)
 @PG	ID:bwa	PN:bwa	VN:0.7.17-r1198-dirty	CL:bwa mem -t 2 ... <-- Programs and arguments used in processing
 ```
