@@ -88,6 +88,7 @@ Mac
 On Mac the shell is available through Terminal  
 Applications -> Utilities -> Terminal  
 Go ahead and drag the Terminal application to your Dock for easy access.
+Note: newer versions of MacOSX ship with "zsh" as the default shell language in their terminal. It is possible to change the preference to "bash". However, if you are only using the terminal to log into the Tufts cluster, you don't necessarily need to do this, because you will be using "bash" once you are on the cluster. "zsh" would only impact scripts and commands run locally on your own machine.
 
 Windows
 -------
