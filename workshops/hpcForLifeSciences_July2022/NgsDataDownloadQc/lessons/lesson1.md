@@ -63,7 +63,7 @@ Let's take a moment ot go through the Viral NGS Workflow. Total RNA is extracted
 - We often have two kinds of data, single-end and paired-end
 - **single-end** sequence each DNA fragement from one end only
 - **paired-end** sequence each DNA fragement from both sides
-  > paired-end data is useful when sequencing highly repetitive sequences. Today we will be working with paired end data
+  - paired-end data is useful when sequencing highly repetitive sequences. Today we will be working with paired end data
 
 ![](../images/single_paired.png)
 
