@@ -81,7 +81,6 @@ You will see the name of the file and name of the sequence populate.
 
 <img src="../images/igv_variant_info.png" width="200">
 
-## Summary of Workshop
 
 [Previous: Alignment ](lesson1.md)
 

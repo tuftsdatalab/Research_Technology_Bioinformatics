@@ -3,9 +3,9 @@ Approximate time: 30 minutes
 ## Goals
 - Align short reads to a references genome with BWA
 
-## BWA Overview
+## Burrows-Wheeler Aligner (BWA) Overview
 
-Burrows-Wheeler Aligner ([BWA](http://bio-bwa.sourceforge.net/)) is a software package for mapping low-divergent 
+[BWA](http://bio-bwa.sourceforge.net/) is a software package for mapping low-divergent 
 sequences against a large reference genome, such as the human genome. 
 The naive approach to read alignment is to compare a read to every position in the reference genome until a good match 
 is found is far too slow. 
