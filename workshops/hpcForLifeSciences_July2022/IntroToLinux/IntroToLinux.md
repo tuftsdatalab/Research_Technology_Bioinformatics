@@ -4,11 +4,21 @@
 * TOC
 {:toc}
 
-
-
 This short workshop provides some basic training on bash and shell scripting on the command line on the Linux-based Tufts HPC cluster.
 
 This course is not meant to be comprehensive, but provides some insights into how the command line works as well as some strategic resources for studying and understanding command line on the HPC cluster.
+
+#### Helpful Tip: Some Vocabulary
+===================================
+
+"Command line" is a more general term to indicate that you are using text commands on a terminal (linux bash shell or similar). Command line differs from "Graphical User Interface (GUI)" because all commands are texts instead of drag-and-drop or interactive formats such as the Windows or Mac Operating Sytems provide.
+
+"HPC" stands for High Performance Computing, "cluster" refers to a shared computer resource to enable more powerful computation than regularly available on an individual machine.
+
+"Linux" can refer to any of the free open source version of "Unix" from AT&T Bell labs who pioneered the language in 1965. There are a number of Linux operating systems installed on HPC clusters (Ubuntu, Debian, RedHat Enterprise License (RHEL), CentOs, Fedora, etc.) Each of these systems have slight differences that may impact the commands demoed here. Tufts University Research Cluster is currently using RHEL7.
+
+"Bash" is one type of languages used in a "shell", the text interface on the Linux system. This lesson introduces a few objectives to help users understand how to use bash commands on the Linux RHEL shell of our HPC. Other shell languages have slight differences that affect how commands are run (e.g. new MacOSX ship with "zsh" as the default shell language on their installed terminal programs).
+
 
 ## Learning Objectives
 -----------------------
