@@ -84,5 +84,6 @@ You will see the name of the file and name of the sequence populate.
 ## Summary of Workshop
 
 [Previous: Alignment ](lesson1.md)
-[Home ](lesson1.md)
+
+[Next: Conclusion](lesson3.md)
 
