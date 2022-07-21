@@ -60,13 +60,12 @@ module load sra/2.10.8
 Now that we have this module loaded we can use it to pull our SARS-Cov-2 NGS sequencing data from the [SRA database](https://www.ncbi.nlm.nih.gov/sra):
 
 ```
-fastq-dump --outdir fastq --gzip --skip-technical --readids --read-filter pass --dumpbase --split-files --clip SRR15607266
+fastq-dump --outdir fastq --gzip --skip-technical --read-filter pass --dumpbase --split-files --clip SRR15607266
 ```
 - `fastq-dump` is the command to pull SRA data
 - `--outdir` specifies where you want your SRA data deposited
 - `--gzip` compress the ouptu using gzip
 - `--skip-technical` only download biological reads and skip technical reads
-- `--readids` add a read ID, `.1` and `.2`, after the file name for paired end data. This allows us to differentiate the both left and right 
 - `--read-filter pass` return reads that pass filtering, so reads without N's
 - `--dumpbase` formats sequences by base space
 - `--split-files` splits files into left and right ends, if these reads are not paired-end they are combined into a single file
