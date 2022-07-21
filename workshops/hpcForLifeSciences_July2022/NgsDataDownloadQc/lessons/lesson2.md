@@ -20,18 +20,17 @@ Where:
 Now it is **IMPORTANT** to note that when you log in you are on the login node. This is a shared node, sort of like a waiting room. You can't run anything from this login node. For that you'll need to request compute resources so type and enter this into your terminal:
 
 ```
-srun -p preempt -t 1-2:30:00 -n 1 --mem=2g --pty bash
+srun --time=0-24:00:00 --partition=batch -n 1 --mem=8Gb --reservation=bioworkshop --pty bash
 ```
 So what did you do? Well you just used what is called a SLURM command. SLURM is what is known as a job scheduler and it is used to organize how jobs are run on the HPC. Let's break down what you did above:
 
-|command/option|description|
-|-|-|
-|srun| runs a parallel job on the cluster|
-|-p| identifies the partition you want to use - here we use the preempt parition|
-|-t| How long do we want to use this resource? The format is in day-hour:minute:second, so here we requested 1 day, 2 hours, 30 minutes and 0 seconds|
-|-n| How many CPU cores do we want to use? Here we asked for 1|
-|--mem| How much memory do we want to use? Here we asked for 2 gigabytes|
-|--pty| What kind of terminal do we want? Here we asked for a bash terminal|
+- `srun` runs a parallel job on the cluster
+- `--time` How long do we want to use this resource? The format is in day-hour:minute:second, so here we requested 1 day, 2 hours, 30 minutes and 0 seconds
+- `--partition` identifies the partition you want to use - here we use the batch parition
+- `-n` How many CPU cores do we want to use? Here we asked for 1
+- `--mem` How much memory do we want to use? Here we asked for 8 gigabytes
+- `--pty` What kind of terminal do we want? Here we asked for a bash terminal
+- `--reservation` what reservation do we want to use? sometimes nodes are "reserved" for a special use case like this workshop. Here we ask for the `bioworkshop` reservation
 
 Now you'll notice that the node has changed:
 
@@ -46,7 +45,7 @@ mkdir hpcDay2
 cd hpcDay2
 ```
 
-In our workshop directory we will need 
+In our workshop directory we will set up a directory structure to organize our inputs/outputs:
 
 ```
 mkdir data
