@@ -1,4 +1,4 @@
-# NGS Data Download/QC
+# Next Generation Sequencing Data Analysis on the Tufts HPC
 
 ## Description
 
