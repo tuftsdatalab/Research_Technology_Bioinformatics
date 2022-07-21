@@ -25,7 +25,7 @@ srun --time=0-24:00:00 --partition=batch -n 1 --mem=8Gb --reservation=bioworksho
 So what did you do? Well you just used what is called a SLURM command. SLURM is what is known as a job scheduler and it is used to organize how jobs are run on the HPC. Let's break down what you did above:
 
 - `srun` runs a parallel job on the cluster
-- `--time` How long do we want to use this resource? The format is in day-hour:minute:second, so here we requested 1 day, 2 hours, 30 minutes and 0 seconds
+- `--time` How long do we want to use this resource? The format is in day-hour:minute:second, so here we requested 0 day, 24 hours, 0 minutes and 0 seconds
 - `--partition` identifies the partition you want to use - here we use the batch parition
 - `-n` How many CPU cores do we want to use? Here we asked for 1
 - `--mem` How much memory do we want to use? Here we asked for 8 gigabytes
