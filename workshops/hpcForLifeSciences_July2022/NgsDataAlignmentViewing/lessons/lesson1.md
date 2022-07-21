@@ -4,7 +4,7 @@ Approximate time: 30 minutes
 - Align short reads to a references genome with BWA
 
 ## Burrows-Wheeler Aligner (BWA) Overview
-
+------------------
 [BWA](http://bio-bwa.sourceforge.net/) is a software package for mapping low-divergent 
 sequences against a large reference genome, such as the human genome. 
 The naive approach to read alignment is to compare a read to every position in the reference genome until a good match 
@@ -27,23 +27,28 @@ BWA has three algorithms:
 - BWA-MEM: optimized for 70-100bp Illumina reads
 
 We'll use BWA-MEM. 
-Underlying the BWA index is the Burrows-Wheeler Transform[Video](https://www.youtube.com/watch?v=4n7NPk5lwbI) and [lecture](http://web.stanford.edu/class/cs262/presentations/lecture4.pdf).  This is beyond the scope of this course but is an widely used data compression algorithm.
+Underlying the BWA index is the Burrows-Wheeler Transform [Video](https://www.youtube.com/watch?v=4n7NPk5lwbI) and [lecture](http://web.stanford.edu/class/cs262/presentations/lecture4.pdf).  This is beyond the scope of this course but is an widely used data compression algorithm.
 
-## Index the reference genoms
 
-In the following steps we'll create the BWA index. 
+## Index the reference genome
+------------------
+In the following steps we'll create the BWA index for the reference genome. 
 
-- Change to our data directory
+Change to our data directory
 
-`cd data`
+```
+cd data
+```
 
-- Preview our genome using the command `head` by typing:
+Preview our genome using the command `head` by typing:
 
-`head GCF_009858895.2_ASM985889v3_genomic.fna` 
+```
+head GCF_009858895.2_ASM985889v3_genomic.fna
+``` 
 
 You'll see the first 10 lines of the file `chr10.fa` which, as discussed, is an example of FASTA format:
 
-```buildoutcfg
+```
 >NC_045512.2 Severe acute respiratory syndrome coronavirus...   <-- '>' charachter followed by sequence name
 ATTAAAGGTTTATACCTTCCCAGGTAACAAACCAACCAACTTTCGATCTCTTGTAGAT...   <-- sequence
 …
@@ -57,12 +62,12 @@ module load bwa/0.7.17
 
 Test it out without any arguments in order to view the help message.
 
-```markdown
+```
 bwa
 ```
 
 Result:
-```markdown
+```
 Program: bwa (alignment via Burrows-Wheeler transformation)
 Version: 0.7.17-r1198-dirty
 Contact: Heng Li <lh3@sanger.ac.uk>
@@ -116,6 +121,7 @@ cGCF_009858895.2_ASM985889v3_genomic.fna.sa  <-- Suffix array index
 ```
 
 ## BWA alignment
+------------------
 Let's check the usage instructions for BWA mem by typing `bwa mem`
 
 ```markdown
@@ -157,22 +163,27 @@ This serves to make the script more readable.
 
 ```markdown
 #!/bin/bash
-#SBATCH --job-name=bwa
+#SBATCH --job-name=bwa             # Job name
 #SBATCH --nodes = 1                # Nodes requested
 #SBATCH -n 2                       # Tasks requested
-#SBATCH --partition=batch
-#SBATCH --reservation=bioworkshop
+#SBATCH --partition=batch          # Parition
+#SBATCH --reservation=bioworkshop  # Omit this line if not part of workshop
 #SBATCH --mem=1Gb                  # Memory requested
 #SBATCH --time=0-30:00             # Time requested
-#SBATCH --output=%j.out
-#SBATCH --error=%j.err
+#SBATCH --output=%j.out            # Output log file labeled by job name
+#SBATCH --error=%j.err             # Output error file labeled by job name
 
+# Load the module
 module load bwa/0.7.17
 
+# Make our output directory, but don't throw an error if it's already there
+mkdir -p results
+
+# Write the BWA command
 bwa mem \
 -t 2 \
 -o results/sarscov2.sam \
-ref/GCF_009858895.2_ASM985889v3_genomic.fna \
+data/GCF_009858895.2_ASM985889v3_genomic.fna \
 fastq/trim_galore/SRR15607266_pass_1_val_1.fq.gz \
 fastq/trim_galore/SRR15607266_pass_2_val_2.fq.gz
 ```
@@ -186,7 +197,7 @@ node allocation with  `--cpus=4`, which can process up to 8 threads. Here we are
 
 3. The following arguments are our reference, read1 and read2 files, in the order required by BWA:
 ``` 
-ref/GCF_009858895.2_ASM985889v3_genomic.fna \
+data/GCF_009858895.2_ASM985889v3_genomic.fna \
 fastq/trim_galore/SRR15607266_pass_1_val_1.fq.gz \
 fastq/trim_galore/SRR15607266_pass_2_val_2.fq.gz
 ```
@@ -200,33 +211,41 @@ sbatch bwa.sh
 
 We can check to see if our job is running
 ```markdown
-squeue -u rbator01
+squeue -u tutln01
+```
+
+```
 JOBID       PARTITION  NAME   USER      ST   TIME  NODES  NODELIST(REASON) 
-23712177    batch      bwa    rbator01  R    0:03  1      c1cmp044 
+23712177    batch      bwa    tutln01  R    0:03  1      c1cmp044 
 ```
 
 I can see my job number is `23712177`. Find your job number.
 
 Take a look at the error and the output files:
-Result:
+
 ```markdown
 ls
-....23712177.err 23712177.out 
 ```
 
-Change into our `scripts` directory:
+```
+bwa.sh 23712177.err 23712177.out 
+```
+
+
+Change into our `results` directory:
 ```markdown
-cd ../scripts
+cd ../results
 ```
 
 List the files in the results directory by typing `ls`.
 Result:
 ```markdown
-sarscov2.sam 23712177.err 23712177.out
+sarscov2.sam
 ```
 
----
+
 ## Sequence Alignment Map (SAM)
+------------------
 
 We will now introduce the SAM format and a tool called `Samtools` which we will use to manipulate SAM files.
 Let's load the tool.
@@ -240,12 +259,12 @@ SAM files have two sections, Header and Alignment.
 
 We can view the alignment header with this command:
 ```markdown
-$samtools view -H results/sarscov2.sam
+samtools view -H results/sarscov2.sam
 @SQ	SN:NC_045512.2	LN:29903                                  <-- Reference sequence name (SN) and length (LN)
 @PG	ID:bwa	PN:bwa	VN:0.7.17-r1198-dirty	CL:bwa mem -t 2 ... <-- Programs and arguments used in processing
 ```
 
-We can preview the alignment with this command. Note the '|' pipe and 'head':
+We can preview the alignment with this command. We use the bash '|' symbol, called a "pip", which takes the input of one process and passes it as input to another process:
 ```
 samtools view sarscov2.sam | head
 ````
@@ -275,13 +294,17 @@ Here is a useful site to [decode flags](https://broadinstitute.github.io/picard/
 More information on [SAM format](https://samtools.github.io/hts-specs/SAMv1.pdf).
 
 
-Convert the SAM into a binary format called BAM in order to process it further.
-Can still be viewed.
+Next, we'll convert the SAM into a compressed, binary format called BAM in order to process it further.
+
 ```
 samtools view -S -b sarscov2.sam > sarscov2.bam
-samtools view sarscov2.bam | head
 ```
 
+It is not human readable, so we use samtools to view BAM files:
+
+```
+samtools view sarscov2.bam | head
+```
 
 ## Sort SAM file
 
@@ -289,22 +312,33 @@ Downstream applications require that reads in SAM files be sorted by reference g
 This will assist in fast search, display and other functions.
 ```
 samtools sort sarscov2.bam  -o sarscov2.srt.bam
-samtools view sarscov2.srt.bam | head
 ````
 
-Look at the difference in order.
+Look at the new file, do you notice anything different about the read order?
 
-TODO: ADD TABLE 
-Index it for fast searching.
+```
+samtools view sarscov2.srt.bam | head
+```
+
+1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 
+------|------|-----|----|------|------|-----|----|------|-----|---- 
+SRR15607266.1 | 99 | NC_045512.2 |8152 |60 |76M | = | 8307 | 231 | NTTA… | #8ACC... |
+SRR15607266.1 | 147 | NC_045512.2 | 8307 | 60 | 76M | = | 81523  | -231 | AAAA…   |  GGGG... | 
+SRR15607266.2 | 83 | NC_045512.2 | 16369 | 60 | 74M | = | 16255 | -188 | GTTA…   |  GGFD... |
+
+
+Finally, we create a BAM index to speed up searching in downstream applications.
+
 ```
 samtools index sarscov2.srt.bam
 ```
 
----
-## Alignment Quality Control
 
-Next, we'd like to know how well our reads aligned to the reference genome.
-To run the `flagstat` program on our sorted `BAM` file:
+## Alignment Quality Control
+--------------
+Before we view our reads, we'd like to calculate some summary statistics to know how well our reads aligned to the reference genome.
+This can be done by running the `samtools flagstat` program on our sorted `BAM` file:
+
 ```
 samtools flagstat sarscov2.srt.bam
 ```
@@ -326,8 +360,8 @@ Result:
 0 + 0 with mate mapped to a different chr (mapQ>=5)
 ```
 
-Samtools flagstat is a great way to check to make sure that the aligment meets the quality expected.
-In this case, >X% properly paired and mapped indicates a high quality alignment.
+Samtools flagstat is a great way to check to make sure that the alignment meets the quality expected.
+In this case, >75% properly paired and mapped indicates a high quality alignment.
 
 ## Summary
 
