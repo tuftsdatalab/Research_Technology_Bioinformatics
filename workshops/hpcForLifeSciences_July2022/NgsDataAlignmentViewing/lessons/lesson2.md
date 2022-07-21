@@ -12,18 +12,19 @@ Approximate time: 10 minutes
 <img src="../images/igv_dropdown_1.png" width="300">
 
 -Choose the following compute resource parameters: 
--- Number of house = 1
--- Number of cores = 1
--- Amount of Memory = 8GB
--- Reservation = Bioinformatics Workshop
--- Directory (leave blank)
++Number of house = 1
++Number of cores = 1
++Amount of Memory = 8GB
++Reservation = Bioinformatics Workshop
++Directory (leave blank)
 
 <img src="../images/igv_params.png" width="400">
 
 - Click the blue button `Launch IGV` when it appears
 
-After this the IGV window will appear as a small window on a grey background.
-Click the square icon in the top right corner to maximize the window.
+- After this the IGV window will appear as a small window on a grey background.
+
+- Click the square icon in the top right corner to maximize the window.
 
 <img src="../images/igv_start.png" width="400">
 
@@ -33,22 +34,22 @@ Choose reference genome by clicking the `Genomes` menu and selecting `Load Genom
 
 <img src="../images/igv_ref_1.png" width="300">
 
-Navigate from your home directory to `hpcDay2/data/` and select the fasta file `GCF_009858895.2_ASM985889v3_genomic.fna`
+- Navigate from your home directory to `hpcDay2/data/` and select the fasta file `GCF_009858895.2_ASM985889v3_genomic.fna`
 
 <img src="../images/igv_ref_2.png" width="600">
 
-Click `Open`
+- Click `Open`
 
 You will see the name of the file and name of the sequence populate.
 
 
 ### Load the GFF file
 
-Choose the GFF file by clicking on `File` menu and selecting `Load from File...`
+- Choose the GFF file by clicking on `File` menu and selecting `Load from File...`
 
 <img src="../images/igv_from_file.png" width="300">
 
-As before, navigate to `hpcDay2/data/` and select the GFF file `GCF_009858895.2_ASM985889v3_genomic.gff` and click `Open`
+- As before, navigate to `hpcDay2/data/` and select the GFF file `GCF_009858895.2_ASM985889v3_genomic.gff` and click `Open`
 
 ### Load the BAM file
 
@@ -66,7 +67,7 @@ As before, navigate to `hpcDay2/data/` and select the GFF file `GCF_009858895.2_
 
 ### Examining a Gene
 
-- Zoom in on the Gene that encodes the Spike protein by hovering with your mouse on the genome track and clicking and dragging over the portion that is directly above the "S" protein.
+- Zoom in on the Gene that encodes the Spike protein by hovering with your mouse on the genome track and clicking and dragging over the portion that is directly above the "S" gene in the GFF track.
 
 - We should see the coordinate box show roughly basepairs 22,000-25,000 `NC_045512.2:22,000-25,000`.
 
