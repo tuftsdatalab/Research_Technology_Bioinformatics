@@ -17,7 +17,7 @@ module load trim-galore/0.6.4_dev
 To trim our data we will enter:
 
 ```
-trim_galore --illumina --paired -o trim_galore/ fastq/SRR15607266_pass_1.fastq.gz fastq/SRR15607266_pass_2.fastq.gz
+trim_galore --illumina --paired -o trim_galore/ SRR15607266_pass_1.fastq.gz SRR15607266_pass_2.fastq.gz
 ```
 
 - `--illumina` Adapter sequence to be trimmed is the first 13bp of the Illumina universal adapter

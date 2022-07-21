@@ -69,27 +69,38 @@ You will see the name of the file and name of the sequence populate.
 
 - Zoom in on the Gene that encodes the Spike protein by hovering with your mouse on the genome track and clicking and dragging over the portion that is directly above the "S" gene in the GFF track.
 
+<img src="../images/select_s.png" width="200">
+
 - We should see the coordinate box show roughly basepairs 22,000-25,000 `NC_045512.2:22,000-25,000`.
 
 <img src="../images/igv_coordinates.png" width="500">
 
 - Looking at the Coverage track we see there are five positions that are colored, which indicates a basepair mismatch with respect to the references sequence in over 20% of the reads a that position. we will examine one more closely.
 
+<img src="../images/variants.png" width="800">
 
 ### Examining a Variant
 
 - This region contains one of the 4 mutations that differentiate the delta variant from the originally characterized sequence. 
 
-- Select region around the variant at 22,995.
+- Select region around the variant at 22,995, or type `NC_045512.2:22,995` into the search box.
 
-- View  amino acid change is a T>K change at protein position 478, which corresponds to a C>A SNP at nucleotide position 22,995. 
+- The result shows many short reads that are aligned to the reference but disagree with the reference nucleotide `C` instead having an `A`. This corresponds to an amino acid change is a T>K change at protein position 478. We also see one read with a missing base at this position. 
 
-- Explain hovering on a variant.
+<img src="../images/variant_zoom.png" width="500">
 
-<img src="../images/igv_variant_info.png" width="200">
+- We can get more information about the coverage and composition of that position by clicking ont the variant in the coverage track. We confirm that there are no reads that match the reference sequence, one `G` and one deletion. 
+
+<img src="../images/igv_variant_info_1.png" width="200">
 
 
 ### Examining a Read
+- Similar to a variant, you can click on a read to get individual read information.
+
+- Reads can be colored in various ways. The default is to color by `Insert size and pair orientation`. The [insert size](https://software.broadinstitute.org/software/igv/interpreting_insert_size) is the length in basepairs between sequencing adapters (which may be greater than the length of reads R1 + R2) and the order of mapping of R1 and R2. You can change this by right clicking on the alignment and choosing `Color alignments by`. 
+
+
+Note on IGV on demand for July 2022: I've observed behavior where the interface become no longer responsive to user actions. This likely means that more memory is needed. Sometimes it can be overcome by closing the browser tab and rejoining the session by clicking `Launch IGV`. The tech team is looking into this.
 
 [Previous: Alignment ](lesson1.md)
 
