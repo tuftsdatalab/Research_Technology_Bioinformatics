@@ -65,10 +65,8 @@ shell commands. We will finish with a demonstration of how to run programs inter
 ### Where to learn shell commands
 -----------------------------------------
 
-The challenge with UNIX is that it's not particularly simple - it's a
+The challenge with bash for the command line is that it's not particularly simple - it's a
 power tool, with its own deep internal logic with lots of details.
-The joke is that Unix is user-friendly - it's just very selective
-about who its friends are!
 
 Practice is the best way to learn, but here are some helpful shell command resources:
 
@@ -82,9 +80,7 @@ components of a shell command are doing.
 
 [Log In through OnDemand](https://ondemand.pax.tufts.edu/pun/sys/dashboard){:target="_blank" rel="noopener"}
 
-
 <img width="692" alt="Ondemand_Shell" src="https://user-images.githubusercontent.com/8632603/179539946-5d4fa52d-95ae-4215-ab16-24c912879aeb.png">
-
 
 Mac
 ---
@@ -118,13 +114,9 @@ You probably already know how to find the shell prompt.
 ## Starting with the Shell
 ---------------------------
 
-We will spend most of our time learning about the basics of the shell
-by manipulating some experimental data.
+We will spend most of our time learning about the basics of the shell by manipulating some experimental data that we download from the internet.
 
-Later on, we're going to download the data for the tutorial. For this you'll need
-internet access, because you're going to get it off the web.
-
-Open up the shell and type the command::
+Open up the shell through a terminal (OnDemand or on your laptop) and type the command::
 
 ```
 whoami
@@ -805,23 +797,21 @@ For genomics projects, the files are often stored in pubic repositories and we m
 [NCBI FTP site](ftp://ftp.ncbi.nih.gov/refseq/M_musculus/mRNA_Prot), a copy has been placed in our github directory for future reference.
 
 
-Now, we'll use `curl` to download the files from a Web site onto our
-computer; note, 
+Now, we'll use `curl` to download the files from a Web site onto our computer. You will need to be connected to the internet for these commands to work.
 
 * `-o` indicates this is the name we are assigning to our files in our own directory
 * `-L` provides the full path for the download
 
 
-```
+It is possible to copy and paste both conmands to your terminal, they will run in sequence if there is not an error.
 
+```
 curl -o mouse.1.protein.faa.gz -L https://tuftsdatalab.github.io/Research_Technology_Bioinformatics/workshops/hpcForLifeSciences_July2022/IntroToLinux/mouse.1.protein.faa.gz
 
 curl -o zebrafish.1.protein.faa.gz -L https://tuftsdatalab.github.io/Research_Technology_Bioinformatics/workshops/hpcForLifeSciences_July2022/IntroToLinux/zebrafish.1.protein.faa.gz
-
-
 ```
 
-Another method for pulling files from the internet is `wget`, which will be demoed tomorrow.
+Another method for pulling files from the internet is `wget`, which will be demoed tomorrow. `curl` can pull more file types than `wget`, but in this simple case, either can be used.
 
 
 If you look at the files in the current directory:
