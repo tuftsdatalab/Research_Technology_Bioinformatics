@@ -6,7 +6,7 @@ This is the first part of Day 2 of the High Performance Computing For Life Scien
 
 ### Goals
 
-![](./images/day2workflow.PNG)
+![](./images/workflow.png)
 
 ### Materials Needed
 
