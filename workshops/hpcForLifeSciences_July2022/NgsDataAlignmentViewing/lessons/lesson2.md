@@ -4,7 +4,7 @@ Approximate time: 10 minutes
 - View alignment, variants and reads using [Integrative Genomics Viewer](https://software.broadinstitute.org/software/igv/)
 
 ## BAM Visualization with IGV
-
+--------------
 - With a Chrome web browser, visit [https://ondemand.pax.tufts.edu/](https://ondemand.pax.tufts.edu/)
 - Log in in with your Tufts credentials
 - On the top grey menu bar, choose `Interactive Apps->IGV`.
@@ -29,7 +29,7 @@ Approximate time: 10 minutes
 <img src="../images/igv_start.png" width="400">
 
 ### Load reference genome 
-
+--------------
 Choose reference genome by clicking the `Genomes` menu and selecting `Load Genome from File...`
 
 <img src="../images/igv_ref_1.png" width="300">
@@ -44,7 +44,7 @@ You will see the name of the file and name of the sequence populate.
 
 
 ### Load the GFF file
-
+--------------
 - Choose the GFF file by clicking on `File` menu and selecting `Load from File...`
 
 <img src="../images/igv_from_file.png" width="300">
@@ -66,7 +66,7 @@ You will see the name of the file and name of the sequence populate.
 <img src="../images/igv_result_1.png" width="800">
 
 ### Examining a Gene
-
+--------------
 - Zoom in on the Gene that encodes the Spike protein by hovering with your mouse on the genome track and clicking and dragging over the portion that is directly above the "S" gene in the GFF track.
 
 <img src="../images/select_s.png" width="200">
@@ -80,7 +80,7 @@ You will see the name of the file and name of the sequence populate.
 <img src="../images/variants.png" width="800">
 
 ### Examining a Variant
-
+--------------
 - This region contains one of the 4 mutations that differentiate the delta variant from the originally characterized sequence. 
 
 - Select region around the variant at 22,995, or type `NC_045512.2:22,995` into the search box.
@@ -95,6 +95,8 @@ You will see the name of the file and name of the sequence populate.
 
 
 ### Examining a Read
+--------------
+
 - Similar to a variant, you can click on a read to get individual read information.
 
 - Reads can be colored in various ways. The default is to color by `Insert size and pair orientation`. The [insert size](https://software.broadinstitute.org/software/igv/interpreting_insert_size) is the length in basepairs between sequencing adapters (which may be greater than the length of reads R1 + R2) and the order of mapping of R1 and R2. You can change this by right clicking on the alignment and choosing `Color alignments by`. 
