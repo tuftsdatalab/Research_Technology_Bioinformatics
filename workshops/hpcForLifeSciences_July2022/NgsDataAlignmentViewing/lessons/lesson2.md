@@ -9,7 +9,7 @@ Approximate time: 10 minutes
 - Log in in with your Tufts credentials
 - On the top grey menu bar, choose `Interactive Apps->IGV`.
 
-<img src="../images/igv_dropdown.png" width="300">
+<img src="../images/igv_dropdown_1.png" width="300">
 
 -Choose the following compute resource parameters: 
 -- Number of house = 1
@@ -18,14 +18,14 @@ Approximate time: 10 minutes
 -- Reservation = Bioinformatics Workshop
 -- Directory (leave blank)
 
-<img src="../images/igv_params.png" width="500">
+<img src="../images/igv_params.png" width="400">
 
 - Click the blue button `Launch IGV` when it appears
 
 After this the IGV window will appear as a small window on a grey background.
 Click the square icon in the top right corner to maximize the window.
 
-<img src="../images/igv_start.png" width="500">
+<img src="../images/igv_start.png" width="400">
 
 ### Load reference genome 
 
@@ -62,7 +62,7 @@ As before, navigate to `hpcDay2/data/` and select the GFF file `GCF_009858895.2_
 
 - When it's done, you will have the following view. Each row of data is called a track. There are four tracks visible: the top track shows the reference genome coordinates, followed by two tracks of our alignment (coverage and reads) followed by the GFF track showing the gene locations on our reference genome.
 
-<img src="../images/igv_result.png" width="800">
+<img src="../images/igv_result_1.png" width="800">
 
 ### Examining a Gene
 
