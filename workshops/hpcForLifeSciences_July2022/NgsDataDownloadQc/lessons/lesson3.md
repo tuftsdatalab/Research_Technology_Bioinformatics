@@ -37,7 +37,7 @@ The virus genome is in fasta format. Fasta format has two parts, a sequence iden
 
 
 ### GFF Format
-The gene annotation file is in Generic Feature Format (GFF). This formet tells us where genes are located in the reference genome. Note that we must always be sure that our gene information and genome come from the same source. 
+The gene annotation file is in Generic Feature Format (GFF). This format tells us where genes are located in the reference genome. Note that we must always be sure that our gene information and genome come from the same source. 
 
 <p align="center">
 <img src="../images/gff.PNG">
