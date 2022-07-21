@@ -45,6 +45,6 @@ Here we note that only a small fraction of bases were removed, 0.3%, due to qual
 
 _________________________________________________________________________________________________________________________________________________________
 
-[Main Page](../README.md)
+Next Lesson: [Ngs Data Alignment and Viewing](../../NgsDataAlignmentViewing/README.md)
 
 [Previous](lesson4.md)
