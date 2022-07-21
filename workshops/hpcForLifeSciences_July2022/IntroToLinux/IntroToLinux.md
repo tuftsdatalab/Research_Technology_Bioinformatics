@@ -975,7 +975,6 @@ nano sbatch.sh
 Before closing, let's put some text into the file.
 
 ```
-
 #!/bin/bash
 
 #SBATCH --job-name=job
