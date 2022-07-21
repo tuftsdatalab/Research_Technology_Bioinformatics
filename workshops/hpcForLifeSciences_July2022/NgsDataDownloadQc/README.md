@@ -1,8 +1,8 @@
-# Next Generation Sequencing Data Analysis on the Tufts HPC
+# Next Generation Sequencing (NGS) Data Analysis on the Tufts HPC
 
 ## Description
 
-This is the first part of Day 2 of the High Performance Computing For Life Sciences workshop. Here we examine how to download publically available NGS data and perform quality control on that data.
+This is  Day 2 of the High Performance Computing For Life Sciences workshop. Here we examine how to download publically available NGS data, perform quality control on that data, produce and alignment and view reads and variants.
 
 ### Goals
 
