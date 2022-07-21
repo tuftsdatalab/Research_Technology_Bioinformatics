@@ -11,12 +11,12 @@ Approximate time: 10 minutes
 
 <img src="../images/igv_dropdown_1.png" width="300">
 
--Choose the following compute resource parameters: 
-+Number of house = 1
-+Number of cores = 1
-+Amount of Memory = 8GB
-+Reservation = Bioinformatics Workshop
-+Directory (leave blank)
+- Choose the following compute resource parameters: 
++ Number of house = 1
++ Number of cores = 1
++ Amount of Memory = 8GB
++ Reservation = Bioinformatics Workshop
++ Directory (leave blank)
 
 <img src="../images/igv_params.png" width="400">
 
