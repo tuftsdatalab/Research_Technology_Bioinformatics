@@ -2,7 +2,6 @@ Approximate time: 30 minutes
 
 ## Goals
 - Align short reads to a references genome with BWA
-- View alignment using [Integrative Genomics Viewer](https://software.broadinstitute.org/software/igv/)
 
 ## BWA Overview
 
@@ -28,36 +27,36 @@ BWA has three algorithms:
 - BWA-MEM: optimized for 70-100bp Illumina reads
 
 We'll use BWA-MEM. 
-Underlying the BWA index is the [Burrows-Wheeler Transform](http://web.stanford.edu/class/cs262/presentations/lecture4.pdf)
-This is beyond the scope of this course but is an widely used data compression algorithm.
+Underlying the BWA index is the Burrows-Wheeler Transform[Video](https://www.youtube.com/watch?v=4n7NPk5lwbI) and [lecture](http://web.stanford.edu/class/cs262/presentations/lecture4.pdf).  This is beyond the scope of this course but is an widely used data compression algorithm.
 
-## BWA Index
+## Index the reference genoms
 
 In the following steps we'll create the BWA index. 
 
-1. Change to our reference data directory
-`cd ref`
+- Change to our data directory
 
-2. Preview our genome using the command `head` by typing:
+`cd data`
+
+- Preview our genome using the command `head` by typing:
 
 `head GCF_009858895.2_ASM985889v3_genomic.fna` 
 
-You'll see the first 10 lines of the file `chr10.fa`:
+You'll see the first 10 lines of the file `chr10.fa` which, as discussed, is an example of FASTA format:
+
 ```buildoutcfg
 >NC_045512.2 Severe acute respiratory syndrome coronavirus...   <-- '>' charachter followed by sequence name
 ATTAAAGGTTTATACCTTCCCAGGTAACAAACCAACCAACTTTCGATCTCTTGTAGAT...   <-- sequence
 …
 ```
 
-This is an example of FASTA format. FASTA format is similar to the first two lines of FASTQ format, storing only the 
-sequence name and sequence.
+- Load the BWA module, which will give us access to the `bwa` program:
 
-3. Load the BWA module, which will give us access to the `bwa` program:
 ```
 module load bwa/0.7.17
 ```
 
 Test it out without any arguments in order to view the help message.
+
 ```markdown
 bwa
 ```

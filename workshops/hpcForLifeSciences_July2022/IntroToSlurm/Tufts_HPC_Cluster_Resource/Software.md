@@ -2,7 +2,7 @@
 
 **What are modules**
 
-  - A tool that **simplify** shell initialization and lets users easily modify their environment during the session with modulefiles
+  - A tool that **simplifies** shell initialization and lets users easily modify their environment during the session with modulefiles
   - Each modulefile contains the **information** needed to configure the shell for an application. (PATH, LD_LIBRARY_PATH, CPATH, etc.)
   - Modules are useful in managing **different versions** of applications. 
   - Modules can also be bundled into metamodules that will load an entire **set of different applications (dependencies)**. 
@@ -24,22 +24,22 @@
 To check **ALL available modules** installed on the cluster:
 
 
-`[ymalon01@login-prod-01 ~]$ module av`
+`[your_utln@login-prod-01 ~]$ module av`
 
 
 Upon login, environment `PATH` is set for the system to search executables:
 
 
-`[ymalon01@login-prod-01 ~]$ echo $PATH`
+`[your_utln@login-prod-01 ~]$ echo $PATH`
   
 ```
-/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/ymalon01/bin:/cluster/home/ymalon01/.local/bin
+/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/your_utln/bin:/cluster/home/your_utln/.local/bin
 ```
 
 For example, I would like to use `blast`, to **check** what versions of blast are available, **load** the version I would like to use, and use it:
 
 
-`[ymalon01@login-prod-01 ~]$ module av blast`
+`[your_utln@login-prod-01 ~]$ module av blast`
   
 ```
 ---------------------- /opt/shared/Modules/modulefiles-rhel6 ----------------------
@@ -50,9 +50,9 @@ blast-plus/2.11.0
 ```
 
 
-`[ymalon01@login-prod-01 ~]$ module load blast-plus/2.11.0`
+`[your_utln@login-prod-01 ~]$ module load blast-plus/2.11.0`
   
-`[ymalon01@login-prod-01 ~]$ module list`
+`[your_utln@login-prod-01 ~]$ module list`
   
 ```
 Currently Loaded Modulefiles:
@@ -61,21 +61,21 @@ Currently Loaded Modulefiles:
 ```
 
 
-`[ymalon01@login-prod-01 ~]$ which blastp`
+`[your_utln@login-prod-01 ~]$ which blastp`
   
 ```
 /cluster/tufts/hpc/tools/spack/linux-rhel7-ivybridge/gcc-9.3.0/blast-plus-2.11.0-ip4jcqabi3a2jscgusnkipvib6goy5mv/bin/blastp
 
 ```
-`[ymalon01@login-prod-01 ~]$ echo $PATH`
+`[your_utln@login-prod-01 ~]$ echo $PATH`
 
 ```
-/cluster/tufts/bio/tools/edirect:/cluster/tufts/hpc/tools/spack/linux-rhel7-ivybridge/gcc-9.3.0/blast-plus-2.11.0-ip4jcqabi3a2jscgusnkipvib6goy5mv/bin:/cluster/home/ymalon01/.iraf/bin:/cluster/home/ymalon01/.iraf/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/ymalon01/bin:/cluster/home/ymalon01/.local/bin
+/cluster/tufts/bio/tools/edirect:/cluster/tufts/hpc/tools/spack/linux-rhel7-ivybridge/gcc-9.3.0/blast-plus-2.11.0-ip4jcqabi3a2jscgusnkipvib6goy5mv/bin:/cluster/home/your_utln/.iraf/bin:/cluster/home/your_utln/.iraf/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/your_utln/bin:/cluster/home/your_utln/.local/bin
   
 ```
   
 
-`[ymalon01@login-prod-01 ~]$ blastp -version`
+`[your_utln@login-prod-01 ~]$ blastp -version`
   
 ```
 blastp: 2.11.0+
@@ -86,21 +86,21 @@ blastp: 2.11.0+
 I can also **unload** a loaded modules:
 
 
-`[ymalon01@login-prod-01 ~]$ module unload blast-plus/2.11.0`
+`[your_utln@login-prod-01 ~]$ module unload blast-plus/2.11.0`
   
-`[ymalon01@login-prod-01 ~]$ echo $PATH`
+`[your_utln@login-prod-01 ~]$ echo $PATH`
 
 ```
-/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/ymalon01/bin:/cluster/home/ymalon01/.local/bin
+/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/your_utln/bin:/cluster/home/your_utln/.local/bin
   
 ```
 
 I can **unload ALL** of the loaded modules:
 
 
-`[ymalon01@login-prod-01 ~]$ module purge`
+`[your_utln@login-prod-01 ~]$ module purge`
   
-`[ymalon01@login-prod-01 ~]$ module list`
+`[your_utln@login-prod-01 ~]$ module list`
 
 ```
 No Modulefiles Currently Loaded.

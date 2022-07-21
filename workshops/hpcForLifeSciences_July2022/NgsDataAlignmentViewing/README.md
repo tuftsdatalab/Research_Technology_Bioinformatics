@@ -1,4 +1,4 @@
-# NGS Data Download/QC
+# NGS Data Alignment/Viewing
 
 ## Description
 

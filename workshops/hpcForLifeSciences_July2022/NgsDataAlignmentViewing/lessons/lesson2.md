@@ -1,7 +1,7 @@
 Approximate time: 10 minutes
 
 ## Learning Objectives
-- View alignment in IGV
+- View alignment, variants and reads using [Integrative Genomics Viewer](https://software.broadinstitute.org/software/igv/)
 
 ## BAM Visualization with IGV
 

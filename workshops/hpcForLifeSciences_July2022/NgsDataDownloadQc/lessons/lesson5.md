@@ -17,21 +17,34 @@ module load trim-galore/0.6.4_dev
 To trim our data we will enter:
 
 ```
-trim_galore --illumina --paired --fastqc -o trim_galore/ fastq/SRR15607266_pass_1.fastq.gz fastq/SRR15607266_pass_2.fastq.gz
+trim_galore --illumina --paired -o trim_galore/ fastq/SRR15607266_pass_1.fastq.gz fastq/SRR15607266_pass_2.fastq.gz
 ```
 
 - `--illumina` Adapter sequence to be trimmed is the first 13bp of the Illumina universal adapter
                         'AGATCGGAAGAGC' instead of the default auto-detection of adapter sequence.
-- `--paired` This option performs length trimming of quality/adapter/RRBS trimmed reads for
+- `--paired` This option performs length trimming of quality/adapter trimmed reads for
                         paired-end files
 - `-o` specifies that our output directory will be a folder called trim_galore
 
 ## Trim Galore Output
 
-When you run the command above you will note several lines of output to the screen. We will focus on the summary section.
+When you run the command above you will note several lines of output to the screen. We will focus on the summary section:
+
+```
+=== Summary ===
+
+Total reads processed:               1,264,290
+Reads with adapters:                   451,277 (35.7%)
+Reads written (passing filters):     1,264,290 (100.0%)
+
+Total basepairs processed:    96,086,040 bp
+Quality-trimmed:                 257,279 bp (0.3%)
+Total written (filtered):     95,110,835 bp (99.0%)
+```
+Here we note that only a small fraction of bases were removed, 0.3%, due to quality control issues. 
 
 _________________________________________________________________________________________________________________________________________________________
 
-[Main Page](../README.md)
+Next Lesson: [Ngs Data Alignment and Viewing](../../NgsDataAlignmentViewing/lessons/lesson1.md)
 
 [Previous](lesson4.md)

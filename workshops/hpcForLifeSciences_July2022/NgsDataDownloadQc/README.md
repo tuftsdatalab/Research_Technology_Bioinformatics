@@ -6,11 +6,11 @@ This is the first part of Day 2 of the High Performance Computing For Life Scien
 
 ### Goals
 
-![](./images/day2workflow.PNG)
+![](./images/workflow.png)
 
 ### Materials Needed
 
-- Chrome web browserworkshop
+- Chrome web browser
 - Account on [Tufts High Performance Compute Cluster](https://it.tufts.edu/research-technology/high-performance-computing)
 - [VPN](https://access.tufts.edu/vpn) if accessing the HPC from off campus
 
@@ -26,8 +26,10 @@ This is the first part of Day 2 of the High Performance Computing For Life Scien
 - [Logging In (5 min)](lessons/lesson2.md)
 - [Obtain Data (15 min)](lessons/lesson3.md)
 - [Quality Control (15 min)](lessons/lesson4.md)
-- [Process Reads (15 min)](lessons/lesson5.md)
-
+- [Process Reads (15 min)](../NgsDataAlignmentViewing/lessons/lesson5.md)
+- [Aligning NGS reads (30 min)](../NgsDataAlignmentViewing/lessons/lesson1.md)
+- [Viewing NGS read alignments (15 min)](../NgsDataAlignmentViewing/lessons/lesson2.md)
+- [Conclusion](../NgsDataAlignmentViewing/lessons/lesson3.md)
 _________________________________________________________________________________________________________________________________________________________
 
 [Workshop Home Page](../index.md)

@@ -1,5 +1,5 @@
 # Intro to Command Line
-========================
+=======================================
 
 * TOC
 {:toc}
@@ -729,6 +729,11 @@ There are some keyboard shortcuts that can help when writing complex commands an
 BLAST is the **B**asic **L**ocal **A**lignment **S**earch **T**ool.
 It uses an index to rapdily search large sequence databases;
 it starts by finding small matches between the two sequences and extending those matches.
+
+
+![blst_0602](https://user-images.githubusercontent.com/8632603/180028827-f0980933-95f4-4c3b-b3d8-fece6e93eae8.gif)
+
+
 For more information on how BLAST works and the different BLAST functionality,
 check out the summary on [Wikipedia](https://en.wikipedia.org/wiki/BLAST) or
 the NCBI's list of [BLAST resources](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs).
@@ -798,8 +803,11 @@ computer; note,
 
 
 ```
+
 curl -o mouse.1.protein.faa.gz -L https://tuftsdatalab.github.io/Research_Technology_Bioinformatics/workshops/hpcForLifeSciences_July2022/IntroToLinux/mouse.1.protein.faa.gz
-https://tuftsdatalab.github.io/Research_Technology_Bioinformatics/workshops/hpcForLifeSciences_July2022/IntroToLinux/zebrafish.1.protein.faa.gz
+
+curl -o zebrafish.1.protein.faa.gz -L https://tuftsdatalab.github.io/Research_Technology_Bioinformatics/workshops/hpcForLifeSciences_July2022/IntroToLinux/zebrafish.1.protein.faa.gz
+
 
 ```
 
@@ -989,7 +997,7 @@ Does it have all the elements?
 If it does, a simple way to run it is by telling shell that it is a program.
 
 ```
-sh sbatch.sh
+sbatcb sbatch.sh
 ```
 
 
