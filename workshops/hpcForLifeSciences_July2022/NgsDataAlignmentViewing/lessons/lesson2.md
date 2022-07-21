@@ -6,12 +6,17 @@ Approximate time: 10 minutes
 ## BAM Visualization with IGV
 
 1. With a Chrome web browser, visit [https://ondemand.pax.tufts.edu/](https://ondemand.pax.tufts.edu/)
-2. Login with your Tufts credentials
+2. Logb in with your Tufts credentials
 3. On the top grey menu bar, choose `Interactive Apps->IGV`.
 
 <img src="../images/igv_dropdown.png" width="300">
 
-4. Choose the following compute resource parameters: Number of house = 1, Number of cores = 1s, Amount of Memory = 8GB, Resevation = Bioinformatics Workshop, No Directory (leave blank)
+4. Choose the following compute resource parameters: 
+- Number of house = 1
+- Number of cores = 1
+- Amount of Memory = 8GB
+- Reservation = Bioinformatics Workshop
+- Directory (leave blank)
 
 <img src="../images/igv_params.png" width="500">
 

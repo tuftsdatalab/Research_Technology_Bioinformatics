@@ -194,11 +194,11 @@ node allocation with  `--cpus=4`, which can process up to 8 threads. Here we are
 
 2. `-o results/sarscov2.sam` :  Place the output in the results folder and give it a name
 
-3. The following arguments are our reference, read1 and read2 files, in the order required by BWA:
+3. The following arguments are the full paths of our reference, read1 and read2 files, in the order required by BWA:
 ``` 
-data/GCF_009858895.2_ASM985889v3_genomic.fna \
-fastq/trim_galore/SRR15607266_pass_1_val_1.fq.gz \
-fastq/trim_galore/SRR15607266_pass_2_val_2.fq.gz
+~/hpcDay2/data/GCF_009858895.2_ASM985889v3_genomic.fna \
+~/hpcDay2/data/fastq/trim_galore/SRR15607266_pass_1_val_1.fq.gz \
+~/hpcDay2/data/fastq/trim_galore/SRR15607266_pass_2_val_2.fq.gz
 ```
 
 Exit nano by typing `^X` and follow prompts to save and name the file `bwa.sh`.
@@ -315,10 +315,11 @@ SRR15607266.2 | 161 | NC_045512.2 | 3 | 60 | 32S43M | = | 28255 | 28365 | CCAA�
 Next, we'll convert the SAM into a compressed, binary format called BAM in order to process it further.
 
 ```
-samtools view -S -b sarscov2.sam > sarscov2.bam
+samtools view -bo sarscov2.bam sarscov2.sam
 ```
 
-It is not human readable, so we use samtools to view BAM files:
+We've used options `-bo` to specify `BAM` output to a specific file.
+'BAM` files are not human readable, so we use samtools to view:
 
 ```
 samtools view sarscov2.bam | head
@@ -329,9 +330,10 @@ samtools view sarscov2.bam | head
 Downstream applications require that reads in SAM files be sorted by reference genome coordinates (fields 3 and 4 in each line of our SAM file).
 This will assist in fast search, display and other functions.
 ```
-samtools sort sarscov2.bam  -o sarscov2.srt.bam
+samtools sort -o sarscov2.srt.bam sarscov2.bam 
 ````
 
+Where again we've used option `-o` to specify the output file.
 Look at the new file, do you notice anything different about the read order?
 
 ```
