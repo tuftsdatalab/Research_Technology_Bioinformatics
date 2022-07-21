@@ -46,6 +46,14 @@ mkdir hpcDay2
 cd hpcDay2
 ```
 
+In our workshop directory we will need 
+
+```
+mkdir data
+mkdir results
+mkdir scripts
+```
+
 _________________________________________________________________________________________________________________________________________________________
 
 [Next](lesson3.md)
