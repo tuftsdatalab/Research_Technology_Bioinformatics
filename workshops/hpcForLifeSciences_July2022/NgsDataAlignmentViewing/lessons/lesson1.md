@@ -27,7 +27,7 @@ BWA has three algorithms:
 - BWA-MEM: optimized for 70-100bp Illumina reads
 
 We'll use BWA-MEM. 
-Underlying the BWA index is the Burrows-Wheeler Transform [Video](https://www.youtube.com/watch?v=4n7NPk5lwbI) and [lecture](http://web.stanford.edu/class/cs262/presentations/lecture4.pdf).  This is beyond the scope of this course but is an widely used data compression algorithm.
+Underlying the BWA index is the Burrows-Wheeler Transform [Video](https://www.youtube.com/watch?v=4n7NPk5lwbI) and [lecture](http://web.stanford.edu/class/cs262/presentations/lecture4.pdf).  This is beyond the scope of this course but is an widely used data compression applications.
 
 
 ## Index the reference genome
@@ -117,7 +117,7 @@ GCF_009858895.2_ASM985889v3_genomic.fna.amb  <-- Location of ambiguous (non-ATG
 GCF_009858895.2_ASM985889v3_genomic.fna.ann  <-- Sequence names, lengths
 GCF_009858895.2_ASM985889v3_genomic.fna.bwt  <-- BWT suffix array
 GCF_009858895.2_ASM985889v3_genomic.fna.pac  <-- Binary encoded sequence
-cGCF_009858895.2_ASM985889v3_genomic.fna.sa  <-- Suffix array index
+GCF_009858895.2_ASM985889v3_genomic.fna.sa  <-- Suffix array index
 ```
 
 ## BWA alignment
@@ -270,6 +270,7 @@ Here is a useful site to [decode flags](https://broadinstitute.github.io/picard/
 More information on [SAM format](https://samtools.github.io/hts-specs/SAMv1.pdf).
 
 Your job should be done, and do do this, check to make sure your `bwa` job is no longer listed in your `squeue -u tutln01` output.
+You can also check your resource usage efficiency by running `seff`. Did you use everything you requested?
 
 Change into our `results` directory:
 ```markdown
@@ -385,7 +386,7 @@ In this case, >75% properly paired and mapped indicates a high quality alignment
 
 ## Summary
 
-<img src="../images/alignment_summary.png" width="500">
+<img src="../images/alignment_summary_1.png" width="500">
 
 [Next: View Alignment with IGV](lesson2.md) 
 
