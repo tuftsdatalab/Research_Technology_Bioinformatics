@@ -10,7 +10,7 @@ This is the first part of Day 2 of the High Performance Computing For Life Scien
 
 ### Materials Needed
 
-- Chrome web browserworkshop
+- Chrome web browser
 - Account on [Tufts High Performance Compute Cluster](https://it.tufts.edu/research-technology/high-performance-computing)
 - [VPN](https://access.tufts.edu/vpn) if accessing the HPC from off campus
 
