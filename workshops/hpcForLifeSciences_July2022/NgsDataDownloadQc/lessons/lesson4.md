@@ -43,7 +43,7 @@ To investigate the quality of our sequence, we will need to view the `.html` fil
 
 Now navigate to this workshop's directory and right click on `SRR15607266_pass_1_fastqc.html` and select `Open Link in New Tab`:
 
-![](../images/fastqc_html.png)
+![](../images/fastqc_html1.png)
 
 ## FastQC Output
 
