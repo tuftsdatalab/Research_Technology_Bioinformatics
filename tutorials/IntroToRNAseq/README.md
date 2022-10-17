@@ -47,4 +47,4 @@ All scripts you will be using:
 
 
 ## Acknowledgement
-Much of this workshop was adapted from [Bioinformatics @ Tufts ](https://sites.tufts.edu/biotools/tutorials/) and the [HBC Training DGE workshop](https://github.com/hbctraining/DGE_workshop) with the help of Dr. Rebecca Batorsky and Dr. Albert Tai at Tufts University.
+The original workshop repository can be found [here](https://huoww07.github.io/Bioinformatics-for-RNA-Seq/). Much of this workshop was adapted from [Bioinformatics @ Tufts ](https://sites.tufts.edu/biotools/tutorials/) and the [HBC Training DGE workshop](https://github.com/hbctraining/DGE_workshop) with the help of Dr. Rebecca Batorsky and Dr. Albert Tai at Tufts University.
